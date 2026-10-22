@@ -433,7 +433,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 20px 24px 10px;
+            padding: 14px 24px 10px;
             overflow-y: auto;
             perspective: 1400px;
         }
@@ -441,7 +441,7 @@
         .flashcard-3d-wrapper {
             width: 100%;
             max-width: 780px;
-            min-height: 440px;
+            min-height: 460px;
             position: relative;
             transform-style: preserve-3d;
             transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -589,8 +589,8 @@
         /* ----- BACK FACE ----- */
         .card-back {
             transform: rotateY(180deg);
-            padding: 22px 26px;
-            overflow-y: auto;
+            padding: 18px 24px;
+            overflow-y: hidden;
             cursor: default;
         }
 
@@ -598,42 +598,43 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 14px;
+            padding-bottom: 10px;
             border-bottom: 1px solid #f1f5f9;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             gap: 12px;
         }
 
         .back-kanji-summary {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 14px;
         }
 
         .back-kanji-char {
-            font-size: 56px;
+            font-size: 46px;
             font-weight: 900;
             color: var(--secondary);
             line-height: 1;
             background: #f8fafc;
-            width: 76px;
-            height: 76px;
-            border-radius: 18px;
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
             border: 2px solid #e2e8f0;
             font-family: 'Noto Sans JP', sans-serif;
+            flex-shrink: 0;
         }
 
         .back-title-group {
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 2px;
         }
 
         .back-hanviet {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 800;
             color: var(--primary);
             letter-spacing: 1.5px;
@@ -641,7 +642,7 @@
         }
 
         .back-meaning-main {
-            font-size: 18px;
+            font-size: 16.5px;
             font-weight: 700;
             color: var(--secondary);
         }
@@ -649,24 +650,25 @@
         .back-grid {
             display: grid;
             grid-template-columns: 1fr 1.15fr;
-            gap: 18px;
+            gap: 16px;
             flex: 1;
+            align-items: start;
         }
 
         .back-left-col {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
         }
 
         .reading-card {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 14px 16px;
+            border-radius: 14px;
+            padding: 11px 14px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
         }
 
         .reading-row {
@@ -678,7 +680,7 @@
         .r-badge {
             font-size: 11px;
             font-weight: 800;
-            padding: 4px 8px;
+            padding: 3px 8px;
             border-radius: 6px;
             color: white;
             width: 52px;
@@ -690,7 +692,7 @@
         .r-badge.kun { background: var(--accent-kun); }
 
         .r-value {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
             color: var(--secondary);
             font-family: 'Noto Sans JP', sans-serif;
@@ -700,23 +702,21 @@
         .mnemonic-box {
             background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
             border: 1px solid #fde68a;
-            border-radius: 16px;
-            padding: 14px 16px;
+            border-radius: 14px;
+            padding: 12px 14px;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 5px;
         }
 
         .mnemonic-title {
-            font-size: 12px;
+            font-size: 11.5px;
             font-weight: 800;
             color: #b45309;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
             gap: 6px;
         }
 
@@ -726,52 +726,22 @@
             gap: 6px;
         }
 
-        .mnemonic-ref {
-            font-size: 11px;
-            font-weight: 700;
-            color: #92400e;
-            background: rgba(245, 158, 11, 0.16);
-            border: 1px solid rgba(217, 119, 6, 0.25);
-            padding: 2px 8px;
-            border-radius: 999px;
-            text-transform: none;
-            letter-spacing: 0;
-            white-space: nowrap;
-        }
-
         .mnemonic-content {
-            font-size: 14px;
+            font-size: 13.5px;
             color: #78350f;
-            line-height: 1.55;
+            line-height: 1.5;
             font-weight: 500;
             word-break: break-word;
-        }
-
-        .mnemonic-analysis {
-            font-size: 13px;
-            color: #92400e;
-            background: rgba(255, 255, 255, 0.55);
-            border-left: 3px solid #f59e0b;
-            padding: 6px 10px;
-            border-radius: 6px;
-            margin-top: 2px;
-            line-height: 1.45;
-        }
-
-        .mnemonic-empty {
-            color: #92400e;
-            opacity: 0.85;
-            font-style: italic;
         }
 
         .back-right-col {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
         }
 
         .vocab-section-title {
-            font-size: 13px;
+            font-size: 12.5px;
             font-weight: 800;
             color: var(--accent-purple);
             text-transform: uppercase;
@@ -784,17 +754,17 @@
         .vocab-cards-list {
             display: flex;
             flex-direction: column;
-            gap: 8px;
-            max-height: 255px;
-            overflow-y: auto;
-            padding-right: 4px;
+            gap: 7px;
+            max-height: none;
+            overflow-y: visible;
+            padding-right: 0;
         }
 
         .vocab-row-item {
             background: #fff;
             border: 1.5px solid #eef2f6;
-            border-radius: 12px;
-            padding: 10px 14px;
+            border-radius: 11px;
+            padding: 8px 12px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -810,23 +780,26 @@
         .v-left {
             display: flex;
             flex-direction: column;
+            gap: 1px;
         }
 
         .v-word-jp {
-            font-size: 18px;
+            font-size: 16.5px;
             font-weight: 800;
             color: var(--secondary);
             font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.2;
         }
 
         .v-reading-jp {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--primary);
             font-weight: 600;
+            line-height: 1.2;
         }
 
         .v-meaning-vi {
-            font-size: 14px;
+            font-size: 13.5px;
             font-weight: 600;
             color: #334155;
             text-align: right;
@@ -1812,2141 +1785,251 @@
 
     // Mẹo nhớ & Phân tích bộ thủ giúp học Kanji sâu và dễ thuộc
     const mnemonicDB = {
-        "会": {
-                "found_in_pdf": true,
-                "mnemonic": "Hai người (二) chúng ta sẽ gặp nhau trong nhà.",
-                "analysis": "Hình minh họa: Hai người đứng bắt tay gặp nhau dưới mái nhà → Hội (会)<br>Số nét: 6 · Bộ/Chữ liên quan: ▶ 二(2) ! 合(295)",
-                "pdf_page": 46,
-                "book_number": 72,
-                "source_ref": "PDF Tr.46 · #72"
-        },
-        "同": {
-                "found_in_pdf": true,
-                "mnemonic": "Cả người vào người ra Dùng cùng một cửa rất là giống nhau.",
-                "analysis": "Hình minh họa: Hai người đi vào (IN) và đi ra (OUT) qua cùng một khung cửa lớn, tạo thành hình chữ 同.<br>Số nét: 6 · Bộ/Chữ liên quan: ▶ 口(15) ! 周(79)",
-                "pdf_page": 133,
-                "book_number": 298,
-                "source_ref": "PDF Tr.133 · #298"
-        },
-        "事": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi viết ra toàn bộ việc cần làm.",
-                "analysis": "Hình minh họa: Bàn tay cầm bút viết lên tờ giấy ghi danh sách công việc, chuyển thành hình chữ Sự (事).<br>Số nét: 8",
-                "pdf_page": 123,
-                "book_number": 272,
-                "source_ref": "PDF Tr.123 · #272"
-        },
-        "自": {
-                "found_in_pdf": true,
-                "mnemonic": "Ở Nhật, chỉ ngón tay vào mũi có nghĩa là biểu thị bản thân mình.",
-                "analysis": "Hình minh họa: Bàn tay chỉ vào chiếc mũi trên khuôn mặt, hình dáng chiếc mũi chuyển thành chữ 自.<br>Số nét: 6 · Bộ/Chữ liên quan: ▶目(16) !首(143) 白(156)",
-                "pdf_page": 89,
-                "book_number": 180,
-                "source_ref": "PDF Tr.89 · #180"
-        },
-        "発": {
-                "found_in_pdf": true,
-                "mnemonic": "Loài người đi lại bắt đầu bằng hai chân.",
-                "analysis": "Hình minh họa: Phía trên là hai bàn chân (癶), phía dưới là hình người nguyên thủy đang bước đi bằng hai chân (开 / 儿), tạo thành chữ 発.<br>Số nét: 9 · Bộ/Chữ liên quan: ▶ 儿(C)",
-                "pdf_page": 139,
-                "book_number": 314,
-                "source_ref": "PDF Tr.139 · #314"
-        },
-        "者": {
-                "found_in_pdf": true,
-                "mnemonic": "Mặt trời (日) cũng có lúc tà Người nào cũng phải có già có đau.",
-                "analysis": "Hình minh họa: Cụ già chống gậy đứng phía trên ông mặt trời (日), tạo thành hình chữ Giả (者).<br>Số nét: 8 · Bộ/Chữ liên quan: 日(17)",
-                "pdf_page": 107,
-                "book_number": 227,
-                "source_ref": "PDF Tr.107 · #227"
-        },
-        "業": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi nuôi cừu (羊) trong tường vây. Đó là cả sự nghiệp của tôi đấy!",
-                "analysis": "Hình minh họa: Một con cừu (羊) đứng dưới hàng rào chắn phía trên, chuyển thành hình chữ Nghiệp (業).<br>Số nét: 13 · Bộ/Chữ liên quan: 羊(189)",
-                "pdf_page": 121,
-                "book_number": 266,
-                "source_ref": "PDF Tr.121 · #266"
-        },
-        "地": {
-                "found_in_pdf": true,
-                "mnemonic": "Bọ cạp ở dưới đất (土) này.",
-                "analysis": "Hình minh họa: Bên trái là mầm cây mọc trên mặt đất (chữ Thổ 土), bên phải là hình con bọ cạp cong đuôi tạo thành bộ Dã (也), ghép lại thành chữ 地.<br>Số nét: 6 · Bộ/Chữ liên quan: ▶ 土(23) ! 池(313) 他(448)",
-                "pdf_page": 126,
-                "book_number": 280,
-                "source_ref": "PDF Tr.126 · #280"
-        },
-        "場": {
-                "found_in_pdf": true,
-                "mnemonic": "Đất (土) tốt và ánh mặt trời (日) Chỗ này được chọn làm nơi ta về.",
-                "analysis": "Hình minh họa: Bên trái là mầm cây mọc trên mặt đất (chữ Thổ 土), bên phải là mặt trời (日) chiếu sáng xuống người đang quỳ chọn chỗ đất, ghép lại thành chữ 場.<br>Số nét: 12 · Bộ/Chữ liên quan: ▶ 土(23) 日(17)",
-                "pdf_page": 136,
-                "book_number": 305,
-                "source_ref": "PDF Tr.136 · #305"
-        },
-        "京": {
-                "found_in_pdf": true,
-                "mnemonic": "Ngôi nhà được xây trên ngọn đồi nhỏ (小). Nơi này đã trở thành kinh đô.",
-                "analysis": "Hình minh họa: Ngôi nhà có mái và cửa sổ (亠 + 口) nằm trên đỉnh ngọn đồi nhỏ (小), tạo thành hình chữ 京.<br>Số nét: 8 · Bộ/Chữ liên quan: ▶ 口(15) 小(82) ! 東(45)",
-                "pdf_page": 134,
-                "book_number": 300,
-                "source_ref": "PDF Tr.134 · #300"
-        },
-        "都": {
-                "found_in_pdf": true,
-                "mnemonic": "Có người (者) ở trạm dừng xe Chờ chuyến xe buýt đi về kinh đô.",
-                "analysis": "Hình minh họa: Bên trái là chữ Giả (者 - người chống gậy trên mặt trời), bên phải là biển trạm xe buýt (BUS) tạo hình bộ Ấp (阝), ghép lại thành chữ 都.<br>Số nét: 11 · Bộ/Chữ liên quan: ▶ 者(227) ! 部(370)",
-                "pdf_page": 138,
-                "book_number": 310,
-                "source_ref": "PDF Tr.138 · #310"
-        },
-        "方": {
-                "found_in_pdf": true,
-                "mnemonic": "Hãy đi theo phương của ta.",
-                "analysis": "Hình minh họa: Một người đang giơ tay cầm cây cờ hiệu chỉ hướng, chuyển thành hình chữ 方.<br>Số nét: 4 · Bộ/Chữ liên quan: !万(13)",
-                "pdf_page": 70,
-                "book_number": 136,
-                "source_ref": "PDF Tr.70 · #136"
-        },
-        "主": {
-                "found_in_pdf": true,
-                "mnemonic": "Cái ông đội mũ, là chủ của tôi.",
-                "analysis": "Hình minh họa: Một người đàn ông mặc vest đội chiếc mũ cao trên đầu chuyển thành dấu chấm phía trên chữ Vương (王) tạo thành chữ 主.<br>Số nét: 5 · Bộ/Chữ liên quan: ▶王(63)",
-                "pdf_page": 98,
-                "book_number": 204,
-                "source_ref": "PDF Tr.98 · #204"
-        },
-        "題": {
-                "found_in_pdf": true,
-                "mnemonic": "Phóng viên đang tìm kiếm một đề tài có sử dụng đầu (頭) và chân (足).",
-                "analysis": "Hình minh họa: Phóng viên chạy tìm tin tức dưới ánh mặt trời: bên trái có mặt trời (日) ở trên và chân chạy ở dưới (是), bên phải là cái đầu đội mũ (頁) tạo thành chữ 題.<br>Số nét: 18 · Bộ/Chữ liên quan: ▶日(17) 足(141) 頭(289)",
-                "pdf_page": 103,
-                "book_number": 219,
-                "source_ref": "PDF Tr.103 · #219"
-        },
-        "意": {
-                "found_in_pdf": true,
-                "mnemonic": "Lắng tai nghe tiếng (音) trái tim (心) Có lẽ sẽ hiểu được cảm giác của chính mình.",
-                "analysis": "Hình minh họa: Phía trên là chữ Âm (音 - người đứng trên mặt trời phát ra âm thanh), phía dưới là hình trái tim (chữ Tâm 心), ghép lại thành chữ 意.<br>Số nét: 13 · Bộ/Chữ liên quan: ▶ 音(177) 心(139)",
-                "pdf_page": 129,
-                "book_number": 288,
-                "source_ref": "PDF Tr.129 · #288"
-        },
-        "作": {
-                "found_in_pdf": true,
-                "mnemonic": "Người này đang dùng lưỡi cưa để làm ra thứ gì đó.",
-                "analysis": "Hình minh họa: Một người đứng bên trái (亻) đang cầm một lưỡi cưa có răng cưa ở bên phải (乍) tạo thành chữ 作.<br>Số nét: 7 · Bộ/Chữ liên quan: ▶亻(B)",
-                "pdf_page": 86,
-                "book_number": 174,
-                "source_ref": "PDF Tr.86 · #174"
-        },
-        "用": {
-                "found_in_pdf": true,
-                "mnemonic": "Đây là hàng rào chúng tôi đang sử dụng.",
-                "analysis": "Hình minh họa: Hình ảnh hàng rào gỗ gồm các thanh dọc và thanh ngang tạo thành hình chữ 用.<br>Số nét: 5 · Bộ/Chữ liên quan: ! 月(18) 冊(439)",
-                "pdf_page": 128,
-                "book_number": 285,
-                "source_ref": "PDF Tr.128 · #285"
-        },
-        "度": {
-                "found_in_pdf": true,
-                "mnemonic": "Ở trong nhà 21 lần thì tay sẽ ấm.",
-                "analysis": "Hình minh họa: Bên dưới mái nhà có ống khói (广) là con số 21 (廿) và bàn tay ở dưới (又), ghép lại thành chữ 度.<br>Số nét: 9 · Bộ/Chữ liên quan: ▶ 广(H) 十(10) ! 席(475)",
-                "pdf_page": 127,
-                "book_number": 283,
-                "source_ref": "PDF Tr.127 · #283"
-        },
-        "文": {
-                "found_in_pdf": true,
-                "mnemonic": "Hoa văn trên chiếc bình cổ đã trở thành chữ viết.",
-                "analysis": "Hình minh họa: Chiếc bình gốm cổ có hoa văn đan chéo trên thân bình chuyển thành hình chữ Văn (文).<br>Số nét: 4",
-                "pdf_page": 104,
-                "book_number": 220,
-                "source_ref": "PDF Tr.104 · #220"
-        },
-        "以": {
-                "found_in_pdf": true,
-                "mnemonic": "Đây là vạch xuất phát!",
-                "analysis": "Hình minh họa: Một người (人) đổ mồ hôi (丶) đứng chuẩn bị chạy sau vạch xuất phát nằm bên trái, tạo thành chữ 以.<br>Số nét: 5",
-                "pdf_page": 135,
-                "book_number": 304,
-                "source_ref": "PDF Tr.135 · #304"
-        },
-        "知": {
-                "found_in_pdf": true,
-                "mnemonic": "Người có miệng lớn (大口) thì cái gì cũng biết.",
-                "analysis": "Hình minh họa: Một người dang tay chân giống hình mũi tên (矢) với cái miệng thật to (口) ở bên phải, ghép thành chữ Tri (知).<br>Số nét: 8 · Bộ/Chữ liên quan: 矢(194) 大(81) 口(15) ! 和(386)",
-                "pdf_page": 116,
-                "book_number": 254,
-                "source_ref": "PDF Tr.116 · #254"
-        },
-        "理": {
-                "found_in_pdf": true,
-                "mnemonic": "Đức vua (王) suy nghĩ rất hợp lí. Ngài tạo ra những cánh đồng (田).",
-                "analysis": "Hình minh họa: Ông vua (王) đứng bên trái, bên phải là cánh đồng (田) trên mặt đất có cây mọc (土) ghép thành chữ 理.<br>Số nét: 11 · Bộ/Chữ liên quan: ▶王(63) 田(49) 土(23)",
-                "pdf_page": 82,
-                "book_number": 162,
-                "source_ref": "PDF Tr.82 · #162"
-        },
-        "体": {
-                "found_in_pdf": true,
-                "mnemonic": "Khi cơ thể bạn bị thương, hãy băng lại và nghỉ ngơi (休).",
-                "analysis": "Hình minh họa: Một người có chân bị băng bó (亻) đang đứng tựa vào gốc cây (本), ghép thành chữ 体.<br>Số nét: 7 · Bộ/Chữ liên quan: ▶休(113) 本(25)",
-                "pdf_page": 72,
-                "book_number": 142,
-                "source_ref": "PDF Tr.72 · #142"
-        },
-        "思": {
-                "found_in_pdf": true,
-                "mnemonic": "Trên cánh đồng (田) tôi đang nghĩ về người tôi yêu bằng cả trái tim (心).",
-                "analysis": "Hình minh họa: Cánh đồng lúa (田) ở phía trên và hình trái tim (心) ở phía dưới, ghép lại thành chữ Tư (思).<br>Số nét: 9 · Bộ/Chữ liên quan: 田(49) 心(139)",
-                "pdf_page": 116,
-                "book_number": 253,
-                "source_ref": "PDF Tr.116 · #253"
-        },
-        "開": {
-                "found_in_pdf": true,
-                "mnemonic": "Hai người đang mở cổng (門).",
-                "analysis": "Hình minh họa: Hai người đứng bên trong dùng tay đẩy mở hai cánh cổng (門), tạo thành chữ Khai (開).<br>Số nét: 12 · Bộ/Chữ liên quan: 門(43)",
-                "pdf_page": 115,
-                "book_number": 249,
-                "source_ref": "PDF Tr.115 · #249"
-        },
-        "閉": {
-                "found_in_pdf": true,
-                "mnemonic": "Người này đang đóng cổng (門).",
-                "analysis": "Hình minh họa: Một người đứng bên trong cài then đóng cánh cổng (門), tạo thành chữ Bế (閉).<br>Số nét: 11 · Bộ/Chữ liên quan: 門(43)",
-                "pdf_page": 115,
-                "book_number": 250,
-                "source_ref": "PDF Tr.115 · #250"
-        },
-        "間": {
-                "found_in_pdf": true,
-                "mnemonic": "Có thể nhìn thấy mặt trời (日) giữa những cách cổng (門).",
-                "analysis": "Hình minh họa: Mặt trời (日) chiếu sáng ở khoảng giữa hai cánh cổng (門) → Gian (間)<br>Số nét: 12 · Bộ/Chữ liên quan: ▶ 門(43) 日(17) ! 問(223)",
-                "pdf_page": 36,
-                "book_number": 44,
-                "source_ref": "PDF Tr.36 · #44"
-        },
-        "強": {
-                "found_in_pdf": true,
-                "mnemonic": "Bọ cánh cứng (虫) và cây cung (弓) đều rất khỏe.",
-                "analysis": "Hình minh họa: Cây cung (弓) bên trái và con bọ cánh cứng có sừng (厶 + 虫) bên phải, ghép thành chữ 強.<br>Số nét: 11 · Bộ/Chữ liên quan: ▶弓(123) 虫(124)",
-                "pdf_page": 66,
-                "book_number": 125,
-                "source_ref": "PDF Tr.66 · #125"
-        },
-        "教": {
-                "found_in_pdf": true,
-                "mnemonic": "Người già thì dạy trẻ con (子).",
-                "analysis": "Hình minh họa: Bên trái là cụ già chống gậy ở trên và đứa trẻ (子) ở dưới (孝), bên phải là người thầy cầm sách giảng bài (攵) tạo thành chữ 教.<br>Số nét: 11 · Bộ/Chữ liên quan: ▶子(53)",
-                "pdf_page": 100,
-                "book_number": 209,
-                "source_ref": "PDF Tr.100 · #209"
-        },
-        "正": {
-                "found_in_pdf": true,
-                "mnemonic": "Khi đèn đỏ nếu bạn dừng (止) Đó là điều đúng xin đừng quên nha.",
-                "analysis": "Hình minh họa: Một người dừng lại trước cột đèn giao thông báo 'It's red' (đèn đỏ), nét ngang phía trên cùng với chữ Chỉ (止) bên dưới tạo thành chữ 正.<br>Số nét: 5 · Bộ/Chữ liên quan: ▶ 止(243)",
-                "pdf_page": 133,
-                "book_number": 297,
-                "source_ref": "PDF Tr.133 · #297"
-        },
-        "館": {
-                "found_in_pdf": true,
-                "mnemonic": "Ở tòa nhà này, các quan (官) đang ăn (食) cơm.",
-                "analysis": "Hình minh họa: Một người đang ngồi ăn cơm dưới mái nhà (食) và một vị quan đứng dưới mái nhà có ống khói (官), ghép lại thành chữ 館.<br>Số nét: 16 · Bộ/Chữ liên quan: ▶ 食(70) 官(274)",
-                "pdf_page": 125,
-                "book_number": 275,
-                "source_ref": "PDF Tr.125 · #275"
-        },
-        "屋": {
-                "found_in_pdf": true,
-                "mnemonic": "Con người thì tất yếu là Cần đất (土) và một mái nhà định cư.",
-                "analysis": "Hình minh họa: Dưới mái nhà (尸) có một người đang ngồi bên cạnh mầm cây trên đất (至 -> 厶 + 土), tạo thành chữ 屋.<br>Số nét: 9 · Bộ/Chữ liên quan: ▶ 土(23) ! 室(210)",
-                "pdf_page": 137,
-                "book_number": 308,
-                "source_ref": "PDF Tr.137 · #308"
-        },
-        "国": {
-                "found_in_pdf": true,
-                "mnemonic": "Đức vua (王) với viên ngọc quý đang trị vì đất nước.",
-                "analysis": "Hình minh họa: Nhà vua (王) cùng viên ngọc quý bên trong biên giới lãnh thổ (口) → Quốc (国)<br>Số nét: 8 · Bộ/Chữ liên quan: ▶ 王(63) 口(E)",
-                "pdf_page": 43,
-                "book_number": 64,
-                "source_ref": "PDF Tr.43 · #64"
-        },
-        "家": {
-                "found_in_pdf": true,
-                "mnemonic": "Ngày xưa nuôi lợn ở trong nhà.",
-                "analysis": "Hình minh họa: Một con lợn (豕) đứng bên dưới mái nhà có ống khói (宀) tạo thành chữ 家.<br>Số nét: 10 · Bộ/Chữ liên quan: ▶宀(G)",
-                "pdf_page": 94,
-                "book_number": 193,
-                "source_ref": "PDF Tr.94 · #193"
-        },
-        "族": {
-                "found_in_pdf": true,
-                "mnemonic": "Mũi tên (矢) bảo vệ người đi Gia tộc cùng với quốc kì trên tay.",
-                "analysis": "Hình minh họa: Lá cờ (方) ở bên trái, người giơ tay ở góc trên phải và mũi tên (矢) ở dưới bên phải tạo thành chữ 族.<br>Số nét: 11 · Bộ/Chữ liên quan: ▶方(136) 矢(194) !旅(318)",
-                "pdf_page": 95,
-                "book_number": 195,
-                "source_ref": "PDF Tr.95 · #195"
-        },
-        "親": {
-                "found_in_pdf": true,
-                "mnemonic": "Người cha đang đứng (立) trên cây (木) Mắt (目) trông con nhỏ, ngày ngày dõi theo.",
-                "analysis": "Hình minh họa: Bên trái là người đứng (立) trên cây (木), bên phải là con mắt to có chân (見) tạo thành chữ 親.<br>Số nét: 16 · Bộ/Chữ liên quan: ▶立(77) 木(21) 見(65) !新(85)",
-                "pdf_page": 95,
-                "book_number": 196,
-                "source_ref": "PDF Tr.95 · #196"
-        },
-        "別": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi cắt thịt thành 10000 (万) miếng riêng biệt.",
-                "analysis": "Hình minh họa: Bên trái là miếng thịt (口) ở trên chữ Vạn (万 - biến thể), bên phải là con dao (bộ Đao 刂) đang cắt, ghép lại thành chữ 別.<br>Số nét: 7 · Bộ/Chữ liên quan: ▶ 口(15) 万(13) 刂(A)",
-                "pdf_page": 131,
-                "book_number": 293,
-                "source_ref": "PDF Tr.131 · #293"
-        },
-        "広": {
-                "found_in_pdf": true,
-                "mnemonic": "\"Đây là nhà tớ. Rộng đúng không?",
-                "analysis": "Hình minh họa: Người ngồi khoanh tay tươi cười trong ngôi nhà có mái hiên (广) rộng lớn → Quảng (広)<br>Số nét: 5 · Bộ/Chữ liên quan: ▶ 广(H)",
-                "pdf_page": 53,
-                "book_number": 91,
-                "source_ref": "PDF Tr.53 · #91"
-        },
-        "明": {
-                "found_in_pdf": true,
-                "mnemonic": "Nếu đặt mặt trời (日) và mặt trăng (月) cạnh nhau thì mặt trời sẽ sáng hơn.",
-                "analysis": "Hình minh họa: Mặt trời (日) bên trái và mặt trăng khuyết (月) bên phải đặt cạnh nhau tạo thành chữ 明.<br>Số nét: 8 · Bộ/Chữ liên quan: ▶日(17) 月(18)",
-                "pdf_page": 54,
-                "book_number": 94,
-                "source_ref": "PDF Tr.54 · #94"
-        },
-        "暗": {
-                "found_in_pdf": true,
-                "mnemonic": "Khi ở trong bóng tối. Chỉ nghe thấy tiếng (音) thôi.",
-                "analysis": "Hình minh họa: Mặt trời (日) bên trái và hình người trong bóng tối chỉ phát ra âm thanh (音) bên phải, ghép thành chữ Ám (暗).<br>Số nét: 13 · Bộ/Chữ liên quan: 日(17) 音(177)",
-                "pdf_page": 109,
-                "book_number": 235,
-                "source_ref": "PDF Tr.109 · #235"
-        },
-        "遠": {
-                "found_in_pdf": true,
-                "mnemonic": "Vào thứ Bảy (土) tôi đi chơi xa.",
-                "analysis": "Hình minh họa: Một người đang sải bước trên con đường (辶) bên dưới chữ Thổ (土), ghép lại thành chữ Viễn (遠).<br>Số nét: 13 · Bộ/Chữ liên quan: 土(23) 口(15) 辶(F)",
-                "pdf_page": 106,
-                "book_number": 225,
-                "source_ref": "PDF Tr.106 · #225"
-        },
-        "近": {
-                "found_in_pdf": true,
-                "mnemonic": "Chặt cây bằng một cái rìu Đến gần mục đích là điều tất nhiên",
-                "analysis": "Hình minh họa: Chiếc rìu (斤) đang chặt thân cây bên cạnh con đường (辶), ghép lại thành chữ Cận (近).<br>Số nét: 7 · Bộ/Chữ liên quan: 辶(F)",
-                "pdf_page": 106,
-                "book_number": 226,
-                "source_ref": "PDF Tr.106 · #226"
-        },
-        "新": {
-                "found_in_pdf": true,
-                "mnemonic": "Để bắt đầu một cái gì đó mới mẻ hãy đứng đó (立), dùng rìu (斤) chẻ cây (木) để mở đường đi.",
-                "analysis": "Hình minh họa: Người đứng (立) trên cây (木) bên cạnh chiếc rìu (斤) chặt cây mở đường mới → Tân (新)<br>Số nét: 13 · Bộ/Chữ liên quan: ▶ 立(77) 木(21) ! 親(196)",
-                "pdf_page": 51,
-                "book_number": 85,
-                "source_ref": "PDF Tr.51 · #85"
-        },
-        "古": {
-                "found_in_pdf": true,
-                "mnemonic": "Cùng một câu chuyện, nếu bạn nghe 10 (十) lần, Nó sẽ trở thành chuyện cũ.",
-                "analysis": "Hình minh họa: Số 10 (十) đặt trên cái miệng (口) kể đi kể lại 10 lần thành chuyện cũ → Cổ (古)<br>Số nét: 5 · Bộ/Chữ liên quan: ▶ 十(10) 口(15)",
-                "pdf_page": 52,
-                "book_number": 86,
-                "source_ref": "PDF Tr.52 · #86"
-        },
-        "多": {
-                "found_in_pdf": true,
-                "mnemonic": "Có nhiều chữ Ta (タ).",
-                "analysis": "Hình minh họa: Nhiều chữ katakana タ xếp chồng lên nhau → Đa (多)<br>Số nét: 6",
-                "pdf_page": 53,
-                "book_number": 89,
-                "source_ref": "PDF Tr.53 · #89"
-        },
-        "少": {
-                "found_in_pdf": true,
-                "mnemonic": "Nếu bạn cắt những vật nhỏ (小) bạn sẽ nhận được rất ít.",
-                "analysis": "Hình minh họa: Vật nhỏ (小) bị lưỡi dao cắt thêm một nét ở dưới nên còn rất ít → Thiếu/Thiểu (少)<br>Số nét: 4 · Bộ/Chữ liên quan: ▶ 小(82)",
-                "pdf_page": 53,
-                "book_number": 90,
-                "source_ref": "PDF Tr.53 · #90"
-        },
-        "高": {
-                "found_in_pdf": true,
-                "mnemonic": "Cái tháp cao được đặt trên nóc tòa nhà.",
-                "analysis": "Hình minh họa: Ngọn tháp cao vươn lên trên nóc một tòa nhà nhiều tầng → Cao (高)<br>Số nét: 10 · Bộ/Chữ liên quan: ▶ 口(15)",
-                "pdf_page": 51,
-                "book_number": 83,
-                "source_ref": "PDF Tr.51 · #83"
-        },
-        "安": {
-                "found_in_pdf": true,
-                "mnemonic": "Người phụ nữ cảm thấy an tâm khi ở trong nhà mình.",
-                "analysis": "Hình minh họa: Người phụ nữ (女) đứng bình yên dưới mái nhà (宀) → An (安)<br>Số nét: 6 · Bộ/Chữ liên quan: ▶ 宀(G) 女(52)",
-                "pdf_page": 51,
-                "book_number": 84,
-                "source_ref": "PDF Tr.51 · #84"
-        },
-        "長": {
-                "found_in_pdf": true,
-                "mnemonic": "Hình ảnh một người có mái tóc dài.",
-                "analysis": "Hình minh họa: Một người có mái tóc dài bay về phía sau, chuyển thành hình dạng chữ 長.<br>Số nét: 8",
-                "pdf_page": 54,
-                "book_number": 93,
-                "source_ref": "PDF Tr.54 · #93"
-        },
-        "短": {
-                "found_in_pdf": true,
-                "mnemonic": "Cái mũi tên (矢) và đậu (豆) đều ngắn.",
-                "analysis": "Hình minh họa: Mũi tên ngắn (矢) đặt bên trái chiếc bát đựng hạt đậu (豆), ghép lại thành chữ Đoản (短).<br>Số nét: 12 · Bộ/Chữ liên quan: 矢(194) 豆(237)",
-                "pdf_page": 110,
-                "book_number": 238,
-                "source_ref": "PDF Tr.110 · #238"
-        },
-        "重": {
-                "found_in_pdf": true,
-                "mnemonic": "Nghìn (千) quyển sách thì nặng đấy.",
-                "analysis": "Hình minh họa: Nhiều quyển sách xếp chồng cao lên nhau trông rất nặng, chuyển thành các nét ngang dọc của chữ Trọng (重).<br>Số nét: 9 · Bộ/Chữ liên quan: 千(12)",
-                "pdf_page": 108,
-                "book_number": 230,
-                "source_ref": "PDF Tr.108 · #230"
-        },
-        "軽": {
-                "found_in_pdf": true,
-                "mnemonic": "Xe (車) nhẹ nếu đẩy bằng tay Thì cũng có thể chạy ngay dễ dàng",
-                "analysis": "Hình minh họa: Bàn tay đẩy nhẹ chiếc xe ô tô (車) chạy trên mặt đất (土), kết hợp thành chữ Khinh (軽).<br>Số nét: 12 · Bộ/Chữ liên quan: 車(104) 土(23)",
-                "pdf_page": 108,
-                "book_number": 231,
-                "source_ref": "PDF Tr.108 · #231"
-        },
-        "早": {
-                "found_in_pdf": true,
-                "mnemonic": "Là quá sớm nếu bạn thức dậy lúc 10 (十) giờ vào chủ nhật (日).",
-                "analysis": "Hình minh họa: Mặt trời (日) tỏa sáng phía trên số 10 (十), chuyển thành chữ 早.<br>Số nét: 6 · Bộ/Chữ liên quan: ▶日(17) 十(10)",
-                "pdf_page": 54,
-                "book_number": 92,
-                "source_ref": "PDF Tr.54 · #92"
-        },
-        "遅": {
-                "found_in_pdf": true,
-                "mnemonic": "Một con cừu (羊) đang nghỉ nên nó đã đến muộn.",
-                "analysis": "Hình minh họa: Con cừu (羊) đang ngủ dưới mái hiên (尸) bên cạnh con đường (辶), tạo thành chữ 遅.<br>Số nét: 12 · Bộ/Chữ liên quan: ▶ 羊(189) 辶(F) ! 達(492)",
-                "pdf_page": 200,
-                "book_number": 470,
-                "source_ref": "PDF Tr.200 · #470"
-        },
-        "元": {
-                "found_in_pdf": true,
-                "mnemonic": "Hai người (二) cùng chạy với nhau. Chẳng mấy mạnh khỏe thêm mau ấy mà.",
-                "analysis": "Hình minh họa: Một người cõng một người (hai người 二) chạy bộ bằng đôi chân (儿) tràn đầy nguyên khí → Nguyên (元)<br>Số nét: 4 · Bộ/Chữ liên quan: ▶ 二(2) 儿(C)",
-                "pdf_page": 52,
-                "book_number": 87,
-                "source_ref": "PDF Tr.52 · #87"
-        },
-        "気": {
-                "found_in_pdf": true,
-                "mnemonic": "Nếu bạn thở quá mạnh, bạn có thể làm \"khí chất\" thoát ra ngoài.",
-                "analysis": "Hình minh họa: Người thổi hơi thở mạnh tạo thành các luồng khí bay ra → Khí (気)<br>Số nét: 6",
-                "pdf_page": 52,
-                "book_number": 88,
-                "source_ref": "PDF Tr.52 · #88"
-        },
-        "天": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi dang rộng hai tay và nhìn lên bầu trời.",
-                "analysis": "Hình minh họa: Một người dang rộng hai tay và hai chân (大) đứng dưới vòm trời phía trên (nét ngang trên cùng) tạo thành chữ 天.<br>Số nét: 4 · Bộ/Chữ liên quan: ▶大(81) !夫(202)",
-                "pdf_page": 77,
-                "book_number": 153,
-                "source_ref": "PDF Tr.77 · #153"
-        },
-        "電": {
-                "found_in_pdf": true,
-                "mnemonic": "Trong cơn mưa (雨) chớp lóe sáng như vệt điện xuống đồng (田).",
-                "analysis": "Hình minh họa: Cơn mưa (雨) phía trên đánh tia sét xuyên qua cánh đồng ruộng (田) bên dưới, tạo thành chữ 電.<br>Số nét: 13 · Bộ/Chữ liên quan: ▶雨(102) 田(49)",
-                "pdf_page": 58,
-                "book_number": 103,
-                "source_ref": "PDF Tr.58 · #103"
-        },
-        "駅": {
-                "found_in_pdf": true,
-                "mnemonic": "Ở ga, hành lí, ngựa (馬) được người mang theo.",
-                "analysis": "Hình minh họa: Con ngựa (馬) bên trái và một người đang vác kiện hành lý trên vai (尺) bên phải, ghép thành chữ 駅.<br>Số nét: 14 · Bộ/Chữ liên quan: ▶馬(105) !験(217)",
-                "pdf_page": 59,
-                "book_number": 106,
-                "source_ref": "PDF Tr.59 · #106"
-        },
-        "鉄": {
-                "found_in_pdf": true,
-                "mnemonic": "Sắt sẽ thua (失) về giá trị nếu so với vàng (金).",
-                "analysis": "Hình minh họa: Thanh kim loại/sắt (金) bên trái và người đang khóc vì thua kém (失) bên phải, tạo thành chữ 鉄.<br>Số nét: 13 · Bộ/Chữ liên quan: ▶ 金(22) 失(467)",
-                "pdf_page": 199,
-                "book_number": 468,
-                "source_ref": "PDF Tr.199 · #468"
-        },
-        "道": {
-                "found_in_pdf": true,
-                "mnemonic": "Cổ (首) dài anh ấy đang vươn\nNhư đợi ai đó trên đường sớm nay.",
-                "analysis": "Hình minh họa: Người vươn cổ dài (首) đứng bên con đường uốn lượn (辶), ghép thành chữ 道.<br>Số nét: 12 · Bộ/Chữ liên quan: ▶首(143) 辶(F)",
-                "pdf_page": 73,
-                "book_number": 144,
-                "source_ref": "PDF Tr.73 · #144"
-        },
-        "通": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi vượt tường rào để đi học.",
-                "analysis": "Hình minh họa: Một người đang trèo qua hàng rào (マ + 用 = 甬) dọc theo con đường (bộ Sước 辶), tạo thành chữ 通.<br>Số nét: 10 · Bộ/Chữ liên quan: ▶ 辶(F)",
-                "pdf_page": 141,
-                "book_number": 319,
-                "source_ref": "PDF Tr.141 · #319"
-        },
-        "送": {
-                "found_in_pdf": true,
-                "mnemonic": "Ai đó đã gửi cho tôi một món quà.",
-                "analysis": "Hình minh họa: Một người bưng hộp quà thắt nơ đi trên con đường (辶), biến đổi thành chữ Tống (送).<br>Số nét: 9 · Bộ/Chữ liên quan: 辶(F)",
-                "pdf_page": 114,
-                "book_number": 246,
-                "source_ref": "PDF Tr.114 · #246"
-        },
-        "返": {
-                "found_in_pdf": false
-        },
-        "進": {
-                "found_in_pdf": true,
-                "mnemonic": "Con chim đang tiến lên phía trước.",
-                "analysis": "Hình minh họa: Một chú chim (bộ Chuy 隹) đang bước đi về phía trước trên con đường (bộ Sước 辶), tạo thành chữ 進.<br>Số nét: 11 · Bộ/Chữ liên quan: ▶ 辶(F)",
-                "pdf_page": 141,
-                "book_number": 320,
-                "source_ref": "PDF Tr.141 · #320"
-        },
-        "退": {
-                "found_in_pdf": false
-        },
-        "運": {
-                "found_in_pdf": true,
-                "mnemonic": "Chiếc xe (車) đang vận chuyển tấm nệm.",
-                "analysis": "Hình minh họa: Chiếc xe (車) chở tấm nệm trên nóc (冖) đang chạy trên con đường (辶), tạo thành chữ Vận (運).<br>Số nét: 12 · Bộ/Chữ liên quan: 車(104) 辶(F) ! 連(410)",
-                "pdf_page": 112,
-                "book_number": 241,
-                "source_ref": "PDF Tr.112 · #241"
-        },
-        "動": {
-                "found_in_pdf": true,
-                "mnemonic": "Sức lực (力) mà tác dụng vào Dù nặng (重) đến mấy sách nào chả lay.",
-                "analysis": "Hình minh họa: Một người dùng sức lực cánh tay (力) đẩy chồng sách nặng (重), ghép thành chữ Động (動).<br>Số nét: 11 · Bộ/Chữ liên quan: 重(230) 力(50) ! 働(268)",
-                "pdf_page": 112,
-                "book_number": 242,
-                "source_ref": "PDF Tr.112 · #242"
-        },
-        "歩": {
-                "found_in_pdf": true,
-                "mnemonic": "Dừng (止) lại chút (少) Rồi tiếp tục dạo bước.",
-                "analysis": "Hình minh họa: Một người dừng lại trước đèn tín hiệu giao thông (止) và ngồi nghỉ một chút ở phía dưới (少), ghép trên dưới thành chữ Bộ (歩).<br>Số nét: 8 · Bộ/Chữ liên quan: 止(243) 少(90)",
-                "pdf_page": 113,
-                "book_number": 244,
-                "source_ref": "PDF Tr.113 · #244"
-        },
-        "走": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi chạy ngay cả khi tôi bị bao phủ bởi đất cát (土).",
-                "analysis": "Hình minh họa: Một người đang vung chân chạy bên dưới mặt đất có mầm cây (土), chuyển thành chữ 走.<br>Số nét: 7 · Bộ/Chữ liên quan: ▶土(23) !足(141) 定(356)",
-                "pdf_page": 62,
-                "book_number": 114,
-                "source_ref": "PDF Tr.62 · #114"
-        },
-        "起": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi sẽ chạy (走) vì tôi dậy muộn.",
-                "analysis": "Hình minh họa: Người đang chạy (走) bên trái và người vừa bật dậy khỏi chăn nệm (己) bên phải, ghép thành chữ 起.<br>Số nét: 10 · Bộ/Chữ liên quan: ▶走(114)",
-                "pdf_page": 63,
-                "book_number": 115,
-                "source_ref": "PDF Tr.63 · #115"
-        },
-        "寝": {
-                "found_in_pdf": true,
-                "mnemonic": "Hai người đang ngủ.",
-                "analysis": "Hình minh họa: Hai người đang nằm ngủ dưới mái nhà (宀), hình dáng mái nhà và người nằm đắp chăn tạo thành chữ 寝.<br>Số nét: 13 · Bộ/Chữ liên quan: ▶ 宀(G)",
-                "pdf_page": 165,
-                "book_number": 379,
-                "source_ref": "PDF Tr.165 · #379"
-        },
-        "帰": {
-                "found_in_pdf": true,
-                "mnemonic": "Chim én đang quay về tổ.",
-                "analysis": "Hình minh họa: Đường bay vòng quay lại bên trái và hình chim én đậu trên tổ bên phải, cách điệu thành chữ 帰.<br>Số nét: 10",
-                "pdf_page": 65,
-                "book_number": 121,
-                "source_ref": "PDF Tr.65 · #121"
-        },
-        "来": {
-                "found_in_pdf": true,
-                "mnemonic": "Tháng mười đến rồi (十). Thu hoạch gạo thôi (米).",
-                "analysis": "Hình minh họa: Số 10 (十) đặt phía trên bó lúa gạo (米) báo hiệu mùa thu hoạch đến → Lai (来)<br>Số nét: 7 · Bộ/Chữ liên quan: ▶ 十(10) 米(67)",
-                "pdf_page": 45,
-                "book_number": 68,
-                "source_ref": "PDF Tr.45 · #68"
-        },
-        "去": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi đã từng sống trong quá khứ bây giờ tôi ở trong đất (土).",
-                "analysis": "Hình minh họa: Người đã khuất nằm dưới lòng đất (土) có mầm cây mọc trên → Khứ (去)<br>Số nét: 5 · Bộ/Chữ liên quan: ▶ 土(23)",
-                "pdf_page": 42,
-                "book_number": 61,
-                "source_ref": "PDF Tr.42 · #61"
-        },
-        "入": {
-                "found_in_pdf": true,
-                "mnemonic": "Người đó đang vào trong lều.",
-                "analysis": "Hình minh họa: Một người đang chui vào cửa chiếc lều hình tam giác, đường nét cửa lều tạo thành chữ 入.<br>Số nét: 2 · Bộ/Chữ liên quan: !人(26)",
-                "pdf_page": 56,
-                "book_number": 97,
-                "source_ref": "PDF Tr.56 · #97"
-        },
-        "出": {
-                "found_in_pdf": true,
-                "mnemonic": "Cửa ra ở đây này.",
-                "analysis": "Hình minh họa: Hai mũi tên hướng lên chỉ về phía biển báo EXIT (lối ra), chồng lên nhau tạo thành chữ 出.<br>Số nét: 5",
-                "pdf_page": 56,
-                "book_number": 98,
-                "source_ref": "PDF Tr.56 · #98"
-        },
-        "乗": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi đang đứng (立) ở trên cây (木) Nỗ lực đoạt chiếc cành này cho tôi.",
-                "analysis": "Hình minh họa: Một người đang đứng trèo trên ngọn cây (木) chuyển thành các nét ngang dọc kết hợp với bộ Mộc tạo thành chữ 乗.<br>Số nét: 9 · Bộ/Chữ liên quan: ▶立(77) 木(21)",
-                "pdf_page": 90,
-                "book_number": 182,
-                "source_ref": "PDF Tr.90 · #182"
-        },
-        "降": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi xuống ở điểm dừng xe bus đó.",
-                "analysis": "Hình minh họa: Biển trạm xe buýt (阝) bên trái và đôi chân đang bước xuống bậc thang bên phải, tạo thành chữ 降.<br>Số nét: 10",
-                "pdf_page": 209,
-                "book_number": 495,
-                "source_ref": "PDF Tr.209 · #495"
-        },
-        "着": {
-                "found_in_pdf": true,
-                "mnemonic": "Thấy một con cừu (羊) mặc áo len.",
-                "analysis": "Hình minh họa: Hình một con cừu (羊) mặc áo có cổ chéo ở trên kết hợp với con mắt (目) nhìn ở dưới tạo thành chữ 着.<br>Số nét: 12 · Bộ/Chữ liên quan: ▶羊(189) 目(16)",
-                "pdf_page": 93,
-                "book_number": 192,
-                "source_ref": "PDF Tr.93 · #192"
-        },
-        "待": {
-                "found_in_pdf": true,
-                "mnemonic": "Anh đang chờ em trên con đường phía trước ngôi đền.",
-                "analysis": "Hình minh họa: Con đường (彳) phía trước ngôi chùa/đền (寺) nơi có người đứng chờ → Đãi (待)<br>Số nét: 9 · Bộ/Chữ liên quan: ▶ 彳(D) 寺(28) ! 持(126) 特(292)",
-                "pdf_page": 48,
-                "book_number": 78,
-                "source_ref": "PDF Tr.48 · #78"
-        },
-        "持": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi đi chùa (寺) với chuỗi tràng hạt mang theo.",
-                "analysis": "Hình minh họa: Bàn tay đeo chuỗi hạt (扌) bên trái và ngôi chùa trên mặt đất cùng bàn tay chắp lễ (寺) bên phải, ghép thành chữ 持.<br>Số nét: 9 · Bộ/Chữ liên quan: ▶扌(I) 寺(28) !待(78) 特(292)",
-                "pdf_page": 66,
-                "book_number": 126,
-                "source_ref": "PDF Tr.66 · #126"
-        },
-        "使": {
-                "found_in_pdf": true,
-                "mnemonic": "Ông ấy biết dùng người.",
-                "analysis": "Hình minh họa: Một người ở bên trái (亻) đang sai khiến một người khác bê thùng đồ ở bên phải, tạo thành chữ Sử/Sứ (使).<br>Số nét: 8 · Bộ/Chữ liên quan: 亻(B) ! 便(303)",
-                "pdf_page": 113,
-                "book_number": 245,
-                "source_ref": "PDF Tr.113 · #245"
-        },
-        "借": {
-                "found_in_pdf": true,
-                "mnemonic": "Ngày xưa (昔), tôi đã vay ai đó một cái gì đó thì phải.",
-                "analysis": "Hình minh họa: Một người (イ) cầm hộp đồ đứng cạnh con số 21 và mặt trời (chữ Tích 昔), ghép lại thành chữ 借.<br>Số nét: 10 · Bộ/Chữ liên quan: ▶ イ(B) 昔(276)",
-                "pdf_page": 125,
-                "book_number": 277,
-                "source_ref": "PDF Tr.125 · #277"
-        },
-        "貸": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi đại diện (代) anh ấy, cho vay tiền.",
-                "analysis": "Hình minh họa: Phía trên là hai người đại diện cho nhau (chữ Đại 代), phía dưới là vỏ sò/tiền (chữ Bối 貝), ghép lại thành chữ 貸.<br>Số nét: 12 · Bộ/Chữ liên quan: ▶ 代(278) 貝(116)",
-                "pdf_page": 126,
-                "book_number": 279,
-                "source_ref": "PDF Tr.126 · #279"
-        },
-        "洗": {
-                "found_in_pdf": true,
-                "mnemonic": "Thầy giáo (先生) đang đi rửa tay.",
-                "analysis": "Hình minh họa: Ba giọt nước (氵) ở bên trái và hình thầy giáo đang bước đi (先) ở bên phải, ghép thành chữ Tẩy (洗).<br>Số nét: 9 · Bộ/Chữ liên quan: 氵(J) 先(56)",
-                "pdf_page": 114,
-                "book_number": 247,
-                "source_ref": "PDF Tr.114 · #247"
-        },
-        "飯": {
-                "found_in_pdf": true,
-                "mnemonic": "Mọi người phản đối (反) thói quen ăn (食) quá nhiều cơm của tôi.",
-                "analysis": "Hình minh họa: Người ngồi ăn cơm dưới mái nhà (𠊊/食) ở bên trái và bàn tay giơ lên phản đối 'No!' (反) ở bên phải tạo thành chữ 飯.<br>Số nét: 12 · Bộ/Chữ liên quan: ▶食(70) 反(163) !飲(71)",
-                "pdf_page": 83,
-                "book_number": 164,
-                "source_ref": "PDF Tr.83 · #164"
-        },
-        "食": {
-                "found_in_pdf": true,
-                "mnemonic": "Điều thú vị (良) tôi làm ở nhà đó chính là ăn.",
-                "analysis": "Hình minh họa: Người ngồi cầm đũa ăn no nê (良) dưới mái nhà → Thực (食)<br>Số nét: 9 · Bộ/Chữ liên quan: ▶ 良(69)",
-                "pdf_page": 46,
-                "book_number": 70,
-                "source_ref": "PDF Tr.46 · #70"
-        },
-        "飲": {
-                "found_in_pdf": true,
-                "mnemonic": "Mở miệng to , lúc ăn (食) no, lúc uống đã.",
-                "analysis": "Hình minh họa: Một người ăn (食) dưới mái nhà và một người há miệng to uống nước → Ẩm (飲)<br>Số nét: 12 · Bộ/Chữ liên quan: ▶ 食(70) ! 飯(164)",
-                "pdf_page": 46,
-                "book_number": 71,
-                "source_ref": "PDF Tr.46 · #71"
-        },
-        "買": {
-                "found_in_pdf": true,
-                "mnemonic": "Ngày xưa vỏ ốc (貝) mua đồ\nHóa đơn sử dụng, bây giờ tiện hơn.",
-                "analysis": "Hình minh họa: Tờ tiền giấy ghi số 10 (罒) ở phía trên và vỏ sò ốc (貝) ở phía dưới, ghép thành chữ 買.<br>Số nét: 12 · Bộ/Chữ liên quan: ▶貝(116) !員(269)",
-                "pdf_page": 63,
-                "book_number": 117,
-                "source_ref": "PDF Tr.63 · #117"
-        },
-        "売": {
-                "found_in_pdf": true,
-                "mnemonic": "Người này đang bán thứ gì đó.",
-                "analysis": "Hình minh họa: Một người đang đứng sau bàn bày hàng hóa để rao bán, cách điệu thành chữ 売 (士 trên, 冖 và 儿 dưới).<br>Số nét: 7 · Bộ/Chữ liên quan: ▶士(270) 儿(C)",
-                "pdf_page": 64,
-                "book_number": 118,
-                "source_ref": "PDF Tr.64 · #118"
-        },
-        "物": {
-                "found_in_pdf": true,
-                "mnemonic": "Con bò (牛) và con cáo đều là những vật thể sống.",
-                "analysis": "Hình minh họa: Bên trái là đầu con bò (chữ Ngưu 牛), bên phải là hình con cáo nghiêng mình có các vệt lông đuôi (勿), ghép lại thành chữ 物.<br>Số nét: 8 · Bộ/Chữ liên quan: ▶ 牛(165)",
-                "pdf_page": 140,
-                "book_number": 316,
-                "source_ref": "PDF Tr.140 · #316"
-        },
-        "品": {
-                "found_in_pdf": true,
-                "mnemonic": "Đây là hình ảnh của 3 sản phẩm.",
-                "analysis": "Hình minh họa: Ba chiếc hộp hàng hóa xếp chồng lên nhau (một hộp ở trên, hai hộp ở dưới) tạo thành ba chữ Khẩu (口) của chữ 品.<br>Số nét: 9 · Bộ/Chữ liên quan: ▶ 口(15)",
-                "pdf_page": 140,
-                "book_number": 317,
-                "source_ref": "PDF Tr.140 · #317"
-        },
-        "料": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi đong lượng gạo (米) và các vật liệu khác bằng một cái cân.",
-                "analysis": "Hình minh họa: Bó lúa gạo (米) ở bên trái và cái cân đong có hai hạt rơi xuống (斗) ở bên phải tạo thành chữ 料.<br>Số nét: 10 · Bộ/Chữ liên quan: ▶米(67)",
-                "pdf_page": 82,
-                "book_number": 161,
-                "source_ref": "PDF Tr.82 · #161"
-        },
-        "銀": {
-                "found_in_pdf": true,
-                "mnemonic": "Bạc thì không tốt như vàng.",
-                "analysis": "Hình minh họa: Thỏi kim loại (金) lấp lánh bên trái và người đang nhìn mảnh bạc với vẻ không hài lòng (艮) bên phải, ghép thành chữ 銀.<br>Số nét: 14 · Bộ/Chữ liên quan: ▶金(22)",
-                "pdf_page": 60,
-                "book_number": 110,
-                "source_ref": "PDF Tr.60 · #110"
-        },
-        "店": {
-                "found_in_pdf": true,
-                "mnemonic": "Ở trước cửa hàng, cà chua được xếp trên một cái bục.",
-                "analysis": "Hình minh họa: Mái hiên cửa hàng (广) bao quanh những quả cà chua xếp trên cái bục (占), tạo thành chữ 店.<br>Số nét: 8 · Bộ/Chữ liên quan: ▶广(H) 口(15)",
-                "pdf_page": 60,
-                "book_number": 109,
-                "source_ref": "PDF Tr.60 · #109"
-        },
-        "市": {
-                "found_in_pdf": true,
-                "mnemonic": "Người ta thường đi chợ để mua sắm.",
-                "analysis": "Hình minh họa: Dòng người xếp hàng dưới cổng chợ có biển 'Market' và các gian hàng hai bên, tạo thành hình chữ 市.<br>Số nét: 5",
-                "pdf_page": 57,
-                "book_number": 99,
-                "source_ref": "PDF Tr.57 · #99"
-        },
-        "町": {
-                "found_in_pdf": true,
-                "mnemonic": "Có những con đường và cánh đồng (田) ở thị trấn này.",
-                "analysis": "Hình minh họa: Cánh đồng ruộng (田) nằm cạnh con đường giao nhau hình chữ 丁 với hai người đi bộ, ghép thành chữ 町.<br>Số nét: 7 · Bộ/Chữ liên quan: ▶田(49)",
-                "pdf_page": 57,
-                "book_number": 100,
-                "source_ref": "PDF Tr.57 · #100"
-        },
-        "村": {
-                "found_in_pdf": true,
-                "mnemonic": "Hướng theo cây, sẽ có ngay ngôi làng.",
-                "analysis": "Hình minh họa: Một cái cây (木) bên trái và bàn tay chỉ hướng (寸) bên phải, ghép lại thành chữ 村.<br>Số nét: 7 · Bộ/Chữ liên quan: ▶木(21) !付(331)",
-                "pdf_page": 57,
-                "book_number": 101,
-                "source_ref": "PDF Tr.57 · #101"
-        },
-        "区": {
-                "found_in_pdf": true,
-                "mnemonic": "Khu này được phân biên giới bằng 3 bức tường và 2 con đường.",
-                "analysis": "Hình minh họa: Khu phố được bao quanh bởi 3 bức tường ở ba phía (匚) và có 2 con đường giao nhau hình chữ X (メ) ở giữa, tạo thành chữ 区.<br>Số nét: 4 · Bộ/Chữ liên quan: ! 図(273)",
-                "pdf_page": 138,
-                "book_number": 312,
-                "source_ref": "PDF Tr.138 · #312"
-        },
-        "県": {
-                "found_in_pdf": true,
-                "mnemonic": "Cả nước đang mắt (目) dõi theo tỉnh nhỏ (小).",
-                "analysis": "Hình minh họa: Phía trên là con mắt (chữ Mục 目) đặt trong khung góc vuông, phía dưới là em bé thu mình nhỏ bé (chữ Tiểu 小), ghép lại thành chữ 県.<br>Số nét: 9 · Bộ/Chữ liên quan: ▶ 目(16) 小(82)",
-                "pdf_page": 138,
-                "book_number": 311,
-                "source_ref": "PDF Tr.138 · #311"
-        },
-        "府": {
-                "found_in_pdf": false
-        },
-        "住": {
-                "found_in_pdf": true,
-                "mnemonic": "Ông chủ (主) đang sống với một ai đó.",
-                "analysis": "Hình minh họa: Một người đứng bên trái (亻) cạnh ông chủ đội mũ (主) ở bên phải tạo thành chữ 住.<br>Số nét: 7 · Bộ/Chữ liên quan: ▶亻(B) 主(204) !注(287)",
-                "pdf_page": 98,
-                "book_number": 205,
-                "source_ref": "PDF Tr.98 · #205"
-        },
-        "所": {
-                "found_in_pdf": true,
-                "mnemonic": "Dùng rìu đánh dấu cửa (戸) nhà Để biết nơi ấy chính là của tôi.",
-                "analysis": "Hình minh họa: Bên trái là cánh cửa có dấu X (chữ Hộ 戸), bên phải là chiếc rìu (bộ Cân 斤), ghép lại thành chữ 所.<br>Số nét: 8 · Bộ/Chữ liên quan: ▶ 戸(306)",
-                "pdf_page": 137,
-                "book_number": 307,
-                "source_ref": "PDF Tr.137 · #307"
-        },
-        "番": {
-                "found_in_pdf": true,
-                "mnemonic": "Thu hoạch luân phiên lúa (米) trên đồng (田).",
-                "analysis": "Hình minh họa: Cây lúa (米) ở phía trên và cánh đồng ruộng (田) ở phía dưới, ghép lại thành chữ 番.<br>Số nét: 12 · Bộ/Chữ liên quan: ▶ 米(67) 田(49)",
-                "pdf_page": 187,
-                "book_number": 436,
-                "source_ref": "PDF Tr.187 · #436"
-        },
-        "号": {
-                "found_in_pdf": true,
-                "mnemonic": "Hãy nói số hiệu bằng giọng to, rõ ràng.",
-                "analysis": "Hình minh họa: Chiếc mũ tròn như cái miệng (口) ở trên và khuôn mặt người đang há miệng nói lớn ở dưới, tạo thành chữ 号.<br>Số nét: 5 · Bộ/Chữ liên quan: ▶ 口(15) ! 写(183)",
-                "pdf_page": 190,
-                "book_number": 444,
-                "source_ref": "PDF Tr.190 · #444"
-        },
-        "建": {
-                "found_in_pdf": true,
-                "mnemonic": "Trước khi xây dựng nhà này Quan trọng có bản vẽ (書) ngay để nhìn.",
-                "analysis": "Hình minh họa: Bên trái là tòa nhà cao tầng có nền kéo dài sang phải (bộ Dẫn 廴), bên phải là bàn tay cầm bút vẽ thiết kế (聿), ghép lại thành chữ 建.<br>Số nét: 9 · Bộ/Chữ liên quan: ▶ 書(120)",
-                "pdf_page": 139,
-                "book_number": 315,
-                "source_ref": "PDF Tr.139 · #315"
-        },
-        "働": {
-                "found_in_pdf": true,
-                "mnemonic": "Người ta sẽ cử động (動) khi lao động.",
-                "analysis": "Hình minh họa: Một người đứng bên trái (亻) và một người đang dùng sức đẩy chồng sách nặng (動) ở bên phải, ghép thành chữ Động (働).<br>Số nét: 13 · Bộ/Chữ liên quan: 亻(B) 動(242)",
-                "pdf_page": 122,
-                "book_number": 268,
-                "source_ref": "PDF Tr.122 · #268"
-        },
-        "休": {
-                "found_in_pdf": true,
-                "mnemonic": "Người đó đang nghỉ ở chỗ gốc cây (木).",
-                "analysis": "Hình minh họa: Một người (亻) đứng tựa lưng vào gốc cây (木) để nghỉ ngơi, ghép thành chữ 休.<br>Số nét: 6 · Bộ/Chữ liên quan: ▶イ(B) 木(21) !体(142)",
-                "pdf_page": 62,
-                "book_number": 113,
-                "source_ref": "PDF Tr.62 · #113"
-        },
-        "仕": {
-                "found_in_pdf": true,
-                "mnemonic": "Các võ sĩ (士) Samurai phụng sự cho lãnh chúa.",
-                "analysis": "Hình minh họa: Võ sĩ Samurai đứng bên trái (亻) bên cạnh vị lãnh chúa ngồi khoanh tay tạo hình chữ Sĩ (士) ở bên phải, ghép thành chữ Sĩ (仕).<br>Số nét: 5 · Bộ/Chữ liên quan: 亻(B) 士(270) ! 社(107)",
-                "pdf_page": 123,
-                "book_number": 271,
-                "source_ref": "PDF Tr.123 · #271"
-        },
-        "社": {
-                "found_in_pdf": true,
-                "mnemonic": "Người ta dâng lễ và cầu mong một vụ mùa bội thu ở đền thờ thần linh.",
-                "analysis": "Hình minh họa: Bàn thờ cúng (礻) bên trái và mầm cây mọc trên mặt đất (土) bên phải, ghép thành chữ 社.<br>Số nét: 7 · Bộ/Chữ liên quan: ▶ネ(M) 土(23) !仕(271)",
-                "pdf_page": 59,
-                "book_number": 107,
-                "source_ref": "PDF Tr.59 · #107"
-        },
-        "員": {
-                "found_in_pdf": true,
-                "mnemonic": "Khi trả tiền, bạn nhân được một thẻ hội viên.",
-                "analysis": "Hình minh họa: Tấm thẻ hội viên hình chữ nhật (口) đặt phía trên con sò/tiền (貝), ghép thành chữ Viên (員).<br>Số nét: 10 · Bộ/Chữ liên quan: 口(15) 貝(116) ! 買(117) 負(450)",
-                "pdf_page": 122,
-                "book_number": 269,
-                "source_ref": "PDF Tr.122 · #269"
-        },
-        "医": {
-                "found_in_pdf": true,
-                "mnemonic": "Bệnh nhân bị mũi tên (矢) đâm. Nên bác sĩ phải trị cầm máu ngay.",
-                "analysis": "Hình minh họa: Bệnh nhân nằm trên giường bệnh (匚) với mũi tên (矢) cắm ở chân, chuyển thành chữ Y (医).<br>Số nét: 7 · Bộ/Chữ liên quan: 矢(194)",
-                "pdf_page": 118,
-                "book_number": 257,
-                "source_ref": "PDF Tr.118 · #257"
-        },
-        "病": {
-                "found_in_pdf": true,
-                "mnemonic": "Người ốm đang ngủ trong bệnh viện.",
-                "analysis": "Hình minh họa: Tòa nhà bệnh viện có dấu chữ thập (疒) và bệnh nhân đang nằm trên giường dưới mái màn (丙), ghép thành chữ 病.<br>Số nét: 10 · Bộ/Chữ liên quan: ▶疒(O) !痛(343)",
-                "pdf_page": 61,
-                "book_number": 111,
-                "source_ref": "PDF Tr.61 · #111"
-        },
-        "院": {
-                "found_in_pdf": true,
-                "mnemonic": "Họ đã khỏe mạnh (病) ra viện và trở về nhà.",
-                "analysis": "Hình minh họa: Trạm xe buýt (阝) bên trái và người vui vẻ bước ra từ tòa nhà bệnh viện (完) bên phải, ghép thành chữ 院.<br>Số nét: 10 · Bộ/Chữ liên quan: ▶宀(G) 元(87)",
-                "pdf_page": 61,
-                "book_number": 112,
-                "source_ref": "PDF Tr.61 · #112"
-        },
-        "薬": {
-                "found_in_pdf": true,
-                "mnemonic": "Khi uống thảo dược này vào Vui vẻ (楽) khỏe mạnh, bệnh nào cũng tan.",
-                "analysis": "Hình minh họa: Cỏ thảo dược (艹) mọc phía trên chiếc trống và người đánh trống vui vẻ (楽), ghép lại thành chữ Dược (薬).<br>Số nét: 16 · Bộ/Chữ liên quan: 艹(K) 楽(178)",
-                "pdf_page": 121,
-                "book_number": 267,
-                "source_ref": "PDF Tr.121 · #267"
-        },
-        "痛": {
-                "found_in_pdf": true,
-                "mnemonic": "Trong khi vượt hàng rào bệnh viện tôi cảm thấy rất đau đớn.",
-                "analysis": "Hình minh họa: Dưới mái nhà bệnh viện có dấu chữ thập (bộ Nạch 疒) là một người đang đau đớn trèo qua hàng rào (甬), tạo thành chữ 痛.<br>Số nét: 12 · Bộ/Chữ liên quan: ▶ 疒(O) ! 病(111)",
-                "pdf_page": 152,
-                "book_number": 343,
-                "source_ref": "PDF Tr.152 · #343"
-        },
-        "死": {
-                "found_in_pdf": true,
-                "mnemonic": "\"Ở đây có tiểu thuyết \"Chết ở Taihichi (タヒチ)\" không?\". \"Không có\"",
-                "analysis": "Hình minh họa: Các chữ katakana タ, ヒ, チ (Tahiti) ghép lại dưới nét ngang đầu tiên tạo thành hình chữ Tử (死).<br>Số nét: 6",
-                "pdf_page": 117,
-                "book_number": 256,
-                "source_ref": "PDF Tr.117 · #256"
-        },
-        "生": {
-                "found_in_pdf": true,
-                "mnemonic": "Thực vật được sinh ra từ trong đất (土).",
-                "analysis": "Hình minh họa: Mầm cây đâm chồi mọc lên từ mặt đất (土) → Sinh (生)<br>Số nét: 5 · Bộ/Chữ liên quan: ▶ 土(23)",
-                "pdf_page": 40,
-                "book_number": 55,
-                "source_ref": "PDF Tr.40 · #55"
-        },
-        "命": {
-                "found_in_pdf": false
-        },
-        "頭": {
-                "found_in_pdf": true,
-                "mnemonic": "Đầu trông có vẻ giống đậu (豆) nhỉ.",
-                "analysis": "Hình minh họa: Bên trái là bát đựng hạt đậu (chữ Đậu 豆), bên phải là cái đầu người đội mũ (bộ Hiệt 頁), ghép lại thành chữ 頭.<br>Số nét: 16 · Bộ/Chữ liên quan: ▶ 豆(237) 自(180) ! 顔(290)",
-                "pdf_page": 130,
-                "book_number": 289,
-                "source_ref": "PDF Tr.130 · #289"
-        },
-        "顔": {
-                "found_in_pdf": true,
-                "mnemonic": "Khi lấy cái mũ ra, bạn có thể nhìn thấy sẹo trên mặt tôi.",
-                "analysis": "Hình minh họa: Bên trái là người có những vết sẹo (立 + 彡 = 彦), bên phải là khuôn mặt/đầu người đội mũ (頁), ghép lại thành chữ 顔.<br>Số nét: 18 · Bộ/Chữ liên quan: ▶ 自(180) ! 頭(289)",
-                "pdf_page": 130,
-                "book_number": 290,
-                "source_ref": "PDF Tr.130 · #290"
-        },
-        "首": {
-                "found_in_pdf": true,
-                "mnemonic": "Đây là hình ảnh người có cái cổ dài.",
-                "analysis": "Hình minh họa: Hình vẽ đầu người có hai chỏm tóc phía trên (丷 + 一) và cái cổ dài có ngấn bên dưới (自), tạo thành chữ 首.<br>Số nét: 9 · Bộ/Chữ liên quan: !自(180)",
-                "pdf_page": 73,
-                "book_number": 143,
-                "source_ref": "PDF Tr.73 · #143"
-        },
-        "目": {
-                "found_in_pdf": true,
-                "mnemonic": "Đây là hình dạng của mắt.",
-                "analysis": "Hình minh họa: Hình con mắt có lông mi → hình mắt dựng đứng thành chữ 目<br>Số nét: 5 · Bộ/Chữ liên quan: ! 自(180)",
-                "pdf_page": 23,
-                "book_number": 16,
-                "source_ref": "PDF Tr.23 · #16"
-        },
-        "耳": {
-                "found_in_pdf": true,
-                "mnemonic": "Đây là hình ảnh một cái tai.",
-                "analysis": "Hình minh họa: Hình vẽ vành tai người cách điệu thành các nét thẳng → Nhĩ (耳)<br>Số nét: 6",
-                "pdf_page": 47,
-                "book_number": 73,
-                "source_ref": "PDF Tr.47 · #73"
-        },
-        "口": {
-                "found_in_pdf": true,
-                "mnemonic": "Đây là hình dạng của miệng.",
-                "analysis": "Hình minh họa: Hình đôi môi/cái miệng → khung vuông 口<br>Số nét: 3",
-                "pdf_page": 23,
-                "book_number": 15,
-                "source_ref": "PDF Tr.23 · #15"
-        },
-        "手": {
-                "found_in_pdf": true,
-                "mnemonic": "Đây là hình bàn tay.",
-                "analysis": "Hình minh họa: Hình bàn tay xòe năm ngón, các đường ngang của ngón tay và trục bàn tay tạo thành chữ 手.<br>Số nét: 4",
-                "pdf_page": 72,
-                "book_number": 140,
-                "source_ref": "PDF Tr.72 · #140"
-        },
-        "足": {
-                "found_in_pdf": true,
-                "mnemonic": "Duỗi chân ra và chạy nào!!!",
-                "analysis": "Hình minh họa: Một người đang sải rộng đôi chân chạy về phía trước, phần đầu/thân trên (口) và đôi chân (止/𤴓) tạo thành chữ 足.<br>Số nét: 7 · Bộ/Chữ liên quan: ▶口(15) !走(114)",
-                "pdf_page": 72,
-                "book_number": 141,
-                "source_ref": "PDF Tr.72 · #141"
-        },
-        "背": {
-                "found_in_pdf": false
-        },
-        "肉": {
-                "found_in_pdf": true,
-                "mnemonic": "Đây là hình ảnh một miếng thịt.",
-                "analysis": "Hình minh họa: Một tảng thịt có xương và các đường gân trắng ở giữa chuyển thành khung ngoài và hai chữ nhân (人) bên trong của chữ 肉.<br>Số nét: 6 · Bộ/Chữ liên quan: ▶内(490)",
-                "pdf_page": 84,
-                "book_number": 168,
-                "source_ref": "PDF Tr.84 · #168"
-        },
-        "色": {
-                "found_in_pdf": true,
-                "mnemonic": "Đây là hình ảnh vòng xoáy với 2 màu.",
-                "analysis": "Hình minh họa: Vòng tròn âm dương xoáy hai màu sáng tối chuyển thành các nét uốn lượn của chữ 色.<br>Số nét: 6",
-                "pdf_page": 78,
-                "book_number": 158,
-                "source_ref": "PDF Tr.78 · #158"
-        },
-        "白": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi có một tòa nhà màu trắng.",
-                "analysis": "Hình minh họa: Tòa nhà hình hộp chữ nhật có mái nghiêng ở góc trên phác họa thành nét phẩy trên chữ 日 tạo thành chữ 白.<br>Số nét: 5 · Bộ/Chữ liên quan: ▶日(17) !百(11) 自(180)",
-                "pdf_page": 78,
-                "book_number": 156,
-                "source_ref": "PDF Tr.78 · #156"
-        },
-        "黒": {
-                "found_in_pdf": true,
-                "mnemonic": "Đốt đồng (田) thì đất (土) chả đen.",
-                "analysis": "Hình minh họa: Cánh đồng (田) và đất (土) ở phía trên bị bốn ngọn lửa (灬) thiêu đốt ở phía dưới tạo thành chữ 黒.<br>Số nét: 11 · Bộ/Chữ liên quan: ▶田(49) 土(23) 灬(N) !魚(159)",
-                "pdf_page": 78,
-                "book_number": 157,
-                "source_ref": "PDF Tr.78 · #157"
-        },
-        "赤": {
-                "found_in_pdf": true,
-                "mnemonic": "Đặt đất (土) trên lửa làm gì? Để nung gạch đỏ chứ chi hỡi nàng.",
-                "analysis": "Hình minh họa: Mầm cây trên mặt đất (土) đặt phía trên ngọn lửa đang cháy ở dưới tạo thành chữ 赤.<br>Số nét: 7 · Bộ/Chữ liên quan: ▶土(23)",
-                "pdf_page": 77,
-                "book_number": 154,
-                "source_ref": "PDF Tr.77 · #154"
-        },
-        "青": {
-                "found_in_pdf": true,
-                "mnemonic": "Trên trời có ánh trăng thanh Dưới đất cùng ngọn cỏ xanh đây rồi.",
-                "analysis": "Hình minh họa: Ngọn cỏ nhiều lá mọc trên mặt đất ở phần trên kết hợp với vầng trăng khuyết (月) ở phần dưới tạo thành chữ 青.<br>Số nét: 8 · Bộ/Chữ liên quan: ▶月(18) !春(129)",
-                "pdf_page": 77,
-                "book_number": 155,
-                "source_ref": "PDF Tr.77 · #155"
-        },
-        "茶": {
-                "found_in_pdf": true,
-                "mnemonic": "Hai người đang uống trà.",
-                "analysis": "Hình minh họa: Cỏ cây ở trên (艹), mái nhà ở giữa và hai người ngồi đối diện bên chiếc bàn ở dưới tạo thành chữ 茶.<br>Số nét: 9 · Bộ/Chữ liên quan: ▶艹(K)",
-                "pdf_page": 85,
-                "book_number": 169,
-                "source_ref": "PDF Tr.85 · #169"
-        },
-        "牛": {
-                "found_in_pdf": true,
-                "mnemonic": "Đây là hình ảnh con bò chỉ có 1 sừng.",
-                "analysis": "Hình minh họa: Đầu một con bò nhìn thẳng có một chiếc sừng cong ở bên trái tạo thành nét phẩy đầu và các nét ngang dọc của chữ 牛.<br>Số nét: 4 · Bộ/Chữ liên quan: !午(42)",
-                "pdf_page": 83,
-                "book_number": 165,
-                "source_ref": "PDF Tr.83 · #165"
-        },
-        "魚": {
-                "found_in_pdf": true,
-                "mnemonic": "Đây là hình ảnh một con cá.",
-                "analysis": "Hình minh họa: Hình vẽ một con cá dựng đứng với đầu cá ở trên, thân cá có vây (田) ở giữa và đuôi cá xoè ra thành bốn nét chấm (灬) ở dưới.<br>Số nét: 11 · Bộ/Chữ liên quan: ▶田(49) 灬(N) !黒(157)",
-                "pdf_page": 79,
-                "book_number": 159,
-                "source_ref": "PDF Tr.79 · #159"
-        },
-        "鳥": {
-                "found_in_pdf": true,
-                "mnemonic": "Đây là hình ảnh một con chim.",
-                "analysis": "Hình minh họa: Hình vẽ một con chim nhìn nghiêng với mào trên đầu, thân, cánh và bốn nét ở dưới tượng trưng cho chân/đuôi tạo thành chữ 鳥.<br>Số nét: 11 · Bộ/Chữ liên quan: !島(476)",
-                "pdf_page": 84,
-                "book_number": 167,
-                "source_ref": "PDF Tr.84 · #167"
-        },
-        "犬": {
-                "found_in_pdf": true,
-                "mnemonic": "Đây là hình ảnh một con chó.",
-                "analysis": "Hình minh họa: Hình một chú chó giơ hai chân trước lên với cái tai phía trên đầu chuyển thành dấu chấm của chữ 犬.<br>Số nét: 4 · Bộ/Chữ liên quan: ▶大(81) !太(236)",
-                "pdf_page": 79,
-                "book_number": 160,
-                "source_ref": "PDF Tr.79 · #160"
-        },
-        "猫": {
-                "found_in_pdf": false
-        },
-        "馬": {
-                "found_in_pdf": true,
-                "mnemonic": "Đây là hình ảnh một con ngựa.",
-                "analysis": "Hình minh họa: Hình vẽ con ngựa nhìn nghiêng với bờm, thân, bốn chân và đuôi, cách điệu thành chữ 馬.<br>Số nét: 10",
-                "pdf_page": 59,
-                "book_number": 105,
-                "source_ref": "PDF Tr.59 · #105"
-        },
-        "花": {
-                "found_in_pdf": true,
-                "mnemonic": "Ngọn cỏ thay đổi trở thành hoa.",
-                "analysis": "Hình minh họa: Hai mầm cỏ mọc trên mặt đất ở phía trên (艹) và hình người đứng người ngồi biến đổi ở dưới (化) tạo thành chữ 花.<br>Số nét: 7 · Bộ/Chữ liên quan: ▶艹(K) 化(151)",
-                "pdf_page": 76,
-                "book_number": 152,
-                "source_ref": "PDF Tr.76 · #152"
-        },
-        "草": {
-                "found_in_pdf": false
-        },
-        "木": {
-                "found_in_pdf": true,
-                "mnemonic": "Đây là hình cái cây.",
-                "analysis": "Hình minh họa: Cái cây có tán và rễ → nét ngang, nét sổ và hai nét xiên thành chữ 木<br>Số nét: 4 · Bộ/Chữ liên quan: ! 本(25), 不(302)",
-                "pdf_page": 25,
-                "book_number": 21,
-                "source_ref": "PDF Tr.25 · #21"
-        },
-        "林": {
-                "found_in_pdf": true,
-                "mnemonic": "Hai cây (木) thành ngọn rừng thưa.",
-                "analysis": "Hình minh họa: Hai cái cây đứng cạnh nhau chuyển thành hai bộ Mộc (木) ghép lại tạo thành chữ 林.<br>Số nét: 8 · Bộ/Chữ liên quan: ▶木(21)",
-                "pdf_page": 75,
-                "book_number": 147,
-                "source_ref": "PDF Tr.75 · #147"
-        },
-        "森": {
-                "found_in_pdf": true,
-                "mnemonic": "Ba cây (木) thành cánh rừng xưa mất rồi. (Rừng từ xưa thì cây cối rất rậm rạp)",
-                "analysis": "Hình minh họa: Ba cái cây xếp theo hình tam giác (một trên, hai dưới) chuyển thành ba chữ Mộc (木) tạo thành chữ 森.<br>Số nét: 12 · Bộ/Chữ liên quan: ▶木(21)",
-                "pdf_page": 75,
-                "book_number": 148,
-                "source_ref": "PDF Tr.75 · #148"
-        },
-        "山": {
-                "found_in_pdf": true,
-                "mnemonic": "Đây là hình ảnh một ngọn núi.",
-                "analysis": "Hình minh họa: Hình dãy núi có ba đỉnh (đỉnh giữa cao nhất, hai đỉnh hai bên thấp hơn), cách điệu thành chữ 山.<br>Số nét: 3",
-                "pdf_page": 74,
-                "book_number": 145,
-                "source_ref": "PDF Tr.74 · #145"
-        },
-        "川": {
-                "found_in_pdf": true,
-                "mnemonic": "Một dòng sông đang chảy.",
-                "analysis": "Hình minh họa: Hình dòng sông uốn lượn với ba đường nước chảy song song, cách điệu thành chữ 川.<br>Số nét: 3",
-                "pdf_page": 74,
-                "book_number": 146,
-                "source_ref": "PDF Tr.74 · #146"
-        },
-        "海": {
-                "found_in_pdf": true,
-                "mnemonic": "Ngày nào tôi cũng đi bơi ngoài biển.",
-                "analysis": "Hình minh họa: Những giọt nước văng bên trái (bộ chấm thủy 氵) cùng hình người mẹ bế con bên phải (毎) tạo thành chữ 海.<br>Số nét: 9 · Bộ/Chữ liên quan: ▶氵(J) 毎(62)",
-                "pdf_page": 76,
-                "book_number": 150,
-                "source_ref": "PDF Tr.76 · #150"
-        },
-        "空": {
-                "found_in_pdf": true,
-                "mnemonic": "Mở cửa sổ ra, dùng thước chuẩn của thợ thủ công (工) để đo bầu trời.",
-                "analysis": "Hình minh họa: Khung cửa sổ có mái che ở trên kết hợp với bàn tay cầm thước kẻ đứng ở dưới tạo thành chữ 空.<br>Số nét: 8 · Bộ/Chữ liên quan: ▶宀(G) 工(38) !究(262)",
-                "pdf_page": 75,
-                "book_number": 149,
-                "source_ref": "PDF Tr.75 · #149"
-        },
-        "雨": {
-                "found_in_pdf": true,
-                "mnemonic": "Từ mây và những giọt mưa có thể tạo ra chữ Hán này.",
-                "analysis": "Hình minh họa: Đám mây phía trên và bốn giọt mưa rơi xuống bên dưới, chuyển thành chữ 雨.<br>Số nét: 8",
-                "pdf_page": 58,
-                "book_number": 102,
-                "source_ref": "PDF Tr.58 · #102"
-        },
-        "雪": {
-                "found_in_pdf": true,
-                "mnemonic": "\"Mưa (雨) hay sao ấy nhỉ?\" \"Không phải, chạm vào thử xem, là tuyết đấy\".",
-                "analysis": "Hình minh họa: Đám mây mưa (雨) ở phía trên và bàn tay (ヨ) đưa ra hứng ở phía dưới, tạo thành chữ 雪.<br>Số nét: 11 · Bộ/Chữ liên quan: ▶ 雨(102)",
-                "pdf_page": 208,
-                "book_number": 494,
-                "source_ref": "PDF Tr.208 · #494"
-        },
-        "風": {
-                "found_in_pdf": true,
-                "mnemonic": "Côn trùng (虫) tránh gió Bằng cái lá nhỏ.",
-                "analysis": "Hình minh họa: Con côn trùng (虫) cầm chiếc lá che phía trên trong làn gió thổi bao quanh (几), tạo thành chữ Phong (風).<br>Số nét: 9 · Bộ/Chữ liên quan: 虫(124)",
-                "pdf_page": 111,
-                "book_number": 240,
-                "source_ref": "PDF Tr.111 · #240"
-        },
-        "春": {
-                "found_in_pdf": true,
-                "mnemonic": "Mùa xuân cũng đã đến rồi.\nBa người cùng ngắm ánh mặt trời với nhau.",
-                "analysis": "Hình minh họa: Số ba (三) và người dang chân (人) tạo thành phần trên (𡗗), bên dưới là mặt trời (日), ghép thành chữ 春.<br>Số nét: 9 · Bộ/Chữ liên quan: ▶三(3) 人(26) 日(17) !青(155)",
-                "pdf_page": 68,
-                "book_number": 129,
-                "source_ref": "PDF Tr.68 · #129"
-        },
-        "夏": {
-                "found_in_pdf": true,
-                "mnemonic": "Mùa hè nóng quá nên một người đã gục xuống bóng râm.",
-                "analysis": "Hình minh họa: Một người đổ mồ hôi ngồi gục dưới bóng râm mái che, cách điệu thành chữ 夏 (一, 自, 夂).<br>Số nét: 10 · Bộ/Chữ liên quan: ▶自(180)",
-                "pdf_page": 68,
-                "book_number": 130,
-                "source_ref": "PDF Tr.68 · #130"
-        },
-        "秋": {
-                "found_in_pdf": true,
-                "mnemonic": "Khi thu đến, cũng là lúc lúa chín.\nSắc lá úa hóa sắc lửa (火).",
-                "analysis": "Hình minh họa: Bông lúa trĩu hạt (禾) bên trái và ngọn lửa (火) bên phải, ghép thành chữ 秋.<br>Số nét: 9 · Bộ/Chữ liên quan: ▶禾(P) 火(19)",
-                "pdf_page": 69,
-                "book_number": 131,
-                "source_ref": "PDF Tr.69 · #131"
-        },
-        "冬": {
-                "found_in_pdf": true,
-                "mnemonic": "Vào mùa đông, nếu bạn đi bộ trên băng sẽ rất trơn.",
-                "analysis": "Hình minh họa: Đôi chân đang bước đi (夂) bị trượt trên mặt băng lấp lánh (冫), tạo thành chữ 冬.<br>Số nét: 5",
-                "pdf_page": 69,
-                "book_number": 132,
-                "source_ref": "PDF Tr.69 · #132"
-        },
-        "暑": {
-                "found_in_pdf": true,
-                "mnemonic": "Dưới ánh mặt trời (日) thì người (者) cũng nóng.",
-                "analysis": "Hình minh họa: Mặt trời (日) chiếu nắng phía trên một người già (者) đang đổ mồ hôi vì nóng, tạo thành chữ Thử (暑).<br>Số nét: 12 · Bộ/Chữ liên quan: 日(17) 者(227)",
-                "pdf_page": 107,
-                "book_number": 228,
-                "source_ref": "PDF Tr.107 · #228"
-        },
-        "寒": {
-                "found_in_pdf": true,
-                "mnemonic": "Ngày lạnh đến nhà bạn chơi. Vết chân để lại khắp trời tuyết hoa.",
-                "analysis": "Hình minh họa: Một người co ro vì lạnh đứng dưới mái nhà (宀) phủ đầy tuyết, bên dưới có hai dấu chân trên tuyết, tạo thành chữ Hàn (寒).<br>Số nét: 12 · Bộ/Chữ liên quan: 宀(G)",
-                "pdf_page": 107,
-                "book_number": 229,
-                "source_ref": "PDF Tr.107 · #229"
-        },
-        "暖": {
-                "found_in_pdf": true,
-                "mnemonic": "Bạn bè (友) tay để trong tay Chỉ cần có thế ấm ngay ấy mà.",
-                "analysis": "Hình minh họa: Mặt trời (日) tỏa nắng bên trái và những bàn tay đan vào nhau ở bên phải, tạo thành chữ 暖.<br>Số nét: 13 · Bộ/Chữ liên quan: ▶ 日(17) 友(96)",
-                "pdf_page": 175,
-                "book_number": 404,
-                "source_ref": "PDF Tr.175 · #404"
-        },
-        "涼": {
-                "found_in_pdf": true,
-                "mnemonic": "Mưa rơi rơi xuống kinh đô (京) Trở nên mát mẻ, héo khô chẳng còn.",
-                "analysis": "Hình minh họa: Những giọt nước mưa (氵) bên trái và cổng thành kinh đô (京) trên đồi bên phải, tạo thành chữ 涼.<br>Số nét: 11 · Bộ/Chữ liên quan: ▶ 氵(J) 京(300)",
-                "pdf_page": 175,
-                "book_number": 405,
-                "source_ref": "PDF Tr.175 · #405"
-        },
-        "星": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi nghĩ là sao được sinh (生) ra từ mặt trời (日)?",
-                "analysis": "Hình minh họa: Mặt trời (日) chiếu sáng ở trên và mầm cây sinh trưởng (生) ở dưới, ghép lại thành chữ 星.<br>Số nét: 9 · Bộ/Chữ liên quan: ▶ 日(17) 生(55)",
-                "pdf_page": 208,
-                "book_number": 493,
-                "source_ref": "PDF Tr.208 · #493"
-        },
-        "月": {
-                "found_in_pdf": true,
-                "mnemonic": "Đây là hình trăng lưỡi liềm.",
-                "analysis": "Hình minh họa: Trăng lưỡi liềm với mây → hình trăng có hai nét ngang thành chữ 月<br>Số nét: 4 · Bộ/Chữ liên quan: ▶ 夕(135); ! 用(285)",
-                "pdf_page": 24,
-                "book_number": 18,
-                "source_ref": "PDF Tr.24 · #18"
-        },
-        "日": {
-                "found_in_pdf": true,
-                "mnemonic": "Đây là hình mặt trời.",
-                "analysis": "Hình minh họa: Mặt trời tỏa tia sáng → hình tròn có nét ngang ở giữa thành chữ 日<br>Số nét: 4",
-                "pdf_page": 24,
-                "book_number": 17,
-                "source_ref": "PDF Tr.24 · #17"
-        },
-        "年": {
-                "found_in_pdf": true,
-                "mnemonic": "Thu hoạch lúa mất cả một năm.",
-                "analysis": "Hình minh họa: Người nông dân cầm liềm gặt cây lúa trĩu bông → Niên (年)<br>Số nét: 6",
-                "pdf_page": 42,
-                "book_number": 60,
-                "source_ref": "PDF Tr.42 · #60"
-        },
-        "週": {
-                "found_in_pdf": true,
-                "mnemonic": "Mất 1 tuần để đi vòng quanh (周) con đường này.",
-                "analysis": "Hình minh họa: Con đường (辶) bao quanh chu kỳ tuần hoàn (周) → Chu (週)<br>Số nét: 11 · Bộ/Chữ liên quan: ▶ 周(79) 辶(F)",
-                "pdf_page": 49,
-                "book_number": 80,
-                "source_ref": "PDF Tr.49 · #80"
-        },
-        "曜": {
-                "found_in_pdf": true,
-                "mnemonic": "Vào ngày đầu tuần, con chim kêu piyo - piyo (ピヨピヨ).",
-                "analysis": "Hình minh họa: Mặt trời bên trái và con chim kêu ピヨピヨ bên phải → 日 bên trái và phần 翟 (ヨヨ trên, thân chim dưới) thành chữ 曜<br>Số nét: 18 · Bộ/Chữ liên quan: ▶ 日(17); ! 濯(378)",
-                "pdf_page": 26,
-                "book_number": 24,
-                "source_ref": "PDF Tr.26 · #24"
-        },
-        "朝": {
-                "found_in_pdf": true,
-                "mnemonic": "Đó là một buổi sáng ngày 10 tháng 10 (十月十日).",
-                "analysis": "Hình minh họa: Bên trái gồm chữ thập (十), mặt trời (日) và chữ thập (十); bên phải là mặt trăng (月), ghép thành chữ 朝.<br>Số nét: 12 · Bộ/Chữ liên quan: ▶十(10) 日(17) 早(92) 月(18)",
-                "pdf_page": 69,
-                "book_number": 133,
-                "source_ref": "PDF Tr.69 · #133"
-        },
-        "昼": {
-                "found_in_pdf": true,
-                "mnemonic": "Buổi trưa lúc mặt trời lên cao, tôi sẽ kéo tấm rèm lên.",
-                "analysis": "Hình minh họa: Tấm rèm che nắng (尺) phía trên mặt trời (日) và mặt đất (一) phía dưới, ghép thành chữ 昼.<br>Số nét: 9 · Bộ/Chữ liên quan: ▶日(17)",
-                "pdf_page": 70,
-                "book_number": 134,
-                "source_ref": "PDF Tr.70 · #134"
-        },
-        "夜": {
-                "found_in_pdf": true,
-                "mnemonic": "Có người đội mũ đêm nay\nNhìn trăng rồi lại ngắm mây trên trời.",
-                "analysis": "Hình minh họa: Chiếc mũ rộng vành (亠) ở trên, người đứng (亻) bên trái và vầng trăng khuyết kèm đám mây (夕 + 丶) bên phải, tạo thành chữ 夜.<br>Số nét: 8 · Bộ/Chữ liên quan: ▶イ(B)",
-                "pdf_page": 71,
-                "book_number": 138,
-                "source_ref": "PDF Tr.71 · #138"
-        },
-        "晩": {
-                "found_in_pdf": true,
-                "mnemonic": "Trời đã tối rồi, phải nhanh chóng trở về nhà thôi.",
-                "analysis": "Hình minh họa: Mặt trời đang lặn (日) bên trái và người đội mũ đang vội vã chạy về (免) bên phải, ghép thành chữ 晩.<br>Số nét: 12 · Bộ/Chữ liên quan: ▶日(17) 儿(C) !勉(122)",
-                "pdf_page": 71,
-                "book_number": 137,
-                "source_ref": "PDF Tr.71 · #137"
-        },
-        "今": {
-                "found_in_pdf": true,
-                "mnemonic": "\"Bây giờ, cậu đang làm gì đấy?\" \"Tớ đang hát lalala (ラララ) ở nhà.\"",
-                "analysis": "Hình minh họa: Mái nhà hình chữ 人 với người bên trong đang hát ラララ → mái 𠆢 trên, nét ラ bên dưới thành chữ 今<br>Số nét: 4",
-                "pdf_page": 27,
-                "book_number": 27,
-                "source_ref": "PDF Tr.27 · #27"
-        },
-        "毎": {
-                "found_in_pdf": true,
-                "mnemonic": "Mỗi người đều có một bà mẹ.",
-                "analysis": "Hình minh họa: Một người ở phía trên chỉ vào người mẹ (母) ngồi bên dưới → Mỗi (毎)<br>Số nét: 6 · Bộ/Chữ liên quan: ▶ 母(59)",
-                "pdf_page": 42,
-                "book_number": 62,
-                "source_ref": "PDF Tr.42 · #62"
-        },
-        "前": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi chuẩn bị bữa tối trước khi trăng (月) xuất hiện.",
-                "analysis": "Hình minh họa: Mặt trăng (月) và con dao chuẩn bị bữa tối trước khi trăng lên → Tiền (前)<br>Số nét: 9 · Bộ/Chữ liên quan: ▶ 月(18) 刂(A)",
-                "pdf_page": 32,
-                "book_number": 40,
-                "source_ref": "PDF Tr.32 · #40"
-        },
-        "後": {
-                "found_in_pdf": true,
-                "mnemonic": "Ta đang đi bộ ngược về phía sau con đường.",
-                "analysis": "Hình minh họa: Người đi bộ quay mặt ngược về phía sau trên con đường (彳) → Hậu (後)<br>Số nét: 9 · Bộ/Chữ liên quan: ▶ 彳(D)",
-                "pdf_page": 35,
-                "book_number": 41,
-                "source_ref": "PDF Tr.35 · #41"
-        },
-        "次": {
-                "found_in_pdf": true,
-                "mnemonic": "Mở miệng lớn ra, hét: \"Tiếp theo\".",
-                "analysis": "Hình minh họa: Một người đang há to miệng gọi 'Next!' với hai vạch âm thanh phía trước (冫), tạo thành chữ 次.<br>Số nét: 6",
-                "pdf_page": 190,
-                "book_number": 446,
-                "source_ref": "PDF Tr.190 · #446"
-        },
-        "最": {
-                "found_in_pdf": true,
-                "mnemonic": "Lấy (取) được mặt trời (日) bằng tay là việc cực kì khó khăn.",
-                "analysis": "Hình minh họa: Mặt trời (日) ở phía trên và bàn tay đang với lấy (取) ở phía dưới, tạo thành chữ 最.<br>Số nét: 12 · Bộ/Chữ liên quan: ▶ 日(17) 取(433)",
-                "pdf_page": 186,
-                "book_number": 434,
-                "source_ref": "PDF Tr.186 · #434"
-        },
-        "初": {
-                "found_in_pdf": true,
-                "mnemonic": "Khi làm Kimono, đầu tiên phải cắt vải bằng dao (刀).",
-                "analysis": "Hình minh họa: Bộ trang phục Kimono (衤) bên trái và con dao (刀) đang cắt tấm vải bên phải, tạo thành chữ 初.<br>Số nét: 7 · Bộ/Chữ liên quan: ▶ 刀(31)",
-                "pdf_page": 187,
-                "book_number": 435,
-                "source_ref": "PDF Tr.187 · #435"
-        },
-        "終": {
-                "found_in_pdf": true,
-                "mnemonic": "Mối quan hệ của chúng tôi tiếp tục kéo dài như sợi chỉ (糸) vậy, nhưng nó đã kết thúc vào mùa đông (冬).",
-                "analysis": "Hình minh họa: Cuộn chỉ (糸) ở bên trái và hình người bước đi trong mùa đông (冬) ở bên phải, ghép thành chữ Chung (終).<br>Số nét: 11 · Bộ/Chữ liên quan: 糸(206) 冬(132)",
-                "pdf_page": 119,
-                "book_number": 259,
-                "source_ref": "PDF Tr.119 · #259"
-        },
-        "始": {
-                "found_in_pdf": true,
-                "mnemonic": "Bắt đầu phát biểu trên đài (台) Có cô con gái (女) miệt mài lắng nghe.",
-                "analysis": "Hình minh họa: Cô gái (女) đứng bên trái lắng nghe người đàn ông đứng trên bục (台) phát biểu ở bên phải, tạo thành chữ Thủy (始).<br>Số nét: 8 · Bộ/Chữ liên quan: 女(52) 台(185)",
-                "pdf_page": 118,
-                "book_number": 258,
-                "source_ref": "PDF Tr.118 · #258"
-        },
-        "中": {
-                "found_in_pdf": true,
-                "mnemonic": "Chỗ này ở chính giữa hình tròn.",
-                "analysis": "Hình minh họa: Trục thẳng xuyên qua chính giữa hình tròn → Trung (中)<br>Số nét: 4",
-                "pdf_page": 31,
-                "book_number": 35,
-                "source_ref": "PDF Tr.31 · #35"
-        },
-        "外": {
-                "found_in_pdf": true,
-                "mnemonic": "Hãy hút thuốc ở bên ngoài!",
-                "analysis": "Hình minh họa: Chữ タ (trong タバコ) và người đứng hút thuốc ở bên ngoài → Ngoại (外)<br>Số nét: 5",
-                "pdf_page": 31,
-                "book_number": 36,
-                "source_ref": "PDF Tr.31 · #36"
-        },
-        "内": {
-                "found_in_pdf": true,
-                "mnemonic": "Người đó (人) đi vào trong cái hộp to.",
-                "analysis": "Hình minh họa: Một người (人) đang ở bên trong chiếc hộp lớn (冂), tạo thành chữ 内.<br>Số nét: 4 · Bộ/Chữ liên quan: ▶ 人(26) ! 肉(168)",
-                "pdf_page": 207,
-                "book_number": 490,
-                "source_ref": "PDF Tr.207 · #490"
-        },
-        "上": {
-                "found_in_pdf": true,
-                "mnemonic": "Chỗ này phía trên đoạn nằm ngang.",
-                "analysis": "Hình minh họa: Bàn tay chỉ vào vị trí phía trên vạch nằm ngang → Thượng (上)<br>Số nét: 3 · Bộ/Chữ liên quan: ! 土(23) 止(243)",
-                "pdf_page": 30,
-                "book_number": 33,
-                "source_ref": "PDF Tr.30 · #33"
-        },
-        "下": {
-                "found_in_pdf": true,
-                "mnemonic": "Chỗ này phía dưới đoạn nằm ngang.",
-                "analysis": "Hình minh họa: Bàn tay chỉ vào vị trí phía dưới vạch nằm ngang → Hạ (下)<br>Số nét: 3 · Bộ/Chữ liên quan: ! 不(302)",
-                "pdf_page": 30,
-                "book_number": 34,
-                "source_ref": "PDF Tr.30 · #34"
-        },
-        "左": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi nắm cái thước bằng tay trái.",
-                "analysis": "Hình minh họa: Bàn tay trái giữ cây thước thủ công (工) → Tả (左)<br>Số nét: 5 · Bộ/Chữ liên quan: ▶ 工(38) ! 式(215)",
-                "pdf_page": 32,
-                "book_number": 39,
-                "source_ref": "PDF Tr.32 · #39"
-        },
-        "右": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi ăn bằng tay phải.",
-                "analysis": "Hình minh họa: Bàn tay phải đưa thức ăn vào miệng (口) → Hữu (右)<br>Số nét: 5 · Bộ/Chữ liên quan: ▶ 口(15) ! 石(260)",
-                "pdf_page": 31,
-                "book_number": 37,
-                "source_ref": "PDF Tr.31 · #37"
-        },
-        "東": {
-                "found_in_pdf": true,
-                "mnemonic": "Mặt trời (日) mọc ở đằng Đông. Có thể thấy ánh nắng (日) hổng sau cây (木).",
-                "analysis": "Hình minh họa: Mặt trời (日) mọc lấp ló phía sau cái cây (木) → Đông (東)<br>Số nét: 8 · Bộ/Chữ liên quan: ▶ 日(17) 木(21) ! 車(104) 束(460)",
-                "pdf_page": 36,
-                "book_number": 45,
-                "source_ref": "PDF Tr.36 · #45"
-        },
-        "西": {
-                "found_in_pdf": true,
-                "mnemonic": "Một (一) trong 4 (四) hướng là hướng Tây.",
-                "analysis": "Hình minh họa: Ngón tay giơ 1 (一) phía trên chữ tứ (四) chỉ 4 hướng → Tây (西)<br>Số nét: 6 · Bộ/Chữ liên quan: ▶ 四(4)",
-                "pdf_page": 36,
-                "book_number": 46,
-                "source_ref": "PDF Tr.36 · #46"
-        },
-        "南": {
-                "found_in_pdf": true,
-                "mnemonic": "Hai cây trong vườn đang lớn lên vươn về hướng Nam.",
-                "analysis": "Hình minh họa: Hai mầm cây mọc vươn lên trong mảnh vườn quay về hướng Nam → Nam (南)<br>Số nét: 9",
-                "pdf_page": 37,
-                "book_number": 47,
-                "source_ref": "PDF Tr.37 · #47"
-        },
-        "北": {
-                "found_in_pdf": true,
-                "mnemonic": "Hai người ngồi đối lưng vào nhau bởi vì phương Bắc rất lạnh.",
-                "analysis": "Hình minh họa: Hai người ngồi co ro quay lưng vào nhau vì lạnh → Bắc (北)<br>Số nét: 5 · Bộ/Chữ liên quan: ! 化(151) 比(357)",
-                "pdf_page": 37,
-                "book_number": 48,
-                "source_ref": "PDF Tr.37 · #48"
-        },
-        "横": {
-                "found_in_pdf": true,
-                "mnemonic": "Trong hộp ở cạnh cái cây (木) Lũ trẻ chúng nó ngày ngày vui chơi.",
-                "analysis": "Hình minh họa: Cái cây (木) ở bên trái và hai đứa trẻ đang chơi trên chiếc hộp lớn (黄) ở bên phải, tạo thành chữ 横.<br>Số nét: 15 · Bộ/Chữ liên quan: ▶ 木(21) 由(374)",
-                "pdf_page": 214,
-                "book_number": 508,
-                "source_ref": "PDF Tr.214 · #508"
-        },
-        "縦": {
-                "found_in_pdf": false
-        },
-        "低": {
-                "found_in_pdf": true,
-                "mnemonic": "Tại sao gạch dưới tên (氏) em \"Vì điểm số thấp tôi xem thế nào\"",
-                "analysis": "Hình minh họa: Một người (亻) đứng cạnh tấm bảng ghi họ tên (氏) có gạch ngang bên dưới, tạo thành chữ Đê (低).<br>Số nét: 7 · Bộ/Chữ liên quan: 亻(B) 氏(207)",
-                "pdf_page": 108,
-                "book_number": 232,
-                "source_ref": "PDF Tr.108 · #232"
-        },
-        "狭": {
-                "found_in_pdf": false
-        },
-        "太": {
-                "found_in_pdf": true,
-                "mnemonic": "Khúc gỗ lớn quá.",
-                "analysis": "Hình minh họa: Một người dang rộng tay chân thành chữ Đại (大) nhảy qua khúc gỗ tròn ở dưới (nét chấm), tạo thành chữ Thái (太).<br>Số nét: 4 · Bộ/Chữ liên quan: 大(81) ! 犬(160)",
-                "pdf_page": 110,
-                "book_number": 236,
-                "source_ref": "PDF Tr.110 · #236"
-        },
-        "細": {
-                "found_in_pdf": true,
-                "mnemonic": "Bông lúa ở những cánh đồng (田) cũng mảnh như sợi chỉ (糸).",
-                "analysis": "Hình minh họa: Cuộn chỉ (糸) ở bên trái và cánh đồng lúa (田) ở bên phải, ghép lại thành chữ 細.<br>Số nét: 11 · Bộ/Chữ liên quan: ▶ 糸(206) 田(49)",
-                "pdf_page": 215,
-                "book_number": 511,
-                "source_ref": "PDF Tr.215 · #511"
-        },
-        "若": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi dùng tay phải (右) Hái lộc vừa ra.",
-                "analysis": "Hình minh họa: Mầm cỏ non (艹) mọc ở trên và bàn tay phải cùng khuôn mặt (右) ở dưới, ghép lại thành chữ 若.<br>Số nét: 8 · Bộ/Chữ liên quan: ▶ 艹(K) 右(37) ! 苦(342) 君(491)",
-                "pdf_page": 182,
-                "book_number": 423,
-                "source_ref": "PDF Tr.182 · #423"
-        },
-        "違": {
-                "found_in_pdf": true,
-                "mnemonic": "Con đường quá phức tạp. Có vẻ tôi đã nhầm.",
-                "analysis": "Hình minh họa: Người đang đi trên con đường ngoằn ngoèo phức tạp, nét vẽ mê cung và con đường tạo thành chữ 違.<br>Số nét: 13 · Bộ/Chữ liên quan: ▶ 辶(F)",
-                "pdf_page": 160,
-                "book_number": 365,
-                "source_ref": "PDF Tr.160 · #365"
-        },
-        "全": {
-                "found_in_pdf": true,
-                "mnemonic": "Đức vua () thống trị toàn bộ mọi thứ ở trên núi.",
-                "analysis": "Hình minh họa: Đức vua đội vương miện đứng dưới dãy núi, hình ảnh núi ở trên và vị vua (王) ở dưới tạo thành chữ 全.<br>Số nét: 6 · Bộ/Chữ liên quan: ▶ 王(63) ! 金(22)",
-                "pdf_page": 162,
-                "book_number": 369,
-                "source_ref": "PDF Tr.162 · #369"
-        },
-        "半": {
-                "found_in_pdf": true,
-                "mnemonic": "Hãy cắt 3 đoạn này thành đôi. Oái, chỉ một đoạn trên cùng bị cắt.",
-                "analysis": "Hình minh họa: Thanh kiếm cắt dọc qua 3 vạch ngang nhưng chỉ cắt đứt vạch trên cùng → Bán (半)<br>Số nét: 5 · Bộ/Chữ liên quan: ! 羊(189)",
-                "pdf_page": 28,
-                "book_number": 30,
-                "source_ref": "PDF Tr.28 · #30"
-        },
-        "部": {
-                "found_in_pdf": true,
-                "mnemonic": "Có người đang đứng (立) Ở trạm dừng xe.",
-                "analysis": "Hình minh họa: Một người đang đứng trên bục cạnh biển trạm dừng xe buýt, tạo thành các nét của chữ 部.<br>Số nét: 11 · Bộ/Chữ liên quan: ▶ 立(77) 口(15) ! 都(310)",
-                "pdf_page": 162,
-                "book_number": 370,
-                "source_ref": "PDF Tr.162 · #370"
-        },
-        "分": {
-                "found_in_pdf": true,
-                "mnemonic": "Hãy cắt thành 2 phần bằng dao (刀).",
-                "analysis": "Hình minh họa: Con dao (刀) ở dưới cắt vật ở trên làm hai phần → Phân (分)<br>Số nét: 4 · Bộ/Chữ liên quan: ▶ 刀(31)",
-                "pdf_page": 29,
-                "book_number": 32,
-                "source_ref": "PDF Tr.29 · #32"
-        },
-        "数": {
-                "found_in_pdf": false
-        },
-        "第": {
-                "found_in_pdf": false
-        },
-        "回": {
-                "found_in_pdf": true,
-                "mnemonic": "Cái gì đó đang xoay vòng.",
-                "analysis": "Hình minh họa: Vòng xoáy tròn có mũi tên xoay vòng chuyển thành hai hình vuông lồng vào nhau tạo nên chữ 回.<br>Số nét: 6 · Bộ/Chữ liên quan: ▶ 口(15) 囗(E)",
-                "pdf_page": 128,
-                "book_number": 284,
-                "source_ref": "PDF Tr.128 · #284"
-        },
-        "点": {
-                "found_in_pdf": true,
-                "mnemonic": "4 điểm đang được đóng dấu.",
-                "analysis": "Hình minh họa: Con dấu phía trên (占) đóng xuống tạo ra bốn dấu chấm (灬) ở phía dưới, tạo thành chữ 点.<br>Số nét: 9 · Bộ/Chữ liên quan: ▶ 灬(N)",
-                "pdf_page": 189,
-                "book_number": 441,
-                "source_ref": "PDF Tr.189 · #441"
-        },
-        "形": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi đang làm thành hình cái gì thế này?",
-                "analysis": "Hình minh họa: Người thợ đứng trên giàn giáo (开) bên trái đang đẽo gọt bức tượng có ba nét lượn (彡) bên phải, tạo thành chữ 形.<br>Số nét: 7",
-                "pdf_page": 179,
-                "book_number": 416,
-                "source_ref": "PDF Tr.179 · #416"
-        },
-        "線": {
-                "found_in_pdf": false
-        },
-        "丸": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi đang cuộn tròn cơ thể mình.",
-                "analysis": "Hình minh họa: Một người đang cúi gập cuộn tròn cơ thể lại, tạo thành hình chữ Cửu (九) thêm một nét chấm ở giữa thành chữ 丸.<br>Số nét: 3 · Bộ/Chữ liên quan: ▶ 九(9)",
-                "pdf_page": 144,
-                "book_number": 321,
-                "source_ref": "PDF Tr.144 · #321"
-        },
-        "直": {
-                "found_in_pdf": true,
-                "mnemonic": "Nhìn này, chỗ đó bị hỏng. Sửa nó đi thôi nhỉ",
-                "analysis": "Hình minh họa: Khuôn mặt nghiêng với con mắt to (目) đang nhìn vào góc tường để kiểm tra, tạo thành chữ 直.<br>Số nét: 8 · Bộ/Chữ liên quan: ▶ 十(10) 目(16) ! 真(184)",
-                "pdf_page": 209,
-                "book_number": 496,
-                "source_ref": "PDF Tr.209 · #496"
-        },
-        "曲": {
-                "found_in_pdf": false
-        },
-        "言": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi sử dụng miệng để nói điều gì đó.",
-                "analysis": "Hình minh họa: Cái miệng (口) phát ra những làn sóng lời nói phía trên → Ngôn (言)<br>Số nét: 7 · Bộ/Chữ liên quan: ▶ 口(15)",
-                "pdf_page": 47,
-                "book_number": 75,
-                "source_ref": "PDF Tr.47 · #75"
-        },
-        "話": {
-                "found_in_pdf": true,
-                "mnemonic": "Người ta sử dụng hàng ngàn từ để nói chuyện.",
-                "analysis": "Hình minh họa: Lời nói (言) bên trái kết hợp với con số 1000 (千) và cái miệng (口) bên phải → Thoại (話)<br>Số nét: 13 · Bộ/Chữ liên quan: ▶ 言(75) 千(12) ! 語(128)",
-                "pdf_page": 48,
-                "book_number": 76,
-                "source_ref": "PDF Tr.48 · #76"
-        },
-        "読": {
-                "found_in_pdf": true,
-                "mnemonic": "Anh ta rao (言):\"Hãy mua những cuốn sách được bán (売) chạy nhất này\".",
-                "analysis": "Hình minh họa: Lời nói phát ra từ miệng (言) bên trái và người đang đứng bán sách (売) bên phải, ghép thành chữ 読.<br>Số nét: 14 · Bộ/Chữ liên quan: ▶言(75) 売(118) !続(455)",
-                "pdf_page": 64,
-                "book_number": 119,
-                "source_ref": "PDF Tr.64 · #119"
-        },
-        "書": {
-                "found_in_pdf": true,
-                "mnemonic": "Cầm cây bút này, tôi sẽ viết chữ Nhật.",
-                "analysis": "Hình minh họa: Bàn tay cầm bút lông (聿) phía trên đang vẽ hình mặt trời (日) trên giấy phía dưới, tạo thành chữ 書.<br>Số nét: 10 · Bộ/Chữ liên quan: ▶日(17)",
-                "pdf_page": 64,
-                "book_number": 120,
-                "source_ref": "PDF Tr.64 · #120"
-        },
-        "聞": {
-                "found_in_pdf": true,
-                "mnemonic": "Ai đó đang ghé tai (耳) ở cổng (門) để nghe.",
-                "analysis": "Hình minh họa: Người ghé cái tai (耳) lắng nghe ở giữa cánh cổng (門) → Văn (聞)<br>Số nét: 14 · Bộ/Chữ liên quan: ▶ 門(43) 耳(73)",
-                "pdf_page": 47,
-                "book_number": 74,
-                "source_ref": "PDF Tr.47 · #74"
-        },
-        "見": {
-                "found_in_pdf": true,
-                "mnemonic": "Để nhìn thấy nhiều thứ, bạn cần phải có mắt (目) và chân.",
-                "analysis": "Hình minh họa: Con mắt (目) gắn thêm đôi chân bước đi để nhìn ngắm → Kiến (見)<br>Số nét: 7 · Bộ/Chữ liên quan: ▶ 目(16) 儿(C) ! 貝(116)",
-                "pdf_page": 44,
-                "book_number": 65,
-                "source_ref": "PDF Tr.44 · #65"
-        },
-        "記": {
-                "found_in_pdf": true,
-                "mnemonic": "Anh đã ghi lại những lời em nói.",
-                "analysis": "Hình minh họa: Lời nói phát ra từ miệng (言) bên trái và một người đang cúi ghi chép bên phải, tạo thành chữ 記.<br>Số nét: 10 · Bộ/Chữ liên quan: ▶ 言(75)",
-                "pdf_page": 179,
-                "book_number": 415,
-                "source_ref": "PDF Tr.179 · #415"
-        },
-        "説": {
-                "found_in_pdf": true,
-                "mnemonic": "Anh trai (兄) tôi đang thuyết minh.",
-                "analysis": "Hình minh họa: Người anh trai (兄) đang nói ra những lời giải thích (言) ở bên trái, ghép thành chữ Thuyết (説).<br>Số nét: 14 · Bộ/Chữ liên quan: 言(75) 兄(197)",
-                "pdf_page": 105,
-                "book_number": 224,
-                "source_ref": "PDF Tr.105 · #224"
-        },
-        "質": {
-                "found_in_pdf": true,
-                "mnemonic": "Ốc (貝) to bổ với hai rìu. Muốn biết chất lượng phải điều tra xem.",
-                "analysis": "Hình minh họa: Hai chiếc rìu (斤斤) đặt phía trên một con sò/ốc lớn (貝) để bổ ra kiểm tra, ghép lại thành chữ Chất (質).<br>Số nét: 15 · Bộ/Chữ liên quan: 貝(116) ! 賛(451)",
-                "pdf_page": 104,
-                "book_number": 222,
-                "source_ref": "PDF Tr.104 · #222"
-        },
-        "問": {
-                "found_in_pdf": true,
-                "mnemonic": "Muốn giỏi thì hỏi ở cổng (門).",
-                "analysis": "Hình minh họa: Cái miệng (口) kèm dấu chấm hỏi ở giữa cánh cổng (門), tạo thành chữ Vấn (問).<br>Số nét: 11 · Bộ/Chữ liên quan: 門(43) 口(15) ! 間(44)",
-                "pdf_page": 105,
-                "book_number": 223,
-                "source_ref": "PDF Tr.105 · #223"
-        },
-        "習": {
-                "found_in_pdf": true,
-                "mnemonic": "Đàn chim đang vỗ cánh (羽) trên ngôi nhà trắng (白) để học bay.",
-                "analysis": "Hình minh họa: Hai chú chim vỗ đôi cánh (羽) ở phía trên tòa nhà màu trắng (白) ở phía dưới tạo thành chữ 習.<br>Số nét: 11 · Bộ/Chữ liên quan: ▶羽(211) 白(156)",
-                "pdf_page": 101,
-                "book_number": 212,
-                "source_ref": "PDF Tr.101 · #212"
-        },
-        "勉": {
-                "found_in_pdf": true,
-                "mnemonic": "Chàng trai này, đang cố gắng hết khả năng của mình.",
-                "analysis": "Hình minh họa: Chàng trai đội mũ đổ mồ hôi (免) đang gồng cánh tay cơ bắp (力), ghép thành chữ 勉.<br>Số nét: 10 · Bộ/Chữ liên quan: ▶儿(C) 力(50) !晩(137)",
-                "pdf_page": 65,
-                "book_number": 122,
-                "source_ref": "PDF Tr.65 · #122"
-        },
-        "校": {
-                "found_in_pdf": true,
-                "mnemonic": "Bố (父) đến trường đón tôi.",
-                "analysis": "Hình minh họa: Cái cây (木) bên trái và người bố có ria mép (父) đội mũ đứng trước cổng trường có đồng hồ (亠), ghép thành chữ 校.<br>Số nét: 10 · Bộ/Chữ liên quan: ▶木(21) 交(480) 父(58)",
-                "pdf_page": 60,
-                "book_number": 108,
-                "source_ref": "PDF Tr.60 · #108"
-        },
-        "字": {
-                "found_in_pdf": true,
-                "mnemonic": "Đứa trẻ (子) học chữ ở trong nhà.",
-                "analysis": "Hình minh họa: Một đứa trẻ cầm bút (子) đứng dưới mái nhà có ống khói (宀) tạo thành chữ 字.<br>Số nét: 6 · Bộ/Chữ liên quan: ▶宀(G) 子(53) !学(54)",
-                "pdf_page": 102,
-                "book_number": 214,
-                "source_ref": "PDF Tr.102 · #214"
-        },
-        "英": {
-                "found_in_pdf": true,
-                "mnemonic": "Anh hùng ở giữa (央) bức hình Sinh ra từ sự chuyển mình cỏ cây.",
-                "analysis": "Hình minh họa: Một siêu anh hùng đứng dang tay ở chính giữa (央) bên dưới mặt đất có hai mầm cỏ mọc lên ở phía trên (艹), tạo thành chữ Anh (英).<br>Số nét: 8 · Bộ/Chữ liên quan: 艹(K) 央(186) ! 映(187)",
-                "pdf_page": 104,
-                "book_number": 221,
-                "source_ref": "PDF Tr.104 · #221"
-        },
-        "語": {
-                "found_in_pdf": true,
-                "mnemonic": "Họ nói chuyện (言) bằng 5 (五) thứ tiếng.",
-                "analysis": "Hình minh họa: Lời nói phát ra từ cái miệng (言) bên trái, chữ ngũ (五) và cái miệng (口) bên phải, ghép thành chữ 語.<br>Số nét: 14 · Bộ/Chữ liên quan: ▶言(75) 五(5) 口(15) !話(76)",
-                "pdf_page": 67,
-                "book_number": 128,
-                "source_ref": "PDF Tr.67 · #128"
-        },
-        "漢": {
-                "found_in_pdf": true,
-                "mnemonic": "Nhìn kìa ông chồng (夫) Trung Hoa Trên đầu đội cỏ vượt qua sông hồ.",
-                "analysis": "Hình minh họa: Nước sông bắn lên bên trái (氵), bên phải là người đàn ông (夫) đội chậu cỏ (艹) trên đầu lội qua sông tạo thành chữ 漢.<br>Số nét: 13 · Bộ/Chữ liên quan: ▶氵(J) 艹(K) 夫(202)",
-                "pdf_page": 101,
-                "book_number": 213,
-                "source_ref": "PDF Tr.101 · #213"
-        },
-        "忘": {
-                "found_in_pdf": true,
-                "mnemonic": "Quên xây bức tường bên phải mất rồi!",
-                "analysis": "Hình minh họa: Phía trên là ngôi nhà bị thiếu mất bức tường bên phải (chữ Vong 亡), phía dưới là trái tim (chữ Tâm 心), ghép lại thành chữ 忘.<br>Số nét: 7 · Bộ/Chữ liên quan: ▶ 心(139)",
-                "pdf_page": 156,
-                "book_number": 354,
-                "source_ref": "PDF Tr.156 · #354"
-        },
-        "覚": {
-                "found_in_pdf": true,
-                "mnemonic": "Ở trường đã thấy (見) những gì Tôi nhớ như thể đã ghi trong đầu.",
-                "analysis": "Hình minh họa: Phía trên là mái trường có ba ô cửa sổ (⺌ + 冖), phía dưới là con mắt có hai chân (chữ Kiến 見), ghép lại thành chữ 覚.<br>Số nét: 12 · Bộ/Chữ liên quan: ▶ 見(65) ! 党(400)",
-                "pdf_page": 156,
-                "book_number": 353,
-                "source_ref": "PDF Tr.156 · #353"
-        },
-        "急": {
-                "found_in_pdf": true,
-                "mnemonic": "Nếu nhanh lên thì sẽ ổn thôi.",
-                "analysis": "Hình minh họa: Một người vừa chạy vội vừa giơ ngón cái ra hiệu ổn thỏa, phần thân và bước chân biến thành các nét trên và bộ Tâm (心) ở dưới của chữ Cấp (急).<br>Số nét: 9 · Bộ/Chữ liên quan: 心(139)",
-                "pdf_page": 114,
-                "book_number": 248,
-                "source_ref": "PDF Tr.114 · #248"
-        },
-        "必": {
-                "found_in_pdf": true,
-                "mnemonic": "Nhất định anh sẽ bắn gục trái tim (心) em.",
-                "analysis": "Hình minh họa: Trái tim bị một mũi tên bắn xuyên qua, kết hợp hình trái tim (心) và mũi tên chéo tạo thành chữ 必.<br>Số nét: 5 · Bộ/Chữ liên quan: ▶ 心(139)",
-                "pdf_page": 163,
-                "book_number": 371,
-                "source_ref": "PDF Tr.163 · #371"
-        },
-        "要": {
-                "found_in_pdf": true,
-                "mnemonic": "Các cô gái (女) thường bỏ những thứ thiết yếu vào trong túi xách.",
-                "analysis": "Hình minh họa: Hình chiếc túi xách ở trên và người phụ nữ (女) ở dưới, ghép lại tạo thành chữ 要.<br>Số nét: 9 · Bộ/Chữ liên quan: ▶ 女(52)",
-                "pdf_page": 163,
-                "book_number": 372,
-                "source_ref": "PDF Tr.163 · #372"
-        },
-        "便": {
-                "found_in_pdf": true,
-                "mnemonic": "Nếu dịch vụ bưu điện có thể gửi hàng trong 1 ngày (一日) thì thật tiện lợi.",
-                "analysis": "Hình minh họa: Bên trái là một người đứng (イ), bên phải là chữ Nhất (一), chữ Nhật (日) và bàn tay ở dưới đan chéo, ghép lại thành chữ 便.<br>Số nét: 9 · Bộ/Chữ liên quan: ▶ イ(B) 一(1) 日(17) ! 使(245)",
-                "pdf_page": 135,
-                "book_number": 303,
-                "source_ref": "PDF Tr.135 · #303"
-        },
-        "利": {
-                "found_in_pdf": true,
-                "mnemonic": "Cắt lúa thu được nhiều lợi ích.",
-                "analysis": "Hình minh họa: Cây lúa (禾) ở bên trái và con dao sắc (刂) ở bên phải đang cắt lúa, ghép lại thành chữ 利.<br>Số nét: 7 · Bộ/Chữ liên quan: ▶ 禾(P) 刂(A)",
-                "pdf_page": 164,
-                "book_number": 376,
-                "source_ref": "PDF Tr.164 · #376"
-        },
-        "不": {
-                "found_in_pdf": true,
-                "mnemonic": "Nó không phải chữ T.",
-                "analysis": "Hình minh họa: Chữ T bị gạch chéo bằng hai nét xiên hai bên, tạo thành hình chữ 不.<br>Số nét: 4 · Bộ/Chữ liên quan: ! 木(21) 下(34)",
-                "pdf_page": 134,
-                "book_number": 302,
-                "source_ref": "PDF Tr.134 · #302"
-        },
-        "無": {
-                "found_in_pdf": true,
-                "mnemonic": "Ngôi nhà bị thiêu trong lửa, toàn bộ mọi thứ trước đây nay không còn gì.",
-                "analysis": "Hình minh họa: Ngôi nhà có khung cửa sổ đang bốc cháy trên bốn ngọn lửa (灬) ở phía dưới, tạo thành chữ 無.<br>Số nét: 12 · Bộ/Chữ liên quan: ▶ 灬(N)",
-                "pdf_page": 215,
-                "book_number": 512,
-                "source_ref": "PDF Tr.215 · #512"
-        },
-        "有": {
-                "found_in_pdf": true,
-                "mnemonic": "Mặt trăng (月) thì có, nhưng không thể chạm vào được.",
-                "analysis": "Hình minh họa: Bàn tay ở phía trên (ナ) vươn ra định chạm vào vầng trăng (月) ở phía dưới, tạo thành chữ Hữu (有).<br>Số nét: 6 · Bộ/Chữ liên quan: 月(18)",
-                "pdf_page": 120,
-                "book_number": 264,
-                "source_ref": "PDF Tr.120 · #264"
-        },
-        "取": {
-                "found_in_pdf": true,
-                "mnemonic": "Đừng véo tai tao.",
-                "analysis": "Hình minh họa: Bàn tay (又) bên phải đang véo chiếc tai (耳) bên trái, ghép lại thành chữ 取.<br>Số nét: 8 · Bộ/Chữ liên quan: ▶ 耳(73)",
-                "pdf_page": 186,
-                "book_number": 433,
-                "source_ref": "PDF Tr.186 · #433"
-        },
-        "集": {
-                "found_in_pdf": true,
-                "mnemonic": "Bầy chim tập hợp trên cây (木).",
-                "analysis": "Hình minh họa: Phía trên là hình con chim (bộ Chuy 隹), phía dưới là cái cây (chữ Mộc 木), diễn tả đàn chim đậu tập hợp trên cây tạo thành chữ 集.<br>Số nét: 12 · Bộ/Chữ liên quan: ▶ 木(21)",
-                "pdf_page": 134,
-                "book_number": 301,
-                "source_ref": "PDF Tr.134 · #301"
-        },
-        "選": {
-                "found_in_pdf": true,
-                "mnemonic": "Cùng (共) chọn ra người đứng đầu nào mọi người.",
-                "analysis": "Hình minh họa: Mọi người cùng đứng trên con đường (辶), hai người phía trước khoác vai nhau tạo hình chữ 選.<br>Số nét: 15 · Bộ/Chữ liên quan: ▶ 共(420) 辶(F)",
-                "pdf_page": 195,
-                "book_number": 458,
-                "source_ref": "PDF Tr.195 · #458"
-        },
-        "決": {
-                "found_in_pdf": true,
-                "mnemonic": "Tôi đã quyết việc tiết kiệm nước.",
-                "analysis": "Hình minh họa: Bên trái là ba giọt nước (氵), bên phải là một người đứng cạnh vòi nước với tấm biển 'SAVE WATER' tạo thành phần 夬, ghép lại thành chữ 決.<br>Số nét: 7 · Bộ/Chữ liên quan: ▶ 氵(J) 人(26)",
-                "pdf_page": 157,
-                "book_number": 355,
-                "source_ref": "PDF Tr.157 · #355"
-        }
+        "会": "Hai người (二) chúng ta sẽ gặp nhau trong nhà. 👉 Hai người đứng bắt tay gặp nhau dưới mái nhà → Hội (会)",
+        "同": "Cả người vào người ra Dùng cùng một cửa rất là giống nhau. 👉 Hai người đi vào (IN) và đi ra (OUT) qua cùng một khung cửa lớn, tạo thành hình chữ 同.",
+        "事": "Tôi viết ra toàn bộ việc cần làm. 👉 Bàn tay cầm bút viết lên tờ giấy ghi danh sách công việc, chuyển thành hình chữ Sự (事).",
+        "自": "Ở Nhật, chỉ ngón tay vào mũi có nghĩa là biểu thị bản thân mình. 👉 Bàn tay chỉ vào chiếc mũi trên khuôn mặt, hình dáng chiếc mũi chuyển thành chữ 自.",
+        "発": "Loài người đi lại bắt đầu bằng hai chân. 👉 Phía trên là hai bàn chân (癶), phía dưới là hình người nguyên thủy đang bước đi bằng hai chân (开 / 儿), tạo thành chữ 発.",
+        "者": "Mặt trời (日) cũng có lúc tà Người nào cũng phải có già có đau. 👉 Cụ già chống gậy đứng phía trên ông mặt trời (日), tạo thành hình chữ Giả (者).",
+        "業": "Tôi nuôi cừu (羊) trong tường vây. Đó là cả sự nghiệp của tôi đấy! 👉 Một con cừu (羊) đứng dưới hàng rào chắn phía trên, chuyển thành hình chữ Nghiệp (業).",
+        "地": "Bọ cạp ở dưới đất (土) này. 👉 Bên trái là mầm cây mọc trên mặt đất (chữ Thổ 土), bên phải là hình con bọ cạp cong đuôi tạo thành bộ Dã (也), ghép lại thành chữ 地.",
+        "場": "Đất (土) tốt và ánh mặt trời (日) Chỗ này được chọn làm nơi ta về. 👉 Bên trái là mầm cây mọc trên mặt đất (chữ Thổ 土), bên phải là mặt trời (日) chiếu sáng xuống người đang quỳ chọn chỗ đất, ghép lại thành chữ 場.",
+        "京": "Ngôi nhà được xây trên ngọn đồi nhỏ (小). Nơi này đã trở thành kinh đô. 👉 Ngôi nhà có mái và cửa sổ (亠 + 口) nằm trên đỉnh ngọn đồi nhỏ (小), tạo thành hình chữ 京.",
+        "都": "Có người (者) ở trạm dừng xe Chờ chuyến xe buýt đi về kinh đô. 👉 Bên trái là chữ Giả (者 - người chống gậy trên mặt trời), bên phải là biển trạm xe buýt (BUS) tạo hình bộ Ấp (阝), ghép lại thành chữ 都.",
+        "方": "Hãy đi theo phương của ta. 👉 Một người đang giơ tay cầm cây cờ hiệu chỉ hướng, chuyển thành hình chữ 方.",
+        "主": "Cái ông đội mũ, là chủ của tôi. 👉 Một người đàn ông mặc vest đội chiếc mũ cao trên đầu chuyển thành dấu chấm phía trên chữ Vương (王) tạo thành chữ 主.",
+        "題": "Phóng viên đang tìm kiếm một đề tài có sử dụng đầu (頭) và chân (足). 👉 Phóng viên chạy tìm tin tức dưới ánh mặt trời: bên trái có mặt trời (日) ở trên và chân chạy ở dưới (是), bên phải là cái đầu đội mũ (頁) tạo thành chữ 題.",
+        "意": "Lắng tai nghe tiếng (音) trái tim (心) Có lẽ sẽ hiểu được cảm giác của chính mình. 👉 Phía trên là chữ Âm (音 - người đứng trên mặt trời phát ra âm thanh), phía dưới là hình trái tim (chữ Tâm 心), ghép lại thành chữ 意.",
+        "作": "Người này đang dùng lưỡi cưa để làm ra thứ gì đó. 👉 Một người đứng bên trái (亻) đang cầm một lưỡi cưa có răng cưa ở bên phải (乍) tạo thành chữ 作.",
+        "用": "Đây là hàng rào chúng tôi đang sử dụng. 👉 Hình ảnh hàng rào gỗ gồm các thanh dọc và thanh ngang tạo thành hình chữ 用.",
+        "度": "Ở trong nhà 21 lần thì tay sẽ ấm. 👉 Bên dưới mái nhà có ống khói (广) là con số 21 (廿) và bàn tay ở dưới (又), ghép lại thành chữ 度.",
+        "文": "Hoa văn trên chiếc bình cổ đã trở thành chữ viết. 👉 Chiếc bình gốm cổ có hoa văn đan chéo trên thân bình chuyển thành hình chữ Văn (文).",
+        "以": "Đây là vạch xuất phát! 👉 Một người (人) đổ mồ hôi (丶) đứng chuẩn bị chạy sau vạch xuất phát nằm bên trái, tạo thành chữ 以.",
+        "知": "Người có miệng lớn (大口) thì cái gì cũng biết. 👉 Một người dang tay chân giống hình mũi tên (矢) với cái miệng thật to (口) ở bên phải, ghép thành chữ Tri (知).",
+        "理": "Đức vua (王) suy nghĩ rất hợp lí. Ngài tạo ra những cánh đồng (田). 👉 Ông vua (王) đứng bên trái, bên phải là cánh đồng (田) trên mặt đất có cây mọc (土) ghép thành chữ 理.",
+        "体": "Khi cơ thể bạn bị thương, hãy băng lại và nghỉ ngơi (休). 👉 Một người có chân bị băng bó (亻) đang đứng tựa vào gốc cây (本), ghép thành chữ 体.",
+        "思": "Trên cánh đồng (田) tôi đang nghĩ về người tôi yêu bằng cả trái tim (心). 👉 Cánh đồng lúa (田) ở phía trên và hình trái tim (心) ở phía dưới, ghép lại thành chữ Tư (思).",
+        "開": "Hai người đang mở cổng (門). 👉 Hai người đứng bên trong dùng tay đẩy mở hai cánh cổng (門), tạo thành chữ Khai (開).",
+        "閉": "Người này đang đóng cổng (門). 👉 Một người đứng bên trong cài then đóng cánh cổng (門), tạo thành chữ Bế (閉).",
+        "間": "Có thể nhìn thấy mặt trời (日) giữa những cách cổng (門). 👉 Mặt trời (日) chiếu sáng ở khoảng giữa hai cánh cổng (門) → Gian (間)",
+        "強": "Bọ cánh cứng (虫) và cây cung (弓) đều rất khỏe. 👉 Cây cung (弓) bên trái và con bọ cánh cứng có sừng (厶 + 虫) bên phải, ghép thành chữ 強.",
+        "教": "Người già thì dạy trẻ con (子). 👉 Bên trái là cụ già chống gậy ở trên và đứa trẻ (子) ở dưới (孝), bên phải là người thầy cầm sách giảng bài (攵) tạo thành chữ 教.",
+        "正": "Khi đèn đỏ nếu bạn dừng (止) Đó là điều đúng xin đừng quên nha. 👉 Một người dừng lại trước cột đèn giao thông báo 'It's red' (đèn đỏ), nét ngang phía trên cùng với chữ Chỉ (止) bên dưới tạo thành chữ 正.",
+        "館": "Ở tòa nhà này, các quan (官) đang ăn (食) cơm. 👉 Một người đang ngồi ăn cơm dưới mái nhà (食) và một vị quan đứng dưới mái nhà có ống khói (官), ghép lại thành chữ 館.",
+        "屋": "Con người thì tất yếu là Cần đất (土) và một mái nhà định cư. 👉 Dưới mái nhà (尸) có một người đang ngồi bên cạnh mầm cây trên đất (至 -> 厶 + 土), tạo thành chữ 屋.",
+        "国": "Đức vua (王) với viên ngọc quý đang trị vì đất nước. 👉 Nhà vua (王) cùng viên ngọc quý bên trong biên giới lãnh thổ (口) → Quốc (国)",
+        "家": "Ngày xưa nuôi lợn ở trong nhà. 👉 Một con lợn (豕) đứng bên dưới mái nhà có ống khói (宀) tạo thành chữ 家.",
+        "族": "Mũi tên (矢) bảo vệ người đi Gia tộc cùng với quốc kì trên tay. 👉 Lá cờ (方) ở bên trái, người giơ tay ở góc trên phải và mũi tên (矢) ở dưới bên phải tạo thành chữ 族.",
+        "親": "Người cha đang đứng (立) trên cây (木) Mắt (目) trông con nhỏ, ngày ngày dõi theo. 👉 Bên trái là người đứng (立) trên cây (木), bên phải là con mắt to có chân (見) tạo thành chữ 親.",
+        "別": "Tôi cắt thịt thành 10000 (万) miếng riêng biệt. 👉 Bên trái là miếng thịt (口) ở trên chữ Vạn (万 - biến thể), bên phải là con dao (bộ Đao 刂) đang cắt, ghép lại thành chữ 別.",
+        "広": "\"Đây là nhà tớ. Rộng đúng không? 👉 Người ngồi khoanh tay tươi cười trong ngôi nhà có mái hiên (广) rộng lớn → Quảng (広)",
+        "明": "Nếu đặt mặt trời (日) và mặt trăng (月) cạnh nhau thì mặt trời sẽ sáng hơn. 👉 Mặt trời (日) bên trái và mặt trăng khuyết (月) bên phải đặt cạnh nhau tạo thành chữ 明.",
+        "暗": "Khi ở trong bóng tối. Chỉ nghe thấy tiếng (音) thôi. 👉 Mặt trời (日) bên trái và hình người trong bóng tối chỉ phát ra âm thanh (音) bên phải, ghép thành chữ Ám (暗).",
+        "遠": "Vào thứ Bảy (土) tôi đi chơi xa. 👉 Một người đang sải bước trên con đường (辶) bên dưới chữ Thổ (土), ghép lại thành chữ Viễn (遠).",
+        "近": "Chặt cây bằng một cái rìu Đến gần mục đích là điều tất nhiên 👉 Chiếc rìu (斤) đang chặt thân cây bên cạnh con đường (辶), ghép lại thành chữ Cận (近).",
+        "新": "Để bắt đầu một cái gì đó mới mẻ hãy đứng đó (立), dùng rìu (斤) chẻ cây (木) để mở đường đi. 👉 Người đứng (立) trên cây (木) bên cạnh chiếc rìu (斤) chặt cây mở đường mới → Tân (新)",
+        "古": "Cùng một câu chuyện, nếu bạn nghe 10 (十) lần, Nó sẽ trở thành chuyện cũ. 👉 Số 10 (十) đặt trên cái miệng (口) kể đi kể lại 10 lần thành chuyện cũ → Cổ (古)",
+        "多": "Có nhiều chữ Ta (タ). 👉 Nhiều chữ katakana タ xếp chồng lên nhau → Đa (多)",
+        "少": "Nếu bạn cắt những vật nhỏ (小) bạn sẽ nhận được rất ít. 👉 Vật nhỏ (小) bị lưỡi dao cắt thêm một nét ở dưới nên còn rất ít → Thiếu/Thiểu (少)",
+        "高": "Cái tháp cao được đặt trên nóc tòa nhà. 👉 Ngọn tháp cao vươn lên trên nóc một tòa nhà nhiều tầng → Cao (高)",
+        "安": "Người phụ nữ cảm thấy an tâm khi ở trong nhà mình. 👉 Người phụ nữ (女) đứng bình yên dưới mái nhà (宀) → An (安)",
+        "長": "Hình ảnh một người có mái tóc dài. 👉 Một người có mái tóc dài bay về phía sau, chuyển thành hình dạng chữ 長.",
+        "短": "Cái mũi tên (矢) và đậu (豆) đều ngắn. 👉 Mũi tên ngắn (矢) đặt bên trái chiếc bát đựng hạt đậu (豆), ghép lại thành chữ Đoản (短).",
+        "重": "Nghìn (千) quyển sách thì nặng đấy. 👉 Nhiều quyển sách xếp chồng cao lên nhau trông rất nặng, chuyển thành các nét ngang dọc của chữ Trọng (重).",
+        "軽": "Xe (車) nhẹ nếu đẩy bằng tay Thì cũng có thể chạy ngay dễ dàng 👉 Bàn tay đẩy nhẹ chiếc xe ô tô (車) chạy trên mặt đất (土), kết hợp thành chữ Khinh (軽).",
+        "早": "Là quá sớm nếu bạn thức dậy lúc 10 (十) giờ vào chủ nhật (日). 👉 Mặt trời (日) tỏa sáng phía trên số 10 (十), chuyển thành chữ 早.",
+        "遅": "Một con cừu (羊) đang nghỉ nên nó đã đến muộn. 👉 Con cừu (羊) đang ngủ dưới mái hiên (尸) bên cạnh con đường (辶), tạo thành chữ 遅.",
+        "元": "Hai người (二) cùng chạy với nhau. Chẳng mấy mạnh khỏe thêm mau ấy mà. 👉 Một người cõng một người (hai người 二) chạy bộ bằng đôi chân (儿) tràn đầy nguyên khí → Nguyên (元)",
+        "気": "Nếu bạn thở quá mạnh, bạn có thể làm \"khí chất\" thoát ra ngoài. 👉 Người thổi hơi thở mạnh tạo thành các luồng khí bay ra → Khí (気)",
+        "天": "Tôi dang rộng hai tay và nhìn lên bầu trời. 👉 Một người dang rộng hai tay và hai chân (大) đứng dưới vòm trời phía trên (nét ngang trên cùng) tạo thành chữ 天.",
+        "電": "Trong cơn mưa (雨) chớp lóe sáng như vệt điện xuống đồng (田). 👉 Cơn mưa (雨) phía trên đánh tia sét xuyên qua cánh đồng ruộng (田) bên dưới, tạo thành chữ 電.",
+        "駅": "Ở ga, hành lí, ngựa (馬) được người mang theo. 👉 Con ngựa (馬) bên trái và một người đang vác kiện hành lý trên vai (尺) bên phải, ghép thành chữ 駅.",
+        "鉄": "Sắt sẽ thua (失) về giá trị nếu so với vàng (金). 👉 Thanh kim loại/sắt (金) bên trái và người đang khóc vì thua kém (失) bên phải, tạo thành chữ 鉄.",
+        "道": "Cổ (首) dài anh ấy đang vươn\nNhư đợi ai đó trên đường sớm nay. 👉 Người vươn cổ dài (首) đứng bên con đường uốn lượn (辶), ghép thành chữ 道.",
+        "通": "Tôi vượt tường rào để đi học. 👉 Một người đang trèo qua hàng rào (マ + 用 = 甬) dọc theo con đường (bộ Sước 辶), tạo thành chữ 通.",
+        "送": "Ai đó đã gửi cho tôi một món quà. 👉 Một người bưng hộp quà thắt nơ đi trên con đường (辶), biến đổi thành chữ Tống (送).",
+        "返": "Trên đường đi (辶) gặp dốc ngược (反) thì quay đầu trở lại 👉 Trả lại, hồi đáp (PHẢN).",
+        "進": "Con chim đang tiến lên phía trước. 👉 Một chú chim (bộ Chuy 隹) đang bước đi về phía trước trên con đường (bộ Sước 辶), tạo thành chữ 進.",
+        "退": "Bước chân đi trên đường (辶) nhưng giữ lại (艮) phía sau 👉 Rút lui, xuất viện, thôi học (THOÁI).",
+        "運": "Chiếc xe (車) đang vận chuyển tấm nệm. 👉 Chiếc xe (車) chở tấm nệm trên nóc (冖) đang chạy trên con đường (辶), tạo thành chữ Vận (運).",
+        "動": "Sức lực (力) mà tác dụng vào Dù nặng (重) đến mấy sách nào chả lay. 👉 Một người dùng sức lực cánh tay (力) đẩy chồng sách nặng (重), ghép thành chữ Động (動).",
+        "歩": "Dừng (止) lại chút (少) Rồi tiếp tục dạo bước. 👉 Một người dừng lại trước đèn tín hiệu giao thông (止) và ngồi nghỉ một chút ở phía dưới (少), ghép trên dưới thành chữ Bộ (歩).",
+        "走": "Tôi chạy ngay cả khi tôi bị bao phủ bởi đất cát (土). 👉 Một người đang vung chân chạy bên dưới mặt đất có mầm cây (土), chuyển thành chữ 走.",
+        "起": "Tôi sẽ chạy (走) vì tôi dậy muộn. 👉 Người đang chạy (走) bên trái và người vừa bật dậy khỏi chăn nệm (己) bên phải, ghép thành chữ 起.",
+        "寝": "Hai người đang ngủ. 👉 Hai người đang nằm ngủ dưới mái nhà (宀), hình dáng mái nhà và người nằm đắp chăn tạo thành chữ 寝.",
+        "帰": "Chim én đang quay về tổ. 👉 Đường bay vòng quay lại bên trái và hình chim én đậu trên tổ bên phải, cách điệu thành chữ 帰.",
+        "来": "Tháng mười đến rồi (十). Thu hoạch gạo thôi (米). 👉 Số 10 (十) đặt phía trên bó lúa gạo (米) báo hiệu mùa thu hoạch đến → Lai (来)",
+        "去": "Tôi đã từng sống trong quá khứ bây giờ tôi ở trong đất (土). 👉 Người đã khuất nằm dưới lòng đất (土) có mầm cây mọc trên → Khứ (去)",
+        "入": "Người đó đang vào trong lều. 👉 Một người đang chui vào cửa chiếc lều hình tam giác, đường nét cửa lều tạo thành chữ 入.",
+        "出": "Cửa ra ở đây này. 👉 Hai mũi tên hướng lên chỉ về phía biển báo EXIT (lối ra), chồng lên nhau tạo thành chữ 出.",
+        "乗": "Tôi đang đứng (立) ở trên cây (木) Nỗ lực đoạt chiếc cành này cho tôi. 👉 Một người đang đứng trèo trên ngọn cây (木) chuyển thành các nét ngang dọc kết hợp với bộ Mộc tạo thành chữ 乗.",
+        "降": "Tôi xuống ở điểm dừng xe bus đó. 👉 Biển trạm xe buýt (阝) bên trái và đôi chân đang bước xuống bậc thang bên phải, tạo thành chữ 降.",
+        "着": "Thấy một con cừu (羊) mặc áo len. 👉 Hình một con cừu (羊) mặc áo có cổ chéo ở trên kết hợp với con mắt (目) nhìn ở dưới tạo thành chữ 着.",
+        "待": "Anh đang chờ em trên con đường phía trước ngôi đền. 👉 Con đường (彳) phía trước ngôi chùa/đền (寺) nơi có người đứng chờ → Đãi (待)",
+        "持": "Tôi đi chùa (寺) với chuỗi tràng hạt mang theo. 👉 Bàn tay đeo chuỗi hạt (扌) bên trái và ngôi chùa trên mặt đất cùng bàn tay chắp lễ (寺) bên phải, ghép thành chữ 持.",
+        "使": "Ông ấy biết dùng người. 👉 Một người ở bên trái (亻) đang sai khiến một người khác bê thùng đồ ở bên phải, tạo thành chữ Sử/Sứ (使).",
+        "借": "Ngày xưa (昔), tôi đã vay ai đó một cái gì đó thì phải. 👉 Một người (イ) cầm hộp đồ đứng cạnh con số 21 và mặt trời (chữ Tích 昔), ghép lại thành chữ 借.",
+        "貸": "Tôi đại diện (代) anh ấy, cho vay tiền. 👉 Phía trên là hai người đại diện cho nhau (chữ Đại 代), phía dưới là vỏ sò/tiền (chữ Bối 貝), ghép lại thành chữ 貸.",
+        "洗": "Thầy giáo (先生) đang đi rửa tay. 👉 Ba giọt nước (氵) ở bên trái và hình thầy giáo đang bước đi (先) ở bên phải, ghép thành chữ Tẩy (洗).",
+        "飯": "Mọi người phản đối (反) thói quen ăn (食) quá nhiều cơm của tôi. 👉 Người ngồi ăn cơm dưới mái nhà (𠊊/食) ở bên trái và bàn tay giơ lên phản đối 'No!' (反) ở bên phải tạo thành chữ 飯.",
+        "食": "Điều thú vị (良) tôi làm ở nhà đó chính là ăn. 👉 Người ngồi cầm đũa ăn no nê (良) dưới mái nhà → Thực (食)",
+        "飲": "Mở miệng to , lúc ăn (食) no, lúc uống đã. 👉 Một người ăn (食) dưới mái nhà và một người há miệng to uống nước → Ẩm (飲)",
+        "買": "Ngày xưa vỏ ốc (貝) mua đồ\nHóa đơn sử dụng, bây giờ tiện hơn. 👉 Tờ tiền giấy ghi số 10 (罒) ở phía trên và vỏ sò ốc (貝) ở phía dưới, ghép thành chữ 買.",
+        "売": "Người này đang bán thứ gì đó. 👉 Một người đang đứng sau bàn bày hàng hóa để rao bán, cách điệu thành chữ 売 (士 trên, 冖 và 儿 dưới).",
+        "物": "Con bò (牛) và con cáo đều là những vật thể sống. 👉 Bên trái là đầu con bò (chữ Ngưu 牛), bên phải là hình con cáo nghiêng mình có các vệt lông đuôi (勿), ghép lại thành chữ 物.",
+        "品": "Đây là hình ảnh của 3 sản phẩm. 👉 Ba chiếc hộp hàng hóa xếp chồng lên nhau (một hộp ở trên, hai hộp ở dưới) tạo thành ba chữ Khẩu (口) của chữ 品.",
+        "料": "Tôi đong lượng gạo (米) và các vật liệu khác bằng một cái cân. 👉 Bó lúa gạo (米) ở bên trái và cái cân đong có hai hạt rơi xuống (斗) ở bên phải tạo thành chữ 料.",
+        "銀": "Bạc thì không tốt như vàng. 👉 Thỏi kim loại (金) lấp lánh bên trái và người đang nhìn mảnh bạc với vẻ không hài lòng (艮) bên phải, ghép thành chữ 銀.",
+        "店": "Ở trước cửa hàng, cà chua được xếp trên một cái bục. 👉 Mái hiên cửa hàng (广) bao quanh những quả cà chua xếp trên cái bục (占), tạo thành chữ 店.",
+        "市": "Người ta thường đi chợ để mua sắm. 👉 Dòng người xếp hàng dưới cổng chợ có biển 'Market' và các gian hàng hai bên, tạo thành hình chữ 市.",
+        "町": "Có những con đường và cánh đồng (田) ở thị trấn này. 👉 Cánh đồng ruộng (田) nằm cạnh con đường giao nhau hình chữ 丁 với hai người đi bộ, ghép thành chữ 町.",
+        "村": "Hướng theo cây, sẽ có ngay ngôi làng. 👉 Một cái cây (木) bên trái và bàn tay chỉ hướng (寸) bên phải, ghép lại thành chữ 村.",
+        "区": "Khu này được phân biên giới bằng 3 bức tường và 2 con đường. 👉 Khu phố được bao quanh bởi 3 bức tường ở ba phía (匚) và có 2 con đường giao nhau hình chữ X (メ) ở giữa, tạo thành chữ 区.",
+        "県": "Cả nước đang mắt (目) dõi theo tỉnh nhỏ (小). 👉 Phía trên là con mắt (chữ Mục 目) đặt trong khung góc vuông, phía dưới là em bé thu mình nhỏ bé (chữ Tiểu 小), ghép lại thành chữ 県.",
+        "府": "Dưới mái nhà lớn (广) có người giao phó (付) việc công 👉 Tòa nhà chính phủ, đô phủ (PHỦ).",
+        "住": "Ông chủ (主) đang sống với một ai đó. 👉 Một người đứng bên trái (亻) cạnh ông chủ đội mũ (主) ở bên phải tạo thành chữ 住.",
+        "所": "Dùng rìu đánh dấu cửa (戸) nhà Để biết nơi ấy chính là của tôi. 👉 Bên trái là cánh cửa có dấu X (chữ Hộ 戸), bên phải là chiếc rìu (bộ Cân 斤), ghép lại thành chữ 所.",
+        "番": "Thu hoạch luân phiên lúa (米) trên đồng (田). 👉 Cây lúa (米) ở phía trên và cánh đồng ruộng (田) ở phía dưới, ghép lại thành chữ 番.",
+        "号": "Hãy nói số hiệu bằng giọng to, rõ ràng. 👉 Chiếc mũ tròn như cái miệng (口) ở trên và khuôn mặt người đang há miệng nói lớn ở dưới, tạo thành chữ 号.",
+        "建": "Trước khi xây dựng nhà này Quan trọng có bản vẽ (書) ngay để nhìn. 👉 Bên trái là tòa nhà cao tầng có nền kéo dài sang phải (bộ Dẫn 廴), bên phải là bàn tay cầm bút vẽ thiết kế (聿), ghép lại thành chữ 建.",
+        "働": "Người ta sẽ cử động (動) khi lao động. 👉 Một người đứng bên trái (亻) và một người đang dùng sức đẩy chồng sách nặng (動) ở bên phải, ghép thành chữ Động (働).",
+        "休": "Người đó đang nghỉ ở chỗ gốc cây (木). 👉 Một người (亻) đứng tựa lưng vào gốc cây (木) để nghỉ ngơi, ghép thành chữ 休.",
+        "仕": "Các võ sĩ (士) Samurai phụng sự cho lãnh chúa. 👉 Võ sĩ Samurai đứng bên trái (亻) bên cạnh vị lãnh chúa ngồi khoanh tay tạo hình chữ Sĩ (士) ở bên phải, ghép thành chữ Sĩ (仕).",
+        "社": "Người ta dâng lễ và cầu mong một vụ mùa bội thu ở đền thờ thần linh. 👉 Bàn thờ cúng (礻) bên trái và mầm cây mọc trên mặt đất (土) bên phải, ghép thành chữ 社.",
+        "員": "Khi trả tiền, bạn nhân được một thẻ hội viên. 👉 Tấm thẻ hội viên hình chữ nhật (口) đặt phía trên con sò/tiền (貝), ghép thành chữ Viên (員).",
+        "医": "Bệnh nhân bị mũi tên (矢) đâm. Nên bác sĩ phải trị cầm máu ngay. 👉 Bệnh nhân nằm trên giường bệnh (匚) với mũi tên (矢) cắm ở chân, chuyển thành chữ Y (医).",
+        "病": "Người ốm đang ngủ trong bệnh viện. 👉 Tòa nhà bệnh viện có dấu chữ thập (疒) và bệnh nhân đang nằm trên giường dưới mái màn (丙), ghép thành chữ 病.",
+        "院": "Họ đã khỏe mạnh (病) ra viện và trở về nhà. 👉 Trạm xe buýt (阝) bên trái và người vui vẻ bước ra từ tòa nhà bệnh viện (完) bên phải, ghép thành chữ 院.",
+        "薬": "Khi uống thảo dược này vào Vui vẻ (楽) khỏe mạnh, bệnh nào cũng tan. 👉 Cỏ thảo dược (艹) mọc phía trên chiếc trống và người đánh trống vui vẻ (楽), ghép lại thành chữ Dược (薬).",
+        "痛": "Trong khi vượt hàng rào bệnh viện tôi cảm thấy rất đau đớn. 👉 Dưới mái nhà bệnh viện có dấu chữ thập (bộ Nạch 疒) là một người đang đau đớn trèo qua hàng rào (甬), tạo thành chữ 痛.",
+        "死": "\"Ở đây có tiểu thuyết \"Chết ở Taihichi (タヒチ)\" không?\". \"Không có\" 👉 Các chữ katakana タ, ヒ, チ (Tahiti) ghép lại dưới nét ngang đầu tiên tạo thành hình chữ Tử (死).",
+        "生": "Thực vật được sinh ra từ trong đất (土). 👉 Mầm cây đâm chồi mọc lên từ mặt đất (土) → Sinh (生)",
+        "命": "Người đứng đầu ra lệnh (令) bằng miệng (口) quyết định sự sống còn 👉 Sinh mạng, mệnh lệnh (MỆNH).",
+        "頭": "Đầu trông có vẻ giống đậu (豆) nhỉ. 👉 Bên trái là bát đựng hạt đậu (chữ Đậu 豆), bên phải là cái đầu người đội mũ (bộ Hiệt 頁), ghép lại thành chữ 頭.",
+        "顔": "Khi lấy cái mũ ra, bạn có thể nhìn thấy sẹo trên mặt tôi. 👉 Bên trái là người có những vết sẹo (立 + 彡 = 彦), bên phải là khuôn mặt/đầu người đội mũ (頁), ghép lại thành chữ 顔.",
+        "首": "Đây là hình ảnh người có cái cổ dài. 👉 Hình vẽ đầu người có hai chỏm tóc phía trên (丷 + 一) và cái cổ dài có ngấn bên dưới (自), tạo thành chữ 首.",
+        "目": "Đây là hình dạng của mắt. 👉 Hình con mắt có lông mi → hình mắt dựng đứng thành chữ 目",
+        "耳": "Đây là hình ảnh một cái tai. 👉 Hình vẽ vành tai người cách điệu thành các nét thẳng → Nhĩ (耳)",
+        "口": "Đây là hình dạng của miệng. 👉 Hình đôi môi/cái miệng → khung vuông 口",
+        "手": "Đây là hình bàn tay. 👉 Hình bàn tay xòe năm ngón, các đường ngang của ngón tay và trục bàn tay tạo thành chữ 手.",
+        "足": "Duỗi chân ra và chạy nào!!! 👉 Một người đang sải rộng đôi chân chạy về phía trước, phần đầu/thân trên (口) và đôi chân (止/𤴓) tạo thành chữ 足.",
+        "背": "Phía Bắc (北) của cơ thể/thịt (月) nơi quay lưng lại với ánh nắng 👉 Cái lưng, chiều cao (BỐI).",
+        "肉": "Đây là hình ảnh một miếng thịt. 👉 Một tảng thịt có xương và các đường gân trắng ở giữa chuyển thành khung ngoài và hai chữ nhân (人) bên trong của chữ 肉.",
+        "色": "Đây là hình ảnh vòng xoáy với 2 màu. 👉 Vòng tròn âm dương xoáy hai màu sáng tối chuyển thành các nét uốn lượn của chữ 色.",
+        "白": "Tôi có một tòa nhà màu trắng. 👉 Tòa nhà hình hộp chữ nhật có mái nghiêng ở góc trên phác họa thành nét phẩy trên chữ 日 tạo thành chữ 白.",
+        "黒": "Đốt đồng (田) thì đất (土) chả đen. 👉 Cánh đồng (田) và đất (土) ở phía trên bị bốn ngọn lửa (灬) thiêu đốt ở phía dưới tạo thành chữ 黒.",
+        "赤": "Đặt đất (土) trên lửa làm gì? Để nung gạch đỏ chứ chi hỡi nàng. 👉 Mầm cây trên mặt đất (土) đặt phía trên ngọn lửa đang cháy ở dưới tạo thành chữ 赤.",
+        "青": "Trên trời có ánh trăng thanh Dưới đất cùng ngọn cỏ xanh đây rồi. 👉 Ngọn cỏ nhiều lá mọc trên mặt đất ở phần trên kết hợp với vầng trăng khuyết (月) ở phần dưới tạo thành chữ 青.",
+        "茶": "Hai người đang uống trà. 👉 Cỏ cây ở trên (艹), mái nhà ở giữa và hai người ngồi đối diện bên chiếc bàn ở dưới tạo thành chữ 茶.",
+        "牛": "Đây là hình ảnh con bò chỉ có 1 sừng. 👉 Đầu một con bò nhìn thẳng có một chiếc sừng cong ở bên trái tạo thành nét phẩy đầu và các nét ngang dọc của chữ 牛.",
+        "魚": "Đây là hình ảnh một con cá. 👉 Hình vẽ một con cá dựng đứng với đầu cá ở trên, thân cá có vây (田) ở giữa và đuôi cá xoè ra thành bốn nét chấm (灬) ở dưới.",
+        "鳥": "Đây là hình ảnh một con chim. 👉 Hình vẽ một con chim nhìn nghiêng với mào trên đầu, thân, cánh và bốn nét ở dưới tượng trưng cho chân/đuôi tạo thành chữ 鳥.",
+        "犬": "Đây là hình ảnh một con chó. 👉 Hình một chú chó giơ hai chân trước lên với cái tai phía trên đầu chuyển thành dấu chấm của chữ 犬.",
+        "猫": "Loài thú nhỏ (犭) thích rình bắt chuột bên ruộng mầm cây (苗) 👉 Con mèo (MIÊU).",
+        "馬": "Đây là hình ảnh một con ngựa. 👉 Hình vẽ con ngựa nhìn nghiêng với bờm, thân, bốn chân và đuôi, cách điệu thành chữ 馬.",
+        "花": "Ngọn cỏ thay đổi trở thành hoa. 👉 Hai mầm cỏ mọc trên mặt đất ở phía trên (艹) và hình người đứng người ngồi biến đổi ở dưới (化) tạo thành chữ 花.",
+        "草": "Loài thực vật (艹) mọc lên đón nắng sớm (早) ngoài đồng 👉 Cây cỏ, thảo nguyên (THẢO).",
+        "木": "Đây là hình cái cây. 👉 Cái cây có tán và rễ → nét ngang, nét sổ và hai nét xiên thành chữ 木",
+        "林": "Hai cây (木) thành ngọn rừng thưa. 👉 Hai cái cây đứng cạnh nhau chuyển thành hai bộ Mộc (木) ghép lại tạo thành chữ 林.",
+        "森": "Ba cây (木) thành cánh rừng xưa mất rồi. (Rừng từ xưa thì cây cối rất rậm rạp) 👉 Ba cái cây xếp theo hình tam giác (một trên, hai dưới) chuyển thành ba chữ Mộc (木) tạo thành chữ 森.",
+        "山": "Đây là hình ảnh một ngọn núi. 👉 Hình dãy núi có ba đỉnh (đỉnh giữa cao nhất, hai đỉnh hai bên thấp hơn), cách điệu thành chữ 山.",
+        "川": "Một dòng sông đang chảy. 👉 Hình dòng sông uốn lượn với ba đường nước chảy song song, cách điệu thành chữ 川.",
+        "海": "Ngày nào tôi cũng đi bơi ngoài biển. 👉 Những giọt nước văng bên trái (bộ chấm thủy 氵) cùng hình người mẹ bế con bên phải (毎) tạo thành chữ 海.",
+        "空": "Mở cửa sổ ra, dùng thước chuẩn của thợ thủ công (工) để đo bầu trời. 👉 Khung cửa sổ có mái che ở trên kết hợp với bàn tay cầm thước kẻ đứng ở dưới tạo thành chữ 空.",
+        "雨": "Từ mây và những giọt mưa có thể tạo ra chữ Hán này. 👉 Đám mây phía trên và bốn giọt mưa rơi xuống bên dưới, chuyển thành chữ 雨.",
+        "雪": "\"Mưa (雨) hay sao ấy nhỉ?\" \"Không phải, chạm vào thử xem, là tuyết đấy\". 👉 Đám mây mưa (雨) ở phía trên và bàn tay (ヨ) đưa ra hứng ở phía dưới, tạo thành chữ 雪.",
+        "風": "Côn trùng (虫) tránh gió Bằng cái lá nhỏ. 👉 Con côn trùng (虫) cầm chiếc lá che phía trên trong làn gió thổi bao quanh (几), tạo thành chữ Phong (風).",
+        "春": "Mùa xuân cũng đã đến rồi.\nBa người cùng ngắm ánh mặt trời với nhau. 👉 Số ba (三) và người dang chân (人) tạo thành phần trên (𡗗), bên dưới là mặt trời (日), ghép thành chữ 春.",
+        "夏": "Mùa hè nóng quá nên một người đã gục xuống bóng râm. 👉 Một người đổ mồ hôi ngồi gục dưới bóng râm mái che, cách điệu thành chữ 夏 (一, 自, 夂).",
+        "秋": "Khi thu đến, cũng là lúc lúa chín.\nSắc lá úa hóa sắc lửa (火). 👉 Bông lúa trĩu hạt (禾) bên trái và ngọn lửa (火) bên phải, ghép thành chữ 秋.",
+        "冬": "Vào mùa đông, nếu bạn đi bộ trên băng sẽ rất trơn. 👉 Đôi chân đang bước đi (夂) bị trượt trên mặt băng lấp lánh (冫), tạo thành chữ 冬.",
+        "暑": "Dưới ánh mặt trời (日) thì người (者) cũng nóng. 👉 Mặt trời (日) chiếu nắng phía trên một người già (者) đang đổ mồ hôi vì nóng, tạo thành chữ Thử (暑).",
+        "寒": "Ngày lạnh đến nhà bạn chơi. Vết chân để lại khắp trời tuyết hoa. 👉 Một người co ro vì lạnh đứng dưới mái nhà (宀) phủ đầy tuyết, bên dưới có hai dấu chân trên tuyết, tạo thành chữ Hàn (寒).",
+        "暖": "Bạn bè (友) tay để trong tay Chỉ cần có thế ấm ngay ấy mà. 👉 Mặt trời (日) tỏa nắng bên trái và những bàn tay đan vào nhau ở bên phải, tạo thành chữ 暖.",
+        "涼": "Mưa rơi rơi xuống kinh đô (京) Trở nên mát mẻ, héo khô chẳng còn. 👉 Những giọt nước mưa (氵) bên trái và cổng thành kinh đô (京) trên đồi bên phải, tạo thành chữ 涼.",
+        "星": "Tôi nghĩ là sao được sinh (生) ra từ mặt trời (日)? 👉 Mặt trời (日) chiếu sáng ở trên và mầm cây sinh trưởng (生) ở dưới, ghép lại thành chữ 星.",
+        "月": "Đây là hình trăng lưỡi liềm. 👉 Trăng lưỡi liềm với mây → hình trăng có hai nét ngang thành chữ 月",
+        "日": "Đây là hình mặt trời. 👉 Mặt trời tỏa tia sáng → hình tròn có nét ngang ở giữa thành chữ 日",
+        "年": "Thu hoạch lúa mất cả một năm. 👉 Người nông dân cầm liềm gặt cây lúa trĩu bông → Niên (年)",
+        "週": "Mất 1 tuần để đi vòng quanh (周) con đường này. 👉 Con đường (辶) bao quanh chu kỳ tuần hoàn (周) → Chu (週)",
+        "曜": "Vào ngày đầu tuần, con chim kêu piyo - piyo (ピヨピヨ). 👉 Mặt trời bên trái và con chim kêu ピヨピヨ bên phải → 日 bên trái và phần 翟 (ヨヨ trên, thân chim dưới) thành chữ 曜",
+        "朝": "Đó là một buổi sáng ngày 10 tháng 10 (十月十日). 👉 Bên trái gồm chữ thập (十), mặt trời (日) và chữ thập (十); bên phải là mặt trăng (月), ghép thành chữ 朝.",
+        "昼": "Buổi trưa lúc mặt trời lên cao, tôi sẽ kéo tấm rèm lên. 👉 Tấm rèm che nắng (尺) phía trên mặt trời (日) và mặt đất (一) phía dưới, ghép thành chữ 昼.",
+        "夜": "Có người đội mũ đêm nay\nNhìn trăng rồi lại ngắm mây trên trời. 👉 Chiếc mũ rộng vành (亠) ở trên, người đứng (亻) bên trái và vầng trăng khuyết kèm đám mây (夕 + 丶) bên phải, tạo thành chữ 夜.",
+        "晩": "Trời đã tối rồi, phải nhanh chóng trở về nhà thôi. 👉 Mặt trời đang lặn (日) bên trái và người đội mũ đang vội vã chạy về (免) bên phải, ghép thành chữ 晩.",
+        "今": "\"Bây giờ, cậu đang làm gì đấy?\" \"Tớ đang hát lalala (ラララ) ở nhà.\" 👉 Mái nhà hình chữ 人 với người bên trong đang hát ラララ → mái 𠆢 trên, nét ラ bên dưới thành chữ 今",
+        "毎": "Mỗi người đều có một bà mẹ. 👉 Một người ở phía trên chỉ vào người mẹ (母) ngồi bên dưới → Mỗi (毎)",
+        "前": "Tôi chuẩn bị bữa tối trước khi trăng (月) xuất hiện. 👉 Mặt trăng (月) và con dao chuẩn bị bữa tối trước khi trăng lên → Tiền (前)",
+        "後": "Ta đang đi bộ ngược về phía sau con đường. 👉 Người đi bộ quay mặt ngược về phía sau trên con đường (彳) → Hậu (後)",
+        "次": "Mở miệng lớn ra, hét: \"Tiếp theo\". 👉 Một người đang há to miệng gọi 'Next!' với hai vạch âm thanh phía trước (冫), tạo thành chữ 次.",
+        "最": "Lấy (取) được mặt trời (日) bằng tay là việc cực kì khó khăn. 👉 Mặt trời (日) ở phía trên và bàn tay đang với lấy (取) ở phía dưới, tạo thành chữ 最.",
+        "初": "Khi làm Kimono, đầu tiên phải cắt vải bằng dao (刀). 👉 Bộ trang phục Kimono (衤) bên trái và con dao (刀) đang cắt tấm vải bên phải, tạo thành chữ 初.",
+        "終": "Mối quan hệ của chúng tôi tiếp tục kéo dài như sợi chỉ (糸) vậy, nhưng nó đã kết thúc vào mùa đông (冬). 👉 Cuộn chỉ (糸) ở bên trái và hình người bước đi trong mùa đông (冬) ở bên phải, ghép thành chữ Chung (終).",
+        "始": "Bắt đầu phát biểu trên đài (台) Có cô con gái (女) miệt mài lắng nghe. 👉 Cô gái (女) đứng bên trái lắng nghe người đàn ông đứng trên bục (台) phát biểu ở bên phải, tạo thành chữ Thủy (始).",
+        "中": "Chỗ này ở chính giữa hình tròn. 👉 Trục thẳng xuyên qua chính giữa hình tròn → Trung (中)",
+        "外": "Hãy hút thuốc ở bên ngoài! 👉 Chữ タ (trong タバコ) và người đứng hút thuốc ở bên ngoài → Ngoại (外)",
+        "内": "Người đó (人) đi vào trong cái hộp to. 👉 Một người (人) đang ở bên trong chiếc hộp lớn (冂), tạo thành chữ 内.",
+        "上": "Chỗ này phía trên đoạn nằm ngang. 👉 Bàn tay chỉ vào vị trí phía trên vạch nằm ngang → Thượng (上)",
+        "下": "Chỗ này phía dưới đoạn nằm ngang. 👉 Bàn tay chỉ vào vị trí phía dưới vạch nằm ngang → Hạ (下)",
+        "左": "Tôi nắm cái thước bằng tay trái. 👉 Bàn tay trái giữ cây thước thủ công (工) → Tả (左)",
+        "右": "Tôi ăn bằng tay phải. 👉 Bàn tay phải đưa thức ăn vào miệng (口) → Hữu (右)",
+        "東": "Mặt trời (日) mọc ở đằng Đông. Có thể thấy ánh nắng (日) hổng sau cây (木). 👉 Mặt trời (日) mọc lấp ló phía sau cái cây (木) → Đông (東)",
+        "西": "Một (一) trong 4 (四) hướng là hướng Tây. 👉 Ngón tay giơ 1 (一) phía trên chữ tứ (四) chỉ 4 hướng → Tây (西)",
+        "南": "Hai cây trong vườn đang lớn lên vươn về hướng Nam. 👉 Hai mầm cây mọc vươn lên trong mảnh vườn quay về hướng Nam → Nam (南)",
+        "北": "Hai người ngồi đối lưng vào nhau bởi vì phương Bắc rất lạnh. 👉 Hai người ngồi co ro quay lưng vào nhau vì lạnh → Bắc (北)",
+        "横": "Trong hộp ở cạnh cái cây (木) Lũ trẻ chúng nó ngày ngày vui chơi. 👉 Cái cây (木) ở bên trái và hai đứa trẻ đang chơi trên chiếc hộp lớn (黄) ở bên phải, tạo thành chữ 横.",
+        "縦": "Sợi chỉ (糸) buông thẳng theo bước chân người đi nối tiếp nhau (従) 👉 Chiều dọc, hàng dọc (TÚNG).",
+        "低": "Tại sao gạch dưới tên (氏) em \"Vì điểm số thấp tôi xem thế nào\" 👉 Một người (亻) đứng cạnh tấm bảng ghi họ tên (氏) có gạch ngang bên dưới, tạo thành chữ Đê (低).",
+        "狭": "Con thú (犭) bị kẹp chặt (夾) giữa hai bên vách núi 👉 Chật hẹp, nhỏ hẹp (HIỆP).",
+        "太": "Khúc gỗ lớn quá. 👉 Một người dang rộng tay chân thành chữ Đại (大) nhảy qua khúc gỗ tròn ở dưới (nét chấm), tạo thành chữ Thái (太).",
+        "細": "Bông lúa ở những cánh đồng (田) cũng mảnh như sợi chỉ (糸). 👉 Cuộn chỉ (糸) ở bên trái và cánh đồng lúa (田) ở bên phải, ghép lại thành chữ 細.",
+        "若": "Tôi dùng tay phải (右) Hái lộc vừa ra. 👉 Mầm cỏ non (艹) mọc ở trên và bàn tay phải cùng khuôn mặt (右) ở dưới, ghép lại thành chữ 若.",
+        "違": "Con đường quá phức tạp. Có vẻ tôi đã nhầm. 👉 Người đang đi trên con đường ngoằn ngoèo phức tạp, nét vẽ mê cung và con đường tạo thành chữ 違.",
+        "全": "Đức vua () thống trị toàn bộ mọi thứ ở trên núi. 👉 Đức vua đội vương miện đứng dưới dãy núi, hình ảnh núi ở trên và vị vua (王) ở dưới tạo thành chữ 全.",
+        "半": "Hãy cắt 3 đoạn này thành đôi. Oái, chỉ một đoạn trên cùng bị cắt. 👉 Thanh kiếm cắt dọc qua 3 vạch ngang nhưng chỉ cắt đứt vạch trên cùng → Bán (半)",
+        "部": "Có người đang đứng (立) Ở trạm dừng xe. 👉 Một người đang đứng trên bục cạnh biển trạm dừng xe buýt, tạo thành các nét của chữ 部.",
+        "分": "Hãy cắt thành 2 phần bằng dao (刀). 👉 Con dao (刀) ở dưới cắt vật ở trên làm hai phần → Phân (分)",
+        "数": "Người phụ nữ (女) đếm từng hạt gạo (米) rồi dùng tay (攵) tính toán 👉 Con số, đếm, môn Toán (SỐ).",
+        "第": "Thẻ tre (竹) buộc dây theo từng nấc thang từ dưới lên 👉 Thứ tự, đệ nhất (ĐỆ).",
+        "回": "Cái gì đó đang xoay vòng. 👉 Vòng xoáy tròn có mũi tên xoay vòng chuyển thành hai hình vuông lồng vào nhau tạo nên chữ 回.",
+        "点": "4 điểm đang được đóng dấu. 👉 Con dấu phía trên (占) đóng xuống tạo ra bốn dấu chấm (灬) ở phía dưới, tạo thành chữ 点.",
+        "形": "Tôi đang làm thành hình cái gì thế này? 👉 Người thợ đứng trên giàn giáo (开) bên trái đang đẽo gọt bức tượng có ba nét lượn (彡) bên phải, tạo thành chữ 形.",
+        "線": "Sợi chỉ (糸) chảy dài liên tục như dòng suối (泉) 👉 Đường kẻ, tuyến tàu, dây điện (TUYẾN).",
+        "丸": "Tôi đang cuộn tròn cơ thể mình. 👉 Một người đang cúi gập cuộn tròn cơ thể lại, tạo thành hình chữ Cửu (九) thêm một nét chấm ở giữa thành chữ 丸.",
+        "直": "Nhìn này, chỗ đó bị hỏng. Sửa nó đi thôi nhỉ 👉 Khuôn mặt nghiêng với con mắt to (目) đang nhìn vào góc tường để kiểm tra, tạo thành chữ 直.",
+        "曲": "Hình chiếc giỏ tre đan uốn cong các thanh gỗ 👉 Uốn cong, rẽ ngoặt, giai điệu bài hát (KHÚC).",
+        "言": "Tôi sử dụng miệng để nói điều gì đó. 👉 Cái miệng (口) phát ra những làn sóng lời nói phía trên → Ngôn (言)",
+        "話": "Người ta sử dụng hàng ngàn từ để nói chuyện. 👉 Lời nói (言) bên trái kết hợp với con số 1000 (千) và cái miệng (口) bên phải → Thoại (話)",
+        "読": "Anh ta rao (言):\"Hãy mua những cuốn sách được bán (売) chạy nhất này\". 👉 Lời nói phát ra từ miệng (言) bên trái và người đang đứng bán sách (売) bên phải, ghép thành chữ 読.",
+        "書": "Cầm cây bút này, tôi sẽ viết chữ Nhật. 👉 Bàn tay cầm bút lông (聿) phía trên đang vẽ hình mặt trời (日) trên giấy phía dưới, tạo thành chữ 書.",
+        "聞": "Ai đó đang ghé tai (耳) ở cổng (門) để nghe. 👉 Người ghé cái tai (耳) lắng nghe ở giữa cánh cổng (門) → Văn (聞)",
+        "見": "Để nhìn thấy nhiều thứ, bạn cần phải có mắt (目) và chân. 👉 Con mắt (目) gắn thêm đôi chân bước đi để nhìn ngắm → Kiến (見)",
+        "記": "Anh đã ghi lại những lời em nói. 👉 Lời nói phát ra từ miệng (言) bên trái và một người đang cúi ghi chép bên phải, tạo thành chữ 記.",
+        "説": "Anh trai (兄) tôi đang thuyết minh. 👉 Người anh trai (兄) đang nói ra những lời giải thích (言) ở bên trái, ghép thành chữ Thuyết (説).",
+        "質": "Ốc (貝) to bổ với hai rìu. Muốn biết chất lượng phải điều tra xem. 👉 Hai chiếc rìu (斤斤) đặt phía trên một con sò/ốc lớn (貝) để bổ ra kiểm tra, ghép lại thành chữ Chất (質).",
+        "問": "Muốn giỏi thì hỏi ở cổng (門). 👉 Cái miệng (口) kèm dấu chấm hỏi ở giữa cánh cổng (門), tạo thành chữ Vấn (問).",
+        "習": "Đàn chim đang vỗ cánh (羽) trên ngôi nhà trắng (白) để học bay. 👉 Hai chú chim vỗ đôi cánh (羽) ở phía trên tòa nhà màu trắng (白) ở phía dưới tạo thành chữ 習.",
+        "勉": "Chàng trai này, đang cố gắng hết khả năng của mình. 👉 Chàng trai đội mũ đổ mồ hôi (免) đang gồng cánh tay cơ bắp (力), ghép thành chữ 勉.",
+        "校": "Bố (父) đến trường đón tôi. 👉 Cái cây (木) bên trái và người bố có ria mép (父) đội mũ đứng trước cổng trường có đồng hồ (亠), ghép thành chữ 校.",
+        "字": "Đứa trẻ (子) học chữ ở trong nhà. 👉 Một đứa trẻ cầm bút (子) đứng dưới mái nhà có ống khói (宀) tạo thành chữ 字.",
+        "英": "Anh hùng ở giữa (央) bức hình Sinh ra từ sự chuyển mình cỏ cây. 👉 Một siêu anh hùng đứng dang tay ở chính giữa (央) bên dưới mặt đất có hai mầm cỏ mọc lên ở phía trên (艹), tạo thành chữ Anh (英).",
+        "語": "Họ nói chuyện (言) bằng 5 (五) thứ tiếng. 👉 Lời nói phát ra từ cái miệng (言) bên trái, chữ ngũ (五) và cái miệng (口) bên phải, ghép thành chữ 語.",
+        "漢": "Nhìn kìa ông chồng (夫) Trung Hoa Trên đầu đội cỏ vượt qua sông hồ. 👉 Nước sông bắn lên bên trái (氵), bên phải là người đàn ông (夫) đội chậu cỏ (艹) trên đầu lội qua sông tạo thành chữ 漢.",
+        "忘": "Quên xây bức tường bên phải mất rồi! 👉 Phía trên là ngôi nhà bị thiếu mất bức tường bên phải (chữ Vong 亡), phía dưới là trái tim (chữ Tâm 心), ghép lại thành chữ 忘.",
+        "覚": "Ở trường đã thấy (見) những gì Tôi nhớ như thể đã ghi trong đầu. 👉 Phía trên là mái trường có ba ô cửa sổ (⺌ + 冖), phía dưới là con mắt có hai chân (chữ Kiến 見), ghép lại thành chữ 覚.",
+        "急": "Nếu nhanh lên thì sẽ ổn thôi. 👉 Một người vừa chạy vội vừa giơ ngón cái ra hiệu ổn thỏa, phần thân và bước chân biến thành các nét trên và bộ Tâm (心) ở dưới của chữ Cấp (急).",
+        "必": "Nhất định anh sẽ bắn gục trái tim (心) em. 👉 Trái tim bị một mũi tên bắn xuyên qua, kết hợp hình trái tim (心) và mũi tên chéo tạo thành chữ 必.",
+        "要": "Các cô gái (女) thường bỏ những thứ thiết yếu vào trong túi xách. 👉 Hình chiếc túi xách ở trên và người phụ nữ (女) ở dưới, ghép lại tạo thành chữ 要.",
+        "便": "Nếu dịch vụ bưu điện có thể gửi hàng trong 1 ngày (一日) thì thật tiện lợi. 👉 Bên trái là một người đứng (イ), bên phải là chữ Nhất (一), chữ Nhật (日) và bàn tay ở dưới đan chéo, ghép lại thành chữ 便.",
+        "利": "Cắt lúa thu được nhiều lợi ích. 👉 Cây lúa (禾) ở bên trái và con dao sắc (刂) ở bên phải đang cắt lúa, ghép lại thành chữ 利.",
+        "不": "Nó không phải chữ T. 👉 Chữ T bị gạch chéo bằng hai nét xiên hai bên, tạo thành hình chữ 不.",
+        "無": "Ngôi nhà bị thiêu trong lửa, toàn bộ mọi thứ trước đây nay không còn gì. 👉 Ngôi nhà có khung cửa sổ đang bốc cháy trên bốn ngọn lửa (灬) ở phía dưới, tạo thành chữ 無.",
+        "有": "Mặt trăng (月) thì có, nhưng không thể chạm vào được. 👉 Bàn tay ở phía trên (ナ) vươn ra định chạm vào vầng trăng (月) ở phía dưới, tạo thành chữ Hữu (有).",
+        "取": "Đừng véo tai tao. 👉 Bàn tay (又) bên phải đang véo chiếc tai (耳) bên trái, ghép lại thành chữ 取.",
+        "集": "Bầy chim tập hợp trên cây (木). 👉 Phía trên là hình con chim (bộ Chuy 隹), phía dưới là cái cây (chữ Mộc 木), diễn tả đàn chim đậu tập hợp trên cây tạo thành chữ 集.",
+        "選": "Cùng (共) chọn ra người đứng đầu nào mọi người. 👉 Mọi người cùng đứng trên con đường (辶), hai người phía trước khoác vai nhau tạo hình chữ 選.",
+        "決": "Tôi đã quyết việc tiết kiệm nước. 👉 Bên trái là ba giọt nước (氵), bên phải là một người đứng cạnh vòi nước với tấm biển 'SAVE WATER' tạo thành phần 夬, ghép lại thành chữ 決."
 };
-
-    const vocabDB = {
-        "会": "会社|かいしゃ|công ty; 会話|かいわ|hội thoại; 会議|かいぎ|cuộc họp; 会う|あう|gặp gỡ",
-        "同": "同じ|おなじ|giống nhau; 同時|どうじ|đồng thời; 同僚|どうりょう|đồng nghiệp",
-        "事": "仕事|しごと|công việc; 食事|しょくじ|bữa ăn; 用事|ようじ|việc bận; 大事|だいじ|quan trọng",
-        "自": "自分|じぶん|bản thân; 自動車|じどうしゃ|ô tô; 自然|しぜん|tự nhiên; 自由|じゆう|tự do",
-        "発": "出発|しゅっぱつ|xuất phát; 発音|はつおん|phát âm; 発表|はっぴょう|phát biểu",
-        "者": "医者|いしゃ|bác sĩ; 学者|がくしゃ|học giả; 若者|わかもの|giới trẻ",
-        "業": "授業|じゅぎょう|tiết học; 産業|さんぎょう|công nghiệp; 卒業|そつぎょう|tốt nghiệp",
-        "地": "地図|ちず|bản đồ; 地下鉄|ちかてつ|tàu điện ngầm; 地震|じしん|động đất",
-        "場": "場所|ばしょ|địa điểm; 工場|こうじょう|nhà máy; 会場|かいじょう|hội trường",
-        "京": "東京|とうきょう|Tokyo; 京都|きょうと|Kyoto; 上京|じょうきょう|lên Tokyo",
-        "都": "首都|しゅと|thủ đô; 都合|つごう|hoàn cảnh, sự thuận tiện; 都市|とし|đô thị",
-        "方": "方法|ほうほう|phương pháp; 夕方|ゆうがた|chiều tối; 読み方|よみかた|cách đọc",
-        "主": "主人|しゅじん|chồng, chủ nhà; 主に|おもに|chủ yếu; 主婦|しゅふ|nội trợ",
-        "題": "問題|もんだい|vấn đề, câu hỏi; 宿題|しゅくだい|bài tập về nhà; 話題|わだい|chủ đề",
-        "意": "意味|いみ|ý nghĩa; 意見|いけん|ý kiến; 注意|ちゅうい|chú ý; 用意|ようい|chuẩn bị",
-        "作": "作る|つくる|làm, chế tạo; 作文|さくぶん|bài văn; 作品|さくひん|tác phẩm",
-        "用": "用意|ようい|chuẩn bị; 用事|ようじ|việc bận; 利用|りよう|sử dụng",
-        "度": "一度|いちど|một lần; 今度|こんど|lần tới; 温度|おんど|nhiệt độ",
-        "文": "文化|ぶんか|văn hóa; 文学|ぶんがく|văn học; 文法|ぶんぽう|ngữ pháp",
-        "以": "以上|いじょう|trở lên; 以下|いか|trở xuống; 以内|いない|trong vòng",
-        "知": "知る|しる|biết; お知らせ|おしらせ|thông báo; 知人|ちじん|người quen",
-        "理": "理由|りゆう|lý do; 料理|りょうり|món ăn, nấu ăn; 無理|むり|vô lý, quá sức",
-        "体": "体|からだ|cơ thể; 体育|たいいく|thể dục; 体重|たいじゅう|cân nặng",
-        "思": "思う|おもう|nghĩ; 思い出す|おもいだす|nhớ ra; 思い出|おもいで|kỷ niệm",
-        "開": "開く|あく|mở (tự động); 開ける|あける|mở ra; 開始|かいし|bắt đầu",
-        "閉": "閉める|しめる|đóng vào; 閉まる|しまる|đóng; 閉会|へいかい|bế mạc",
-        "間": "時間|じかん|thời gian; 間に合う|まにあう|kịp giờ; 間違い|まちがい|nhầm lẫn",
-        "強": "勉強|べんきょう|học tập; 強い|つよい|mạnh mẽ; 強調|きょうちょう|nhấn mạnh",
-        "教": "教える|おしえる|dạy, chỉ bảo; 教室|きょうしつ|phòng học; 教会|きょうかい|nhà thờ",
-        "正": "正しい|ただしい|đúng đắn; お正月|おしょうがつ|Tết năm mới; 正解|せいかい|đáp án đúng",
-        "館": "図書館|としょかん|thư viện; 映画館|えいがかん|rạp chiếu phim; 大使館|たいしかん|đại sứ quán",
-        "屋": "部屋|へや|căn phòng; 本屋|ほんや|hiệu sách; 屋上|おくじょう|sân thượng",
-        "国": "外国|がいこく|nước ngoài; 国内|こくない|trong nước; 帰国|きこく|về nước",
-        "家": "家族|かぞく|gia đình; 家|いえ|ngôi nhà; 家賃|やちん|tiền thuê nhà",
-        "族": "家族|かぞく|gia đình; 民族|みんぞく|dân tộc; 水族館|すいぞくかん|thủy cung",
-        "親": "両親|りょうしん|bố mẹ; 親切|しんせつ|thân thiện, tốt bụng; 親しい|したしい|thân thiết",
-        "別": "特別|とくべつ|đặc biệt; 別れる|わかれる|chia tay; 別の|べつの|khác",
-        "広": "広い|ひろい|rộng rãi; 広場|ひろば|quảng trường; 広告|こうこく|quảng cáo",
-        "明": "明るい|あかるい|sáng sủa; 説明|せつめい|giải thích; 明日|あした|ngày mai",
-        "暗": "暗い|くらい|tối tăm; 暗記|あんき|học thuộc lòng; 暗証番号|あんしょうばんごう|mã PIN",
-        "遠": "遠い|とおい|xa xôi; 遠足|えんそく|dã ngoại; 遠慮|えんりょ|ngại ngần",
-        "近": "近い|ちかい|gần; 最近|さいきん|gần đây; 近所|きんじょ|hàng xóm",
-        "新": "新しい|あたらしい|mới; 新聞|しんぶん|tờ báo; 新幹線|しんかんせん|tàu Shinkansen",
-        "古": "古い|ふるい|cũ kỹ; 中古|ちゅうこ|đồ cũ; 古典|こてん|cổ điển",
-        "多": "多い|おおい|nhiều; 多分|たぶん|có lẽ; 多数|たすう|đa số",
-        "少": "少ない|すくない|ít; 少し|すこし|một chút; 少年|しょうねん|thiếu niên",
-        "高": "高い|たかい|cao, đắt; 高校|こうこう|trường cấp 3; 最高|さいこう|tuyệt nhất",
-        "安": "安い|やすい|rẻ; 安心|あんしん|yên tâm; 安全|あんぜん|an toàn",
-        "長": "長い|ながい|dài; 社長|しゃちょう|giám đốc; 部長|ぶちょう|trưởng phòng",
-        "短": "短い|みじかい|ngắn; 短所|たんしょ|nhược điểm; 短時間|たんじかん|thời gian ngắn",
-        "重": "重い|おもい|nặng; 体重|たいじゅう|cân nặng; 重要|じゅうよう|quan trọng",
-        "軽": "軽い|かるい|nhẹ nhàng; 軽食|けいしょく|bữa ăn nhẹ; 気軽|きがる|thoải mái",
-        "早": "早い|はやい|sớm, nhanh; 早起き|はやおき|dậy sớm; 早速|さっそく|ngay lập tức",
-        "遅": "遅い|おそい|muộn, chậm; 遅刻|ちこく|đi muộn; 遅れる|おくれる|bị trễ",
-        "元": "元気|げんき|khỏe mạnh; 元日|がんじつ|mùng 1 Tết; 地元|じもと|địa phương",
-        "気": "天気|てんき|thời tiết; 病気|びょうき|bệnh tật; 気持ち|きもち|tâm trạng",
-        "天": "天気|てんき|thời tiết; 天気予報|てんきよほう|dự báo thời tiết; 天国|てんごく|thiên đường",
-        "電": "電車|でんしゃ|tàu điện; 電話|でんわ|điện thoại; 電気|でんき|điện, đèn điện",
-        "駅": "駅|えき|nhà ga; 駅前|えきまえ|trước ga; 駅員|えきいん|nhân viên nhà ga",
-        "鉄": "地下鉄|ちかてつ|tàu điện ngầm; 鉄道|てつどう|đường sắt",
-        "道": "道|みち|con đường; 道路|どうろ|đường sá; 水道|すいどう|nước máy; 柔道|じゅうどう|võ Judo",
-        "通": "通る|とおる|đi qua; 通う|かよう|đi học/làm thường xuyên; 交通|こうつう|giao thông",
-        "送": "送る|おくる|gửi, tiễn; 放送|ほうそう|phát sóng; 送料|そうりょう|phí vận chuyển",
-        "返": "返す|かえす|trả lại; 返事|へんじ|trả lời, hồi âm",
-        "進": "進む|すすむ|tiến lên; 進学|しんがく|học lên cao; 進歩|しんぽ|tiến bộ",
-        "退": "退院|たいいん|xuất viện; 退学|たいがく|thôi học; 引退|いんたい|giải nghệ",
-        "運": "運動|うんどう|vận động; 運ぶ|はこぶ|vận chuyển; 運転|うんてん|lái xe",
-        "動": "動物|どうぶつ|động vật; 動く|うごく|chuyển động; 自動車|じどうしゃ|ô tô",
-        "歩": "歩く|あるく|đi bộ; 散歩|さんぽ|đi dạo; 歩道|ほどう|vỉa hè",
-        "走": "走る|はしる|chạy; 競走|きょうそう|chạy đua; ご馳走|ごちそう|bữa tiệc thịnh soạn",
-        "起": "起きる|おきる|thức dậy; 起こす|おこす|đánh thức; 早起き|はやおき|dậy sớm",
-        "寝": "寝る|ねる|ngủ; 昼寝|ひるね|ngủ trưa; 寝室|しんしつ|phòng ngủ",
-        "帰": "帰る|かえる|trở về; 帰国|きこく|về nước; 帰り|かえり|lượt về",
-        "来": "来る|くる|đến; 来週|らいしゅう|tuần sau; 将来|しょうらい|tương lai",
-        "去": "去年|きょねん|năm ngoái; 過去|かこ|quá khứ; 去る|さる|rời đi",
-        "入": "入る|はいる|đi vào; 入れる|いれる|cho vào; 入口|いりぐち|cửa vào; 入学|にゅうがく|nhập học",
-        "出": "出る|でる|đi ra; 出す|だす|nộp, lấy ra; 出口|でぐち|cửa ra; 出発|しゅっぱつ|xuất phát",
-        "乗": "乗る|のる|lên xe; 乗り物|のりもの|phương tiện; 乗り換え|のりかえ|chuyển tàu",
-        "降": "降りる|おりる|xuống xe; 降る|ふる|rơi (mưa, tuyết); 以降|いこう|trở về sau",
-        "着": "着る|きる|mặc (áo); 着く|つく|đến nơi; 到着|とうちゃく|đến nơi; 着物|きもの|Kimono",
-        "待": "待つ|まつ|chờ đợi; 招待|しょうたい|mời, chiêu đãi; 期待|きたい|kỳ vọng",
-        "持": "持つ|もつ|cầm, mang; 持って行く|もっていく|mang đi; 気持ち|きもち|tâm trạng",
-        "使": "使う|つかう|sử dụng; 大使館|たいしかん|đại sứ quán; 使い方|つかいかた|cách dùng",
-        "借": "借りる|かりる|vay, mượn; 借金|しゃっきん|khoản nợ",
-        "貸": "貸す|かす|cho mượn; 貸出|かしだし|cho mượn (sách)",
-        "洗": "洗う|あらう|rửa; 洗濯|せんたく|giặt giũ; お手洗い|おてあらい|nhà vệ sinh",
-        "飯": "ご飯|ごはん|cơm, bữa ăn; 朝ご飯|あさごはん|bữa sáng; 晩ご飯|ばんごはん|bữa tối",
-        "食": "食べる|たべる|ăn; 食事|しょくじ|bữa ăn; 食堂|しょくどう|nhà ăn; 食べ物|たべもの|đồ ăn",
-        "飲": "飲む|のむ|uống; 飲み物|のみもの|đồ uống; 飲み会|のみかい|tiệc nhậu",
-        "買": "買う|かう|mua; 買い物|かいもの|mua sắm; 売買|ばいばい|mua bán",
-        "売": "売る|うる|bán; 売り場|うりば|quầy bán; 発売|はつばい|phát hành, mở bán",
-        "物": "買い物|かいもの|mua sắm; 動物|どうぶつ|động vật; 荷物|にもつ|hành lý; 建物|たてもの|tòa nhà",
-        "品": "品物|しなもの|hàng hóa; 作品|さくひん|tác phẩm; 商品|しょうひん|sản phẩm",
-        "料": "料理|りょうり|nấu ăn; 無料|むりょう|miễn phí; 料金|りょうきん|cước phí; 材料|ざいりょう|nguyên liệu",
-        "銀": "銀行|ぎんこう|ngân hàng; 銀色|ぎんいろ|màu bạc",
-        "店": "店|みせ|cửa hàng; 店員|てんいん|nhân viên tiệm; 喫茶店|きっさてん|quán cà phê",
-        "市": "市|し|thành phố; 市民|しみん|người dân; 市場|いちば|chợ; 市役所|しやくしょ|tòa thị chính",
-        "町": "町|まち|thị trấn, khu phố; 町長|ちょうちょう|thị trưởng",
-        "村": "村|むら|ngôi làng; 農村|のうそん|nông thôn",
-        "区": "区|く|quận; 区役所|くやくしょ|ủy ban quận; 地区|ちく|khu vực",
-        "県": "県|けん|tỉnh; 都道府県|とどうふけん|các tỉnh thành Nhật Bản",
-        "府": "政府|せいふ|chính phủ; 大阪府|おおさかふ|phủ Osaka; 京都府|きょうとふ|phủ Kyoto",
-        "住": "住む|すむ|sinh sống; 住所|じゅうしょ|địa chỉ; 住民|じゅうみん|cư dân",
-        "所": "場所|ばしょ|địa điểm; 台所|だいどころ|nhà bếp; 近所|きんじょ|hàng xóm",
-        "番": "番号|ばんごう|số hiệu; 交番|こうばん|đồn cảnh sát; 一番|いちばん|nhất; 番組|ばんぐみ|chương trình",
-        "号": "番号|ばんごう|số; 信号|しんごう|đèn giao thông; 電話番号|でんわばんごう|số điện thoại",
-        "建": "建てる|たてる|xây dựng; 建物|たてもの|tòa nhà; 建設|けんせつ|kiến thiết",
-        "働": "働く|はたらく|làm việc; 共働き|ともばたらき|vợ chồng cùng đi làm",
-        "休": "休む|やすむ|nghỉ ngơi; 休み|やすみ|ngày nghỉ; 昼休み|ひるやすみ|nghỉ trưa",
-        "仕": "仕事|しごと|công việc; 仕方|しかた|cách làm",
-        "社": "会社|かいしゃ|công ty; 社長|しゃちょう|giám đốc; 社会|しゃかい|xã hội; 神社|じんじゃ|đền Thần đạo",
-        "員": "会社員|かいしゃいん|nhân viên công ty; 店員|てんいん|nhân viên cửa hàng; 全員|ぜんいん|toàn bộ thành viên",
-        "医": "医者|いしゃ|bác sĩ; 医学|いがく|y học; 歯医者|はいしゃ|nha sĩ",
-        "病": "病気|びょうき|bệnh, ốm; 病院|びょういん|bệnh viện; 病人|びょうにん|bệnh nhân",
-        "院": "病院|びょういん|bệnh viện; 入院|にゅういん|nhập viện; 退院|たいいん|xuất viện",
-        "薬": "薬|くすり|thuốc; 薬局|やっきょく|hiệu thuốc; 目薬|めぐすり|thuốc nhỏ mắt",
-        "痛": "痛い|いたい|đau; 頭痛|ずつう|đau đầu; 腹痛|ふくつう|đau bụng",
-        "死": "死ぬ|しぬ|chết; 必死|ひっし|quyết tâm hết sức; 死亡|しぼう|tử vong",
-        "生": "先生|せんせい|giáo viên; 学生|がくせい|học sinh; 生活|せいかつ|cuộc sống; 生まれる|うまれる|sinh ra",
-        "命": "命|いのち|sinh mạng; 一生懸命|いっしょうけんめい|cố gắng hết sức; 命令|めいれい|mệnh lệnh",
-        "頭": "頭|あたま|cái đầu; 頭がいい|あたまがいい|thông minh; 頭痛|ずつう|đau đầu",
-        "顔": "顔|かお|khuôn mặt; 笑顔|えがお|nụ cười; 洗顔|せんがん|rửa mặt",
-        "首": "首|くび|cái cổ; 手首|てくび|cổ tay; 首都|しゅと|thủ đô",
-        "目": "目|め|đôi mắt; 目的|もくてき|mục đích; 一番目|いちばんめ|thứ nhất",
-        "耳": "耳|みみ|đôi tai; 耳鼻科|じびか|khoa tai mũi họng",
-        "口": "口|くち|cái miệng; 入口|いりぐち|cửa vào; 出口|でぐち|cửa ra; 人口|じんこう|dân số",
-        "手": "手|て|bàn tay; 上手|じょうず|giỏi; 下手|へた|kém; 手紙|てがみ|bức thư",
-        "足": "足|あし|chân; 足りる|たりる|đầy đủ; 遠足|えんそく|dã ngoại",
-        "背": "背|せ|lưng, vóc dáng; 背が高い|せがたかい|cao ráo; 背中|せなか|cái lưng",
-        "肉": "肉|にく|thịt; 牛肉|ぎゅうにく|thịt bò; 豚肉|ぶたにく|thịt heo; 鶏肉|とりにく|thịt gà",
-        "色": "色|いろ|màu sắc; 色々|いろいろ|nhiều loại; 景色|けしき|phong cảnh",
-        "白": "白い|しろい|trắng; 面白い|おもしろい|thú vị; 白黒|しろくろ|trắng đen",
-        "黒": "黒い|くろい|đen; 黒板|こくばん|bảng đen",
-        "赤": "赤い|あかい|đỏ; 赤ちゃん|あかちゃん|em bé sơ sinh",
-        "青": "青い|あおい|xanh; 青空|あおぞら|bầu trời xanh; 青年|せいねん|thanh niên",
-        "茶": "お茶|おちゃ|trà; 茶色|ちゃいろ|màu nâu; 喫茶店|きっさてん|quán nước",
-        "牛": "牛|うし|con bò; 牛乳|ぎゅうにゅう|sữa bò; 牛肉|ぎゅうにく|thịt bò",
-        "魚": "魚|さかな|con cá; 金魚|きんぎょ|cá vàng; 魚屋|さかなや|tiệm cá",
-        "鳥": "鳥|とり|con chim; 焼き鳥|やきとり|thịt gà xiên nướng; 小鳥|ことり|chim non",
-        "犬": "犬|いぬ|con chó; 子犬|こいぬ|chó con",
-        "猫": "猫|ねこ|con mèo; 子猫|こねこ|mèo con",
-        "馬": "馬|うま|con ngựa; 乗馬|じょうば|cưỡi ngựa",
-        "花": "花|はな|hoa; 花見|はなみ|ngắm hoa anh đào; 花火|はなび|pháo hoa",
-        "草": "草|くさ|cỏ; 草原|そうげん|thảo nguyên",
-        "木": "木|き|cây; 木曜日|もくようび|Thứ Năm",
-        "林": "林|はやし|rừng thưa; 小林|こばやし|họ Kobayashi",
-        "森": "森|もり|rừng rậm; 森林|しんりん|rừng núi",
-        "山": "山|やま|núi; 富士山|ふじさん|núi Phú Sĩ; 登山|とざん|leo núi",
-        "川": "川|かわ|sông; 河川|かせん|sông ngòi",
-        "海": "海|うみ|biển; 海外|かいがい|nước ngoài; 海岸|かいがん|bờ biển",
-        "空": "空|そら|bầu trời; 空気|くうき|không khí; 空港|くうこう|sân bay",
-        "雨": "雨|あめ|mưa; 大雨|おおあめ|mưa to; 梅雨|つゆ|mùa mưa",
-        "雪": "雪|ゆき|tuyết; 大雪|おおゆき|tuyết dày",
-        "風": "風|かぜ|gió; 台風|たいふう|cơn bão; 風邪|かぜ|cảm cúm; お風呂|おふろ|bồn tắm",
-        "春": "春|はる|mùa xuân; 春休み|はるやすみ|kỳ nghỉ xuân",
-        "夏": "夏|なつ|mùa hè; 夏休み|なつやすみ|nghỉ hè",
-        "秋": "秋|あき|mùa thu; 秋風|あきかぜ|gió mùa thu",
-        "冬": "冬|ふゆ|mùa đông; 冬休み|ふゆやすみ|nghỉ đông",
-        "暑": "暑い|あつい|nóng bức; 猛暑|もうしょ|nắng nóng đỉnh điểm",
-        "寒": "寒い|さむい|lạnh lẽo",
-        "暖": "暖かい|あたたかい|ấm áp; 暖房|だんぼう|máy sưởi",
-        "涼": "涼しい|すずしい|mát mẻ",
-        "星": "星|ほし|ngôi sao; 星空|ほしぞら|bầu trời sao",
-        "月": "月|つき|mặt trăng; 今月|こんげつ|tháng này; 月曜日|げつようび|Thứ Hai",
-        "日": "日本|にほん|Nhật Bản; 毎日|まいにち|mỗi ngày; 日曜日|にちようび|Chủ Nhật; 休日|きゅうじつ|ngày nghỉ",
-        "年": "今年|ことし|năm nay; 来年|らいねん|năm sau; 去年|きょねん|năm ngoái",
-        "週": "今週|こんしゅう|tuần này; 来週|らいしゅう|tuần sau; 週末|しゅうまつ|cuối tuần",
-        "曜": "何曜日|なんようび|thứ mấy; 日曜日|にちようび|Chủ Nhật",
-        "朝": "朝|あさ|buổi sáng; 毎朝|まいあさ|mỗi sáng; 朝食|ちょうしょく|bữa sáng",
-        "昼": "昼|ひる|buổi trưa; 昼休み|ひるやすみ|nghỉ trưa; 昼食|ちゅうしょく|bữa trưa",
-        "夜": "夜|よる|ban đêm; 今夜|こんや|tối nay; 夜中|よなか|nửa đêm",
-        "晩": "今晩|こんばん|tối nay; 毎晩|まいばん|mỗi tối; 晩ご飯|ばんごはん|bữa tối",
-        "今": "今|いま|bây giờ; 今日|きょう|hôm nay; 今月|こんげつ|tháng này",
-        "毎": "毎日|まいにち|mỗi ngày; 毎週|まいしゅう|mỗi tuần; 毎年|まいとし|mỗi năm",
-        "前": "前|まえ|phía trước; 名前|なまえ|tên; 午前|ごぜん|buổi sáng (AM)",
-        "後": "後ろ|うしろ|phía sau; 午後|ごご|buổi chiều (PM); 最後|さいご|cuối cùng",
-        "次": "次|つぎ|tiếp theo; 次回|じかい|lần tới",
-        "最": "最近|さいきん|gần đây; 最初|さいしょ|đầu tiên; 最高|さいこう|tuyệt nhất",
-        "初": "初めて|はじめて|lần đầu tiên; 最初|さいしょ|đầu tiên",
-        "終": "終わる|おわる|kết thúc; 終電|しゅうでん|chuyến tàu cuối; 最終|さいしゅう|cuối cùng",
-        "始": "始める|はじめる|bắt đầu; 始まる|はじまる|được bắt đầu; 開始|かいし|khởi đầu",
-        "中": "中|なか|bên trong; 一日中|いちにちじゅう|suốt cả ngày; 中学校|ちゅうがっこう|trường cấp 2",
-        "外": "外|そと|bên ngoài; 外国|がいこく|nước ngoài; 外食|がいしょく|ăn ngoài",
-        "内": "国内|こくない|trong nước; 案内|あんない|hướng dẫn; 家内|かない|vợ (cách gọi khiêm nhường)",
-        "上": "上|うえ|phía trên; 上手|じょうず|giỏi; 以上|いじょう|trở lên",
-        "下": "下|した|phía dưới; 下手|へた|kém; 地下鉄|ちかてつ|tàu điện ngầm",
-        "左": "左|ひだり|bên trái; 左手|ひだりて|tay trái",
-        "右": "右|みぎ|bên phải; 右手|みぎて|tay phải",
-        "東": "東|ひがし|phía Đông; 東京|とうきょう|Tokyo; 東口|ひがしぐち|cửa Đông",
-        "西": "西|にし|phía Tây; 関西|かんさい|vùng Kansai",
-        "南": "南|みなみ|phía Nam; 東南アジア|とうなんアジア|Đông Nam Á",
-        "北": "北|きた|phía Bắc; 北海道|ほっかいどう|Hokkaido",
-        "横": "横|よこ|bên cạnh, chiều ngang; 横断歩道|おうだんほどう|vạch sang đường",
-        "縦": "縦|たて|chiều dọc; 縦書き|たてがき|viết dọc",
-        "低": "低い|ひくい|thấp; 最低|さいてい|thấp nhất, tệ nhất",
-        "狭": "狭い|せまい|chật hẹp",
-        "太": "太い|ふとい|to, béo; 太る|ふとる|béo lên; 太陽|たいよう|mặt trời",
-        "細": "細い|ほそい|mảnh, thon; 細かい|こまかい|nhỏ, chi tiết, tiền lẻ",
-        "若": "若い|わかい|trẻ trung; 若者|わかもの|người trẻ",
-        "違": "違う|ちがう|khác, sai; 間違い|まちがい|nhầm lẫn",
-        "全": "全部|ぜんぶ|toàn bộ; 全然|ぜんぜん|hoàn toàn (không); 安全|あんぜん|an toàn",
-        "半": "半分|はんぶん|một nửa; 半年|はんとし|nửa năm; 三時半|さんじはん|3 giờ rưỡi",
-        "部": "部屋|へや|căn phòng; 全部|ぜんぶ|toàn bộ; 部長|ぶちょう|trưởng phòng",
-        "分": "分かる|わかる|hiểu; 自分|じぶん|bản thân; 半分|はんぶん|một nửa; 十分|じゅうぶん|đầy đủ",
-        "数": "数学|すうがく|môn Toán; 数字|すうじ|chữ số; 人数|にんずう|số người",
-        "第": "第一|だいいち|thứ nhất",
-        "回": "一回|いっかい|1 lần; 今回|こんかい|lần này; 回す|まわす|xoay, vặn",
-        "点": "点数|てんすう|điểm số; 交差点|こうさてん|ngã tư",
-        "形": "形|かたち|hình dáng; 人形|にんぎょう|búp bê",
-        "線": "線|せん|đường kẻ, tuyến; 新幹線|しんかんせん|tàu cao tốc Shinkansen",
-        "丸": "丸い|まるい|tròn",
-        "直": "直す|なおす|sửa chữa; 直接|ちょくせつ|trực tiếp; 正直|しょうじき|thật thà",
-        "曲": "曲がる|まがる|rẽ, quẹo; 曲|きょく|bài hát, bản nhạc",
-        "言": "言う|いう|nói; 言葉|ことば|từ ngữ, lời nói; 伝言|でんごん|lời nhắn",
-        "話": "話す|はなす|nói chuyện; 電話|でんわ|điện thoại; 会話|かいわ|hội thoại",
-        "読": "読む|よむ|đọc; 読書|どくしょ|việc đọc sách; 読み方|よみかた|cách đọc",
-        "書": "書く|かく|viết; 辞書|じしょ|từ điển; 図書館|としょかん|thư viện; 書類|しょるい|tài liệu",
-        "聞": "聞く|きく|nghe, hỏi; 新聞|しんぶん|tờ báo",
-        "見": "見る|みる|nhìn, xem; 見せる|みせる|cho xem; 意見|いけん|ý kiến; 花見|はなみ|ngắm hoa",
-        "記": "日記|にっき|nhật ký; 記事|きじ|bài báo; 暗記|あんき|học thuộc",
-        "説": "説明|せつめい|giải thích; 小説|しょうせつ|tiểu thuyết",
-        "質": "質問|しつもん|câu hỏi; 品質|ひんしつ|chất lượng",
-        "問": "問題|もんだい|vấn đề, câu hỏi; 質問|しつもん|câu hỏi",
-        "習": "習う|ならう|học; 練習|れんしゅう|luyện tập; 復習|ふくしゅう|ôn tập; 予習|よしゅう|chuẩn bị bài",
-        "勉": "勉強|べんきょう|học tập",
-        "校": "学校|がっこう|trường học; 高校|こうこう|trường cấp 3; 校長|こうちょう|hiệu trưởng",
-        "字": "漢字|かんじ|chữ Hán; 文字|もじ|chữ viết; ローマ字|ローマじ|chữ Romaji",
-        "英": "英語|えいご|tiếng Anh",
-        "語": "日本語|にほんご|tiếng Nhật; 外国語|がいこくご|ngoại ngữ; 単語|たんご|từ vựng",
-        "漢": "漢字|かんじ|chữ Hán",
-        "忘": "忘れる|わすれる|quên; 忘れ物|わすれもの|đồ để quên; 忘年会|ぼうねんかい|tiệc tất niên",
-        "覚": "覚える|おぼえる|nhớ, thuộc; 目覚まし|めざまし|báo thức",
-        "急": "急ぐ|いそぐ|vội vàng; 急に|きゅうに|đột nhiên; 特急|とっきゅう|tàu tốc hành",
-        "必": "必ず|かならず|chắc chắn, nhất định; 必要|ひつよう|cần thiết",
-        "要": "必要|ひつよう|cần thiết; 重要|じゅうよう|quan trọng",
-        "便": "便利|べんり|tiện lợi; 不便|ふべん|bất tiện; 郵便局|ゆうびんきょく|bưu điện",
-        "利": "便利|べんり|tiện lợi; 利用|りよう|sử dụng",
-        "不": "不便|ふべん|bất tiện; 不安|ふあん|bất an; 不足|ふそく|thiếu hụt",
-        "無": "無理|むり|quá sức, vô lý; 無料|むりょう|miễn phí",
-        "有": "有名|ゆうめい|nổi tiếng; 有料|ゆうりょう|có tính phí",
-        "取": "取る|とる|lấy; 受け取る|うけとる|nhận lấy; 聞き取り|ききとり|nghe hiểu",
-        "集": "集める|あつめる|sưu tầm, gom lại; 集まる|あつまる|tụ tập; 集合|しゅうごう|tập hợp",
-        "選": "選ぶ|えらぶ|chọn lựa; 選手|せんしゅ|tuyển thủ",
-        "決": "決める|きめる|quyết định; 決まる|きまる|được quyết định"
-    };
 
     const compoundData = [
         ['会社','かいしゃ','công ty',['会','社']], ['会社員','かいしゃいん','nhân viên công ty',['会','社','員']],
@@ -4714,7 +2797,6 @@
         parseData();
         loadProgress();
         initDict();
-        loadExternalMnemonicData();
 
         // Tự động quét và xóa mọi nút/logo "Powered by Netlify" (bao gồm srcdoc iframe HUD mới của Netlify)
         const removeHostBadge = () => {
