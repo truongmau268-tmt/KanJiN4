@@ -432,45 +432,54 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 14px 24px 10px;
+            justify-content: flex-start;
+            padding: 16px 24px;
             overflow-y: auto;
-            perspective: 1400px;
+            overflow-x: hidden;
         }
 
         .flashcard-3d-wrapper {
             width: 100%;
-            max-width: 780px;
-            min-height: 460px;
+            max-width: 940px;
+            margin: auto;
             position: relative;
-            transform-style: preserve-3d;
-            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
             cursor: pointer;
             user-select: none;
+            flex-shrink: 0;
         }
 
-        .flashcard-3d-wrapper.is-flipped {
-            transform: rotateY(180deg);
+        @keyframes cardFlipTransition {
+            0% { opacity: 0.4; transform: scale(0.985); }
+            100% { opacity: 1; transform: scale(1); }
         }
 
         .card-face {
-            position: absolute;
-            inset: 0;
-            backface-visibility: hidden;
-            -webkit-backface-visibility: hidden;
+            position: relative;
+            inset: auto;
+            width: 100%;
             background: #ffffff;
             border-radius: 26px;
             border: 2px solid #e2e8f0;
             box-shadow: var(--shadow-card);
             display: flex;
             flex-direction: column;
-            overflow: hidden;
+            overflow: visible;
+            animation: cardFlipTransition 0.22s ease-out;
+        }
+
+        .flashcard-3d-wrapper:not(.is-flipped) .card-back {
+            display: none !important;
+        }
+
+        .flashcard-3d-wrapper.is-flipped .card-front {
+            display: none !important;
         }
 
         /* ----- FRONT FACE ----- */
         .card-front {
             justify-content: space-between;
             align-items: center;
+            min-height: 460px;
             padding: 28px 32px;
             background: radial-gradient(circle at top right, #eef2ff 0%, #ffffff 55%);
         }
@@ -588,9 +597,8 @@
 
         /* ----- BACK FACE ----- */
         .card-back {
-            transform: rotateY(180deg);
-            padding: 18px 24px;
-            overflow-y: hidden;
+            padding: 22px 28px;
+            overflow: visible;
             cursor: default;
         }
 
@@ -598,26 +606,26 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 10px;
+            padding-bottom: 12px;
             border-bottom: 1px solid #f1f5f9;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
             gap: 12px;
         }
 
         .back-kanji-summary {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 16px;
         }
 
         .back-kanji-char {
-            font-size: 46px;
+            font-size: 50px;
             font-weight: 900;
             color: var(--secondary);
             line-height: 1;
             background: #f8fafc;
-            width: 64px;
-            height: 64px;
+            width: 68px;
+            height: 68px;
             border-radius: 16px;
             display: flex;
             align-items: center;
@@ -630,11 +638,11 @@
         .back-title-group {
             display: flex;
             flex-direction: column;
-            gap: 2px;
+            gap: 3px;
         }
 
         .back-hanviet {
-            font-size: 20px;
+            font-size: 21px;
             font-weight: 800;
             color: var(--primary);
             letter-spacing: 1.5px;
@@ -642,7 +650,7 @@
         }
 
         .back-meaning-main {
-            font-size: 16.5px;
+            font-size: 17px;
             font-weight: 700;
             color: var(--secondary);
         }
@@ -650,25 +658,24 @@
         .back-grid {
             display: grid;
             grid-template-columns: 1fr 1.15fr;
-            gap: 16px;
-            flex: 1;
+            gap: 20px;
             align-items: start;
         }
 
         .back-left-col {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
         }
 
         .reading-card {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
-            border-radius: 14px;
-            padding: 11px 14px;
+            border-radius: 16px;
+            padding: 13px 16px;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 9px;
         }
 
         .reading-row {
@@ -680,7 +687,7 @@
         .r-badge {
             font-size: 11px;
             font-weight: 800;
-            padding: 3px 8px;
+            padding: 4px 8px;
             border-radius: 6px;
             color: white;
             width: 52px;
@@ -692,7 +699,7 @@
         .r-badge.kun { background: var(--accent-kun); }
 
         .r-value {
-            font-size: 15px;
+            font-size: 15.5px;
             font-weight: 700;
             color: var(--secondary);
             font-family: 'Noto Sans JP', sans-serif;
@@ -702,15 +709,15 @@
         .mnemonic-box {
             background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
             border: 1px solid #fde68a;
-            border-radius: 14px;
-            padding: 12px 14px;
+            border-radius: 16px;
+            padding: 14px 16px;
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 6px;
         }
 
         .mnemonic-title {
-            font-size: 11.5px;
+            font-size: 12px;
             font-weight: 800;
             color: #b45309;
             text-transform: uppercase;
@@ -727,9 +734,9 @@
         }
 
         .mnemonic-content {
-            font-size: 13.5px;
+            font-size: 14.5px;
             color: #78350f;
-            line-height: 1.5;
+            line-height: 1.55;
             font-weight: 500;
             word-break: break-word;
         }
@@ -737,11 +744,11 @@
         .back-right-col {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 9px;
         }
 
         .vocab-section-title {
-            font-size: 12.5px;
+            font-size: 13px;
             font-weight: 800;
             color: var(--accent-purple);
             text-transform: uppercase;
@@ -754,17 +761,17 @@
         .vocab-cards-list {
             display: flex;
             flex-direction: column;
-            gap: 7px;
+            gap: 8px;
             max-height: none;
-            overflow-y: visible;
+            overflow: visible;
             padding-right: 0;
         }
 
         .vocab-row-item {
             background: #fff;
             border: 1.5px solid #eef2f6;
-            border-radius: 11px;
-            padding: 8px 12px;
+            border-radius: 12px;
+            padding: 9px 14px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -784,22 +791,22 @@
         }
 
         .v-word-jp {
-            font-size: 16.5px;
+            font-size: 17px;
             font-weight: 800;
             color: var(--secondary);
             font-family: 'Noto Sans JP', sans-serif;
-            line-height: 1.2;
+            line-height: 1.25;
         }
 
         .v-reading-jp {
-            font-size: 12px;
+            font-size: 12.5px;
             color: var(--primary);
             font-weight: 600;
             line-height: 1.2;
         }
 
         .v-meaning-vi {
-            font-size: 13.5px;
+            font-size: 14px;
             font-weight: 600;
             color: #334155;
             text-align: right;
@@ -2273,48 +2280,13 @@
     function getAutoMnemonic(data) {
         const entry = mnemonicDB[data.kanji];
         if (!entry) {
-            return {
-                html: `<span class="mnemonic-empty">Chưa có mẹo nhớ cho chữ này trong tài liệu PDF</span>`,
-                refHtml: ''
-            };
+            return { html: 'Chưa có mẹo nhớ cho chữ này trong tài liệu PDF', refHtml: '' };
         }
         if (typeof entry === 'string') {
-            const text = entry.trim();
-            if (!text) {
-                return {
-                    html: `<span class="mnemonic-empty">Chưa có mẹo nhớ cho chữ này trong tài liệu PDF</span>`,
-                    refHtml: ''
-                };
-            }
-            return { html: text, refHtml: '' };
+            return { html: entry.trim() || 'Chưa có mẹo nhớ cho chữ này trong tài liệu PDF', refHtml: '' };
         }
-        // Hỗ trợ cấu trúc object từ docs/KANJI_MEMORY_DATA.json
-        const hasData = entry.found_in_pdf !== false && entry.has_mnemonic !== false &&
-            (entry.mnemonic || entry.memory_tip || entry.mnemonic_vi || entry.story || entry.analysis || entry.components || entry.radical_analysis);
-        if (!hasData) {
-            return {
-                html: `<span class="mnemonic-empty">Chưa có mẹo nhớ cho chữ này trong tài liệu PDF</span>`,
-                refHtml: ''
-            };
-        }
-
-        const tip = entry.mnemonic || entry.memory_tip || entry.mnemonic_vi || entry.story || '';
-        const analysis = entry.analysis || entry.components || entry.radical_analysis || entry.decomposition || '';
-        const page = entry.pdf_page || entry.page || (entry.source && (entry.source.pdf_page || entry.source.page)) || '';
-        const bookNum = entry.kanji_number || entry.book_number || entry.entry_number || entry.id || (entry.source && (entry.source.kanji_number || entry.source.entry_number)) || '';
-
-        const refParts = [];
-        if (bookNum) refParts.push(`#${bookNum}`);
-        if (page) refParts.push(`Tr. ${page}`);
-        const refLabel = entry.source_ref || entry.ref || (refParts.length ? `PDF ${refParts.join(' · ')}` : '');
-        const refHtml = refLabel ? `<span class="mnemonic-ref">${refLabel}</span>` : '';
-
-        let html = '';
-        if (tip) html += `<div>${tip}</div>`;
-        if (analysis && analysis !== tip) {
-            html += `<div class="mnemonic-analysis">${analysis}</div>`;
-        }
-        return { html: html || `<span class="mnemonic-empty">Chưa có mẹo nhớ cho chữ này trong tài liệu PDF</span>`, refHtml };
+        const tip = entry.mnemonic || entry.memory_tip || '';
+        return { html: tip || 'Chưa có mẹo nhớ cho chữ này trong tài liệu PDF', refHtml: '' };
     }
 
     function renderCard(index) {
@@ -2764,36 +2736,7 @@
         }
     }
 
-    async function loadExternalMnemonicData() {
-        try {
-            const res = await fetch('../docs/KANJI_MEMORY_DATA.json', { cache: 'no-store' });
-            if (!res.ok) return;
-            const json = await res.json();
-            const records = Array.isArray(json)
-                ? json
-                : (Array.isArray(json.kanji_list) ? json.kanji_list : (Array.isArray(json.data) ? json.data : (Array.isArray(json.items) ? json.items : null)));
-            const newDB = {};
-            if (records) {
-                records.forEach(item => {
-                    if (item && item.kanji) newDB[item.kanji] = item;
-                });
-            } else if (json && typeof json === 'object') {
-                const mapObj = json.kanji_map || json.mnemonics || json;
-                Object.keys(mapObj).forEach(k => {
-                    if (k.length === 1) newDB[k] = mapObj[k];
-                });
-            }
-            if (Object.keys(newDB).length > 0) {
-                Object.keys(mnemonicDB).forEach(k => delete mnemonicDB[k]);
-                Object.assign(mnemonicDB, newDB);
-                if (dictFilteredData.length > 0) renderCard(dictIndex);
-            }
-        } catch (e) {
-            // Khi mở trực tiếp file:// sẽ dùng dữ liệu nhúng trực tiếp trong mnemonicDB
-        }
-    }
-
-    window.onload = () => {
+        window.onload = () => {
         parseData();
         loadProgress();
         initDict();
